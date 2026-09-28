@@ -1,0 +1,3921 @@
+{
+ "gerado_em": "2026-09-27",
+ "total": 158,
+ "clusters": {
+  "fundamentos": {
+   "nome": "Fundamentos de Confiabilidade",
+   "desc": "Estatística de falha, MTBF, handbooks clássicos — a base teórica antes de qualquer sensor."
+  },
+  "sensoriamento": {
+   "nome": "Sensoriamento & Dados de Campo",
+   "desc": "Vibração, acústica, temperatura, pressão, vazão — como a máquina \"fala\" antes de quebrar."
+  },
+  "rul_ia": {
+   "nome": "RUL & Diagnóstico com IA",
+   "desc": "Vida útil remanescente, detecção de falha e anomalia — os datasets clássicos de ML em manutenção."
+  },
+  "iiot_twin": {
+   "nome": "IIoT, Edge & Digital Twin",
+   "desc": "Sensoriamento conectado e réplicas digitais de ativos — o lado \"indústria 4.0\"."
+  },
+  "ia_generativa": {
+   "nome": "IA Generativa aplicada",
+   "desc": "LLMs lendo ordem de serviço, relatório de falha e manual técnico."
+  },
+  "gestao": {
+   "nome": "Gestão da Manutenção",
+   "desc": "Ordens de serviço e dados operacionais — o lado prático de quem gerencia a planta."
+  },
+  "equipamento": {
+   "nome": "Monitoramento de Equipamento",
+   "desc": "Datasheets e fontes de equipamento com viés de monitoramento de condição."
+  },
+  "portais": {
+   "nome": "Portais & Curadorias",
+   "desc": "Hubs que agregam várias fontes de uma vez (ex. PHM Society)."
+  }
+ },
+ "destaques": [
+  "src_nasa_ims_bearings",
+  "src_ind_019",
+  "src_ind_023",
+  "src_ind_099",
+  "src_ind_171",
+  "src_ind_172"
+ ],
+ "sources": [
+  {
+   "id": "src_ind_084",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Failures",
+   "nome": "OREDA (Offshore Reliability Data)",
+   "url": "https://oreda.com/",
+   "oferece": "Dados de confiabilidade offshore e onshore | Múltiplos equipamentos (20,500+ topside, 3,100+ subsea) | Taxas de falha, modos de falha, causas, efeitos, manutenção",
+   "status": "CONFIRMADO",
+   "risco_legal": "BLOQUEADO",
+   "licenca": "Paga",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando OREDA (Offshore Reliability Data)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "qwen_p20",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Confiabilidade Estática",
+   "nome": "UK HSE RR1186 - Failure rates pipelines",
+   "url": "https://www.hse.gov.uk/Research/rrhtm/rr1186.htm",
+   "oferece": "Metodologia e taxas de falha de tubulações acima do solo",
+   "status": "VERIFICADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Artigo/Metodologia",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_tubulacao",
+     "frase": "Calibrar tubulação da Planta Virtual com dado real de UK HSE RR1186 - Failure rates pipelines."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "tubulacao",
+     "nota": "match por palavra-chave 'pipeline'"
+    }
+   ],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_073",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Failures",
+   "nome": "causRCA - Real-World Dataset for Causal Discovery and Root Cause Analysis in Machinery",
+   "url": "https://doi.org/10.5281/zenodo.15876410",
+   "oferece": "Registros de falhas industriais | Múltiplos equipamentos | Modo de falha, tempo de falha, consequência",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Apache-2.0",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando causRCA - Real-World Dataset for Causal Discovery and Root Cause Anal…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_111",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Vibration",
+   "nome": "FAN-COIL-I Vibration Dataset",
+   "url": "https://www.sciencedirect.com/science/article/pii/S2352340924008308",
+   "oferece": "Vibração de motor Fan Coil em operação real (2 semanas) | Motor Fan Coil (ambiente corporativo real) | Vibração (frente e traseira, 32 kHz sampling)",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC BY",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando FAN-COIL-I Vibration Dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_Genesis",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Anomaly_Detection / CPS",
+   "nome": "Genesis Demonstrator Data for Machine Learning (inIT-OWL)",
+   "url": "https://www.kaggle.com/datasets/inIT-OWL/genesis-demonstrator-data-for-machine-learning",
+   "oferece": "Dados de sistema ciber-físico (CPS) de demonstrador industrial (inIT-OWL) pra detecção de anomalia — múltiplos sensores em ciclo de operação real",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "CC BY-NC-SA 4.0 — declarado na página Kaggle (uso não-comercial obrigatório)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Genesis Demonstrator Data for Machine Learning (inIT-OWL)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "confiabilidade_falhas_015",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "ReliabilityCalc",
+   "url": "https://reliabilitycalc.com/",
+   "oferece": "Ferramenta gratuita com 4 calculadoras de confiabilidade (MTBF, MTTR, disponibilidade, OEE)",
+   "status": "CONFIRMADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "desconhecida — NAO_INFORMADO (Gratuito)",
+   "tipo_fonte": "Software/Ferramenta",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de ReliabilityCalc."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_118",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Temperature",
+   "nome": "Intel Lab Data (Sensor Network)",
+   "url": "https://db.csail.mit.edu/labdata/labdata.html",
+   "oferece": "Leituras de rede de sensores (temperatura, umidade, luz, voltagem) | 54 sensores no Intel Berkeley Research Lab | Temperatura, umidade, luz, voltagem, localização no mapa do lab",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "edge_iiot_benchmark",
+     "frase": "Avaliar desempenho de protocolo/dispositivo IIoT/edge com Intel Lab Data (Sensor Network)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_107",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Failures",
+   "nome": "AI4I 2020 Predictive Maintenance Dataset",
+   "url": "https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset",
+   "oferece": "Classificação de falhas em máquinas industriais (sintético) | Máquina genérica industrial | Tipo de produto, temperatura do ar, temperatura do processo, velocidade de rotação, torque, desgaste da ferramenta, target (falha), tipo de falha",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC BY 4.0",
+   "tipo_fonte": "Software/Ferramenta",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando AI4I 2020 Predictive Maintenance Dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_077",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "RUL",
+   "nome": "XJTU-SY Bearing Datasets",
+   "url": "https://github.com/WangBiaoXJTU/xjtu-sy-bearing-datasets",
+   "oferece": "Datasets de Remaining Useful Life | Múltiplos equipamentos | Vida útil remanescente, condição atual",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "não verificado",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com XJTU-SY Bearing Datasets."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_115",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Pressure",
+   "nome": "Two-Phase Flow in Horizontal Pipe (Unicamp)",
+   "url": "https://doi.org/10.25824/redu/ISMWP4",
+   "oferece": "Fluxo bifásico gas-água em tubulação horizontal | Tubulação de aço horizontal (ar + água) | 10 sensores de pressão piezoelétrica (PCB 112B21, 106B50), 5 acelerômetros (PCB 352C33), void fraction meters (4 estações), câmera de alta velocidade (Phantom VEO 640, 800 fps)",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_tubulacao",
+     "frase": "Calibrar tubulação da Planta Virtual com dado real de Two-Phase Flow in Horizontal Pipe (Unicamp)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "tubulacao",
+     "nota": "match por palavra-chave 'tubulação'"
+    }
+   ],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "confiabilidade_falhas_003",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "OREDA Standards & Publications",
+   "url": "https://oreda.com/standards-and-publications/",
+   "oferece": "Handbooks publicados com dados de confiabilidade pré-analisados e validados.",
+   "status": "CONFIRMADO",
+   "risco_legal": "BLOQUEADO",
+   "licenca": "proprietaria_paga — Copyright OREDA",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de OREDA Standards & Publications."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "confiabilidade_falhas_020",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "OREDA — Offshore and Onshore Reliability Data",
+   "url": "https://www.oreda.com/",
+   "oferece": "Taxas de falha de equipamento estático/rotativo em O&G; MTBF, modos de falha (300+ instalações, 18mil+ equipamentos).",
+   "status": "CONFIRMADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "paga — consórcio OREDA (SINTEF/DNV), assinatura corporativa/handbook",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de OREDA — Offshore and Onshore Reliability Data."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_189",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Failures",
+   "nome": "Plant Fault Detection Dataset (70 Industrial Sites)",
+   "url": "https://phmsociety.org/conference/annual-conference-of-the-phm-society/annual-conference-of-the-prognostics-and-health-management-society-2015/phm-data-challenge-3/",
+   "oferece": "Dados de falhas de 70 instalações industriais | Múltiplos equipamentos industriais | 212 data files, múltiplos formatos CSV (raw, selected, sampled)",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Plant Fault Detection Dataset (70 Industrial Sites)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_055",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Temperature",
+   "nome": "Sensor-Based Environmental Monitoring Dataset",
+   "url": "https://data.mendeley.com/datasets/pdsjz2wjw7/1",
+   "oferece": "Datasets de temperatura | Múltiplos equipamentos | Temperatura, gradiente térmico",
+   "status": "CONFIRMADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "não verificado",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "dado_operacional_equipamento_generico",
+     "frase": "Dados operacionais genéricos de equipamento (Sensor-Based Environmental Monitoring Dataset); descrição curta, uso a confirmar."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_fccu_mlpse",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Multi-sensor",
+   "nome": "FCCU Dataset (ML-PSE) — Fluid Catalytic Cracking Unit Process Monitoring",
+   "url": "https://github.com/ML-PSE/Fluid-Catalytic-Cracking-Unit-Dataset-for-Process-Monitoring-Evaluation",
+   "oferece": "Dataset de monitoramento de processo de uma unidade de craqueamento catalítico fluido (FCC) — dados de simulação pra avaliação de métodos de process monitoring/fault detection",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "MIT License — confirmado por 2 fontes independentes lendo o LICENSE do repositório GitHub, incl. nome do titular do copyright ('Copyright (c) 2023 Ankur Kumar')",
+   "tipo_fonte": "Dataset sintético/simulado",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando FCCU Dataset (ML-PSE) — Fluid Catalytic Cracking Unit Process Monitor…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_059",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Electrical",
+   "nome": "MCSA-DC (Motor Current Signature Analysis Data Center)",
+   "url": "https://github.com/lias-laboratory/mcsa-dc",
+   "oferece": "Datasets de assinatura elétrica | Motores, geradores | Corrente, tensão, potência, frequência, harmônicos",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC BY 4.0 (LICENSE explícito no repositório)",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando MCSA-DC (Motor Current Signature Analysis Data Center)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "equipamento"
+  },
+  {
+   "id": "confiabilidade_falhas_004",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "AIChE/CCPS PERD",
+   "url": "https://ccps.aiche.org/resources/process-equipment-reliability-database-perd",
+   "oferece": "Base/metodologia de confiabilidade de equipamentos de processo, alinhada à ISO 14224.",
+   "status": "CONFIRMADO",
+   "risco_legal": "BLOQUEADO",
+   "licenca": "proprietaria_paga — Copyright AIChE/CCPS",
+   "tipo_fonte": "Norma/Padrão técnico",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de AIChE/CCPS PERD."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_159",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Failures",
+   "nome": "Additional TEP Data for Anomaly Detection Evaluation",
+   "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1",
+   "oferece": "Extensão do TEP para avaliação de anomaly detection | Tennessee Eastman Process | 55 colunas (mesmas do TEP original)",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Additional TEP Data for Anomaly Detection Evaluation."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_114",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Multi-sensor",
+   "nome": "PRONTO Heterogeneous Benchmark Dataset",
+   "url": "https://zenodo.org/record/1341582",
+   "oferece": "Dados heterogêneos de processo industrial (água, ar, óleo) | Facilidade de fluxo industrial (Cranfield University) | Pressão, vazão, temperatura, densidade, alarmes, sensores de alta frequência (pressão, ultrassom), logs de operação, vídeo || CORRECAO URL 2026-09-18 (Claude/chat, busca web direta): URL antiga apontava para zenodo.org (raiz do agregador), corrigida para o registro especifico do dataset (Zenodo, publicado 16/05/2019, ABB Corporate Research/Imperial College London/Zhejiang University).",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando PRONTO Heterogeneous Benchmark Dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "confiabilidade_falhas_002",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "OREDA@Cloud",
+   "url": "https://oreda.com/oredacloud/",
+   "oferece": "Acesso web a datasets estruturados, pesquisáveis e filtráveis de confiabilidade e manutenção.",
+   "status": "CONFIRMADO",
+   "risco_legal": "BLOQUEADO",
+   "licenca": "proprietaria_paga — Copyright OREDA",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de OREDA@Cloud."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ibm_failuresensoriq",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Benchmark_Agente_IA_Confiabilidade",
+   "nome": "FailureSensorIQ (IBM Research)",
+   "url": "https://huggingface.co/datasets/ibm-research/FailureSensorIQ",
+   "oferece": "Dataset MCQA (Multi-Choice QA) relacionando sensores e modos de falha para 10 ativos industriais (motor elétrico, turbina a vapor, turbina a gás aero/industrial, etc.) — 8296 perguntas (2667 single-true + 5629 multi-true), geradas a partir de documentos ISO. Inclui leaderboard e paper (arXiv:2506.03278). Repositório: github.com/IBM/FailureSensorIQ",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Apache License 2.0 (confirmada em texto literal no README do dataset)",
+   "tipo_fonte": "Artigo/Metodologia",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (FailureSensorIQ (IBM Research))."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "confiabilidade_falhas_016",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "GIDEP (Government-Industry Data Exchange Program)",
+   "url": "https://www.gidep.org/dashboard/content/data",
+   "oferece": "Base colaborativa governo-indústria dos EUA com taxas de falha, modos e manutenção",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "proprietaria_gratuita — Gov-US / Restrição membros",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de GIDEP (Government-Industry Data Exchange Program)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_105",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Curadorias / Portais",
+   "nome": "PMx_data (Predictive Maintenance eXtended)",
+   "url": "https://github.com/autonlab/pmx_data",
+   "oferece": "Curadoria de datasets para manutenção preditiva | Múltiplos: heat exchangers, pumps, robots, turbofan, solar, trucks | Links, scripts de download, metadados",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "meta_ferramentas"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_trocador_calor",
+     "frase": "Calibrar trocador de calor da Planta Virtual com dado real de PMx_data (Predictive Maintenance eXtended)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "trocador_calor",
+     "nota": "match por palavra-chave 'heat exchanger'"
+    },
+    {
+     "equipamento": "bomba",
+     "nota": "match por palavra-chave 'pumps'"
+    }
+   ],
+   "cluster": "portais"
+  },
+  {
+   "id": "src_ind_103",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Acoustic",
+   "nome": "Acoustic Emission Bearing Fault Dataset (Kaggle)",
+   "url": "https://www.kaggle.com/datasets/ahuyng/bearingfault-dataset",
+   "oferece": "Sinais de emissão acústica de rolamentos com falhas | Rolamento (pitch 46.5mm, 13 elementos, diâmetro 9mm) | Emissão acústica (250 kHz), velocidades 250-500 RPM",
+   "status": "BLOQUEADO_FERRAMENTA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Verificar",
+   "tipo_fonte": "Áudio",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_acustico_industrial",
+     "frase": "Diagnosticar falha por assinatura acústica usando Acoustic Emission Bearing Fault Dataset (Kaggle)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_056",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Pressure",
+   "nome": "Edge-AI Sensor Dataset for Smart Manufacturing",
+   "url": "https://ieee-dataport.org/documents/edge-ai-sensor-dataset-real-time-fault-prediction-smart-manufacturing",
+   "oferece": "Datasets de pressão | Múltiplos equipamentos | Pressão, pressão diferencial",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "não verificado (regra 9: IEEE DataPort força CC BY em bloco — confirmar quando verificar)",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "edge_iiot_benchmark",
+     "frase": "Avaliar desempenho de protocolo/dispositivo IIoT/edge com Edge-AI Sensor Dataset for Smart Manufacturing."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_CuttingBlade_1Y",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "RUL",
+   "nome": "One Year Industrial Component Degradation (Cutting Blade / Vega Shrink-wrapper)",
+   "url": "https://www.kaggle.com/datasets/inIT-OWL/one-year-industrial-component-degradation",
+   "oferece": "Um ano de dados de degradação de componente industrial real (lâmina de corte de uma embaladora shrink-wrap Vega) — sensores de vibração/corrente ao longo de ciclo completo de vida útil",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "CC BY-SA 3.0 — declarado na página Kaggle",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com One Year Industrial Component Degradation (Cutting Blade / Vega Shrin…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_rare_event_pulp_paper",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Anomaly_Detection / CPS",
+   "nome": "Rare Event Classification in Multivariate Time Series — Pulp and Paper Dataset (Ranjan et al. 2018)",
+   "url": "https://arxiv.org/abs/1809.10717",
+   "oferece": "Dataset real de planta de papel e celulose pra classificação de evento raro (paper break) em série temporal multivariada — ~19k observações, sensores de processo contínuo",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International — lido literalmente na Seção 8 (LICENSE) do paper arXiv:1809.10717: 'users can share... cannot be used for any commercial purposes... distribute any additions...'",
+   "tipo_fonte": "Artigo/Metodologia",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Rare Event Classification in Multivariate Time Series — Pulp and Pape…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_149",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Curadorias / Portais",
+   "nome": "UMFDD - Universal Machinery Fault Diagnosis Dataset",
+   "url": "https://data.mendeley.com/datasets/3bz24t6tf4",
+   "oferece": "Repositório multi-sensor normalizado para fault diagnosis cross-domain | Integra CWRU, UOEMD, UORED, HUST, IM-VACD, gearbox multi-mode | Vibração (m/s² → m/s), acústico (V → Pa → particle velocity), corrente, temperatura",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Áudio",
+   "macro_categorias": [
+    "meta_ferramentas"
+   ],
+   "tags_uso": [
+    {
+     "tag": "curadoria_agregador_portal",
+     "frase": "Navegar curadoria/portal agregador de outros datasets (UMFDD - Universal Machinery Fault Diagnosis Dataset) — não é fonte primária em si."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "portais"
+  },
+  {
+   "id": "src_ind_APS_Scania",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Fault_Diagnosis / Cost-Sensitive",
+   "nome": "APS Failure at Scania Trucks (UCI / IDA 2016)",
+   "url": "https://archive.ics.uci.edu/dataset/421/aps+failure+at+scania+trucks",
+   "oferece": "Dataset de diagnóstico de falha do sistema de ar comprimido (APS) de caminhões Scania, usado no desafio IDA 2016 — classificação binária custo-sensível (falso negativo custa 500x mais que falso positivo)",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC BY 4.0 — padrão da plataforma UCI Machine Learning Repository",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando APS Failure at Scania Trucks (UCI / IDA 2016)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "qwen_p21",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Confiabilidade Estática",
+   "nome": "Energy Institute (Heat Exchangers)",
+   "url": "https://www.energyinst.org/",
+   "oferece": "Incidentes e taxas de falha de trocadores de calor",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Misto (sumários abertos; relatórios completos via associação/compra)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_trocador_calor",
+     "frase": "Calibrar trocador de calor da Planta Virtual com dado real de Energy Institute (Heat Exchangers)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "trocador_calor",
+     "nota": "match por palavra-chave 'heat exchanger'"
+    }
+   ],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_161",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Failures",
+   "nome": "SECOM - Semiconductor Manufacturing Process Data",
+   "url": "https://archive.ics.uci.edu/ml/datasets/SECOM",
+   "oferece": "Dados de manufatura de semicondutores para quality prediction | Processo de fabricação de semicondutores | 590 features de sensores, pass/fail label",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando SECOM - Semiconductor Manufacturing Process Data."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_112",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Vibration",
+   "nome": "NREL Wind Turbine Gearbox Vibration Benchmark",
+   "url": "https://catalog.data.gov/dataset/wind-turbine-gearbox-condition-monitoring-vibration-analysis-benchmarking-datasets",
+   "oferece": "Vibração de gearbox de turbina eólica (dinamômetro + campo) | Gearbox de turbina eólica (saudável e danificado) | Acelerômetros (múltiplos eixos), RPM do high-speed shaft",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando NREL Wind Turbine Gearbox Vibration Benchmark."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_maintie_uwa",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Work_Orders",
+   "nome": "MaintIE - Information Extraction from Maintenance Short Texts",
+   "url": "https://github.com/nlp-tlp/maintie",
+   "oferece": "Esquema de anotação + corpus (1.076 textos fino-granulares + 7.000 textos grosso-granulares) e modelos de benchmark para extração de entidades/relações de ordens de serviço de manutenção (MWOs).",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "MIT (confirmado literalmente no README do repositório GitHub e no paper ACL Anthology/LREC-COLING 2024: \"publicly available... under the MIT license\").",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ordem_servico_manutencao",
+     "frase": "Analisar padrão de ordem de serviço de manutenção com MaintIE - Information Extraction from Maintenance Short Texts."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "gestao"
+  },
+  {
+   "id": "src_ind_120",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Curadorias / Portais",
+   "nome": "Fraunhofer Machine Learning Datasets for Production",
+   "url": "https://www.bigdata-ai.fraunhofer.de/s/datasets/index.html",
+   "oferece": "Múltiplos datasets de processos de produção | Extrusora de plástico, máquina de revestimento (e-coating), forno de roasting, wafer manufacturing | Temperatura, pressão, vibração, espessura, defeitos, qualidade",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Varia por dataset",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "meta_ferramentas"
+   ],
+   "tags_uso": [
+    {
+     "tag": "curadoria_agregador_portal",
+     "frase": "Navegar curadoria/portal agregador de outros datasets (Fraunhofer Machine Learning Datasets for Production) — não é fonte primária em si."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "portais"
+  },
+  {
+   "id": "src_ind_SKAB",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Multi-sensor",
+   "nome": "SKAB — Skoltech Anomaly Benchmark",
+   "url": "https://github.com/waico/SKAB",
+   "oferece": "Benchmark de anomaly detection em time-series multivariada (8 sensores: vibração×2, corrente, pressão, temperatura×2, tensão, vazão) em testbed de circulação de água com bomba. 35 CSVs (~37k pontos). Labels dual: outlier (ponto) e changepoint (coletivo).",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "GPL-3.0 — lido literalmente no arquivo LICENSE (github.com/waico/SKAB/blob/master/LICENSE)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando SKAB — Skoltech Anomaly Benchmark."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_058",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Acoustic",
+   "nome": "DINOS - Diverse INdustrial Operation Sounds",
+   "url": "https://doi.org/10.7910/DVN/FWAZBQ",
+   "oferece": "Datasets acústicos | Múltiplos equipamentos | Áudio, espectrogramas, dB",
+   "status": "CONFIRMADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "não verificado",
+   "tipo_fonte": "Áudio",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_acustico_industrial",
+     "frase": "Diagnosticar falha por assinatura acústica usando DINOS - Diverse INdustrial Operation Sounds."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_054",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Vibration",
+   "nome": "Vibration Signals of Different Fault Conditions",
+   "url": "https://zenodo.org/records/14388093",
+   "oferece": "Datasets de vibração genéricos | Múltiplos equipamentos | Aceleração, velocidade, deslocamento, frequência",
+   "status": "CONFIRMADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "CC BY 4.0",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Vibration Signals of Different Fault Conditions."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_industrial_maintenance_synthetic",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "work_orders_sinteticos",
+   "nome": "Industrial Maintenance Synthetic Dataset — Jvachier (Hugging Face/Kaggle)",
+   "url": "https://huggingface.co/datasets/Jvachier/industrial-maintenance-synthetic",
+   "oferece": "Dataset sintético de manutenção industrial (ordens de serviço, eventos, falhas simuladas)",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Apache 2.0",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ordem_servico_manutencao",
+     "frase": "Analisar padrão de ordem de serviço de manutenção com Industrial Maintenance Synthetic Dataset — Jvachier (Hugging Face/Kag…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "gestao"
+  },
+  {
+   "id": "confiabilidade_falhas_009",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "NeqSim - Reliability Data Sources",
+   "url": "https://equinor.github.io/neqsim/",
+   "oferece": "Framework que carrega dados de confiabilidade (MTBF, MTTR) de arquivos CSV baseados em OREDA",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "aberta — MIT License",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de NeqSim - Reliability Data Sources."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_076",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Work_Orders",
+   "nome": "Industrial Maintenance Synthetic Dataset",
+   "url": "https://www.kaggle.com/datasets/jvachier/industrial‑maintenance‑synthetic",
+   "oferece": "Ordens de serviço de manutenção | Múltiplos equipamentos | Tipo de manutenção, tempo, custo, peças",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Apache 2.0",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ordem_servico_manutencao",
+     "frase": "Analisar padrão de ordem de serviço de manutenção com Industrial Maintenance Synthetic Dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "gestao"
+  },
+  {
+   "id": "src_ind_037",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Curadorias / Portais",
+   "nome": "IEEE Industrial AI Lab Datasets",
+   "url": "https://www.ieee.org/",
+   "oferece": "Curadoria de datasets industriais e manutenção preditiva | Múltiplos equipamentos industriais | Links e metadados",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "meta_ferramentas"
+   ],
+   "tags_uso": [
+    {
+     "tag": "curadoria_agregador_portal",
+     "frase": "Navegar curadoria/portal agregador de outros datasets (IEEE Industrial AI Lab Datasets) — não é fonte primária em si."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "portais"
+  },
+  {
+   "id": "src_ind_110",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Vibration",
+   "nome": "Rotating Electromechanical System Dataset (Nature Sci Data)",
+   "url": "https://www.nature.com/articles/s41597-026-07224-0",
+   "oferece": "Sinais multivariados sincronizados de sistema eletromecânico | Bancada eletromecânica flexível (motor + carga) | Vibração (acelerômetro), corrente elétrica (3 fases), temperatura, velocidade de rotação",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Rotating Electromechanical System Dataset (Nature Sci Data)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "qwen_p19",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Confiabilidade Estática",
+   "nome": "UK HSE ROGI (Offshore Oil and Gas Incident)",
+   "url": "https://www.hse.gov.uk/offshore/omar/rogi.htm",
+   "oferece": "Dados de liberação de hidrocarbonetos e falhas offshore",
+   "status": "VERIFICADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto (relatórios agregados)",
+   "tipo_fonte": "Base de dados institucional/governamental",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de UK HSE ROGI (Offshore Oil and Gas Incident)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "confiabilidade_falhas_018",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "Exida SILSafe Data",
+   "url": "https://silsafedata.com/",
+   "oferece": "Coleção de taxas de falha aplicáveis a Sistemas Instrumentados de Segurança (SIS)",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "proprietaria_gratuita — Copyright exida (gratuito parcial)",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de Exida SILSafe Data."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_075",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Inspection",
+   "nome": "Real-IAD D3 - Multimodal Industrial Anomaly Detection",
+   "url": "https://huggingface.co/datasets/Real-IAD/Real-IAD_D3",
+   "oferece": "Dados de inspeção industrial | Múltiplos equipamentos | Tipo de inspeção, resultados, data",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "não verificado",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "inspecao_visual"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_visao_computacional_industrial",
+     "frase": "Treinar/testar modelo de visão computacional (inspeção/defeito) com Real-IAD D3 - Multimodal Industrial Anomaly Detection."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "equipamento"
+  },
+  {
+   "id": "confiabilidade_falhas_011",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "SCANIA Component X Dataset",
+   "url": "https://www.nature.com/articles/s41597-024-03548-5",
+   "oferece": "Dataset real de falhas de componente de motor de caminhão SCANIA",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "aberta — CC BY 4.0",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de SCANIA Component X Dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_038",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Curadorias / Portais",
+   "nome": "Industrial Atlas",
+   "url": "https://www.indatlas.com/",
+   "oferece": "Benchmarks industriais curados | Bombas, rolamentos, sistemas hidráulicos | Links e metadados",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "meta_ferramentas"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_bomba",
+     "frase": "Calibrar bomba da Planta Virtual com dado real de Industrial Atlas."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "bomba",
+     "nota": "benchmarks industriais curados incluindo bombas/rolamentos/sistemas hidráulicos — agregador genérico, não datasheet específico"
+    }
+   ],
+   "cluster": "portais"
+  },
+  {
+   "id": "confiabilidade_falhas_005",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "AIChE/CCPS PERD Publications",
+   "url": "https://ccps.aiche.org/resources/perd/publications",
+   "oferece": "Publicações e tabelas de dados de confiabilidade de equipamentos de processo.",
+   "status": "CONFIRMADO",
+   "risco_legal": "BLOQUEADO",
+   "licenca": "proprietaria_paga — Copyright AIChE/CCPS",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de AIChE/CCPS PERD Publications."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_096",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Curadorias / Portais",
+   "nome": "Data Resources for Materials Science (GitHub)",
+   "url": "https://github.com/sedaoturak/data-resources-for-materials-science",
+   "oferece": "Curadoria de bancos de dados de materiais | Todas as classes de materiais | Links, descrições, tipos de propriedades || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico.",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Repositório agregador",
+   "macro_categorias": [
+    "meta_ferramentas"
+   ],
+   "tags_uso": [
+    {
+     "tag": "curadoria_agregador_portal",
+     "frase": "Navegar curadoria/portal agregador de outros datasets (Data Resources for Materials Science (GitHub)) — não é fonte primária em si."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "portais"
+  },
+  {
+   "id": "src_ind_039",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Curadorias / Portais",
+   "nome": "GitHub - Predictive Maintenance Datasets",
+   "url": "https://github.com/kokikwbt/predictive-maintenance",
+   "oferece": "Lista de datasets para manutenção preditiva | Múltiplos equipamentos | Links e metadados || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico.",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Repositório agregador",
+   "macro_categorias": [
+    "meta_ferramentas"
+   ],
+   "tags_uso": [
+    {
+     "tag": "curadoria_agregador_portal",
+     "frase": "Navegar curadoria/portal agregador de outros datasets (GitHub - Predictive Maintenance Datasets) — não é fonte primária em si."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "portais"
+  },
+  {
+   "id": "confiabilidade_falhas_017",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "Exida Component Reliability Database (CRD)",
+   "url": "https://www.exida.com/OEMx/Reliability-Database",
+   "oferece": "Banco de dados de taxas de falha para componentes elétricos, mecânicos e sensores",
+   "status": "CONFIRMADO",
+   "risco_legal": "BLOQUEADO",
+   "licenca": "proprietaria_paga — Copyright exida",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de Exida Component Reliability Database (CRD)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_alpi_packaging",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Anomaly_Detection / CPS",
+   "nome": "ALPI — Alarm Logs in Packaging Industry",
+   "url": "https://ieee-dataport.org/open-access/alarm-logs-packaging-industry-alpi",
+   "oferece": "Logs de alarme de 20 máquinas de embalagem industrial (2019-2020), 154 códigos de alarme distintos — previsão de próximo alarme / manutenção preditiva por eventos",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC BY — regra de plataforma do IEEE DataPort, confirmada em múltiplas páginas oficiais IEEE: 'Datasets on IEEE DataPort are made available under Creative Commons Attribution (CC-BY) licenses which require attribution'",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando ALPI — Alarm Logs in Packaging Industry."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_117",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Electrical",
+   "nome": "Current Signature Dataset - Three-Phase Induction Motor",
+   "url": "https://data.mendeley.com/datasets/gxdd74czwh",
+   "oferece": "Corrente 3-fase de motor com falhas de rolamento e BRB | Motor de indução com rolamentos defeituosos e barras quebradas | Corrente instantânea 3-fase [A], 10 kHz sampling, 1000 amostras/canal",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Current Signature Dataset - Three-Phase Induction Motor."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "equipamento"
+  },
+  {
+   "id": "src_maintie",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_manutencao_texto",
+   "nome": "MaintIE - Information Extraction from Maintenance Short Texts — nlp-tlp",
+   "url": "https://github.com/nlp-tlp/maintie",
+   "oferece": "Esquema de anotação multi-nível e corpus (1.076 textos finos + 7.000 textos grossos) para extração de entidades/relações de ordens de serviço de manutenção (MWOs)",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "MIT (confirmado no README oficial do repositório)",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de MaintIE - Information Extraction from Maintenance Short Texts — nlp-t…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "confiabilidade_falhas_019",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "confiabilidade_falhas",
+   "nome": "BÔNUS: AIChE DIERS - alívio emergencial.",
+   "url": "https://www.aiche.org/ccps/design-institute-emergency-relief-systems-diers",
+   "oferece": "BÔNUS: AIChE DIERS - alívio emergencial.",
+   "status": "CONFIRMADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Copyright AIChE/CCPS (Assinatura)",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de BÔNUS: AIChE DIERS - alívio emergencial.."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_087",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Multi-sensor",
+   "nome": "Industrial Sensor Time-Series with Operational Event Labels",
+   "url": "https://ieee-dataport.org/documents/industrial-sensor-time-series-operational-event-labels-digital-twin-research",
+   "oferece": "Séries temporais multivariadas de sensores industriais | Sistema industrial genérico | Temperatura, vibração, pressão, horas operacionais, índice de eficiência, estado do sistema, performance score",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Verificar",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Industrial Sensor Time-Series with Operational Event Labels."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_167",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Vibration",
+   "nome": "Lab-Scale Vibration Analysis Dataset (Zenodo)",
+   "url": "https://zenodo.org/record/7006575",
+   "oferece": "Vibração de máquina em escala laboratorial | Máquina rotativa em bancada | Vibração, 4 condições: normal, unbalance, misalignment, bearing fault",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Lab-Scale Vibration Analysis Dataset (Zenodo)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "qwen_p41",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Vibração/Prognóstico",
+   "nome": "NASA Prognostics Data Repository - IMS Bearing Dataset",
+   "url": "https://data.phmsociety.org/nasa/",
+   "oferece": "Experimentos run-to-failure de rolamentos para RUL (Vida Útil Remanescente)",
+   "status": "VERIFICADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Base de dados institucional/governamental",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com NASA Prognostics Data Repository - IMS Bearing Dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_185",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Curadorias / Portais",
+   "nome": "Awesome Industrial Datasets - Extended (GitHub)",
+   "url": "https://github.com/jonathanwvd/awesome-industrial-datasets",
+   "oferece": "Curadoria expandida de datasets industriais (50+ datasets) | Múltiplos: oil wells, turbines, bearings, motors, valves, chemical process, manufacturing | Links, metadados, descrições, licenças, formatos || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico. || CONSOLIDACAO 2026-09-18 (Claude/chat, correcao de dominios repetidos): src_ind_095 era a mesma entrada (repositorio unico github.com/jonathanwvd/awesome-industrial-datasets), cadastrada 2x em rodadas diferentes com contagens desatualizadas; verificado ao vivo (18/09/2026): repo ativo com 190 datasets catalogados atualmente, cresce continuamente. Mesclada em src_ind_185.",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Repositório agregador",
+   "macro_categorias": [
+    "meta_ferramentas"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_valvula",
+     "frase": "Calibrar válvula da Planta Virtual com dado real de Awesome Industrial Datasets - Extended (GitHub)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "valvula",
+     "nota": "match por palavra-chave 'valve'"
+    }
+   ],
+   "cluster": "portais"
+  },
+  {
+   "id": "src_ind_119",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Vibration",
+   "nome": "Paper Machine Vibration Dataset with Annotations (Luleå UT)",
+   "url": "https://researchdata.se/en/catalogue/dataset/2023-246/1",
+   "oferece": "Vibração anotada de máquinas de papel (process industry real) | 2 máquinas de papel Kraftliner (80m×10m×10m) | FFT e envelope-transformed vibration signals, anotações em sueco (por especialistas), embeddings Swedish SentenceBERT",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "BLOQUEADO",
+   "licenca": "Restrito",
+   "tipo_fonte": "Artigo/Metodologia",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Paper Machine Vibration Dataset with Annotations (Luleå UT)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_057",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Flow",
+   "nome": "DiTEC-WDN - Water Distribution Network Dataset",
+   "url": "https://github.com/DiTEC-project/DiTEC_WDN_dataset",
+   "oferece": "Datasets de vazão | Múltiplos equipamentos | Vazão massica, volumétrica",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC BY 4.0",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "dado_operacional_equipamento_generico",
+     "frase": "Dados operacionais genéricos de equipamento (DiTEC-WDN - Water Distribution Network Dataset); descrição curta, uso a confirmar."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_NoBOOM",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Anomaly_Detection_Processos_Quimicos",
+   "nome": "NoBOOM — Chemical Process Datasets for Industrial Anomaly Detection",
+   "url": "https://www.kaggle.com/datasets/faebs94/noboom-anomaly-detection-in-chemical-processes",
+   "oferece": "Primeira coleção de datasets de anomaly detection em dados reais de processo químico: dados rotulados de um processo em operação real na BASF SE + vários processos químicos em plantas laboratoriais/piloto, com informação detalhada de configuração de planta e rótulos de anomalia.",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "CC-BY-SA 4.0 — confirmado por citação literal do paper oficial NeurIPS 2025 (via OpenReview, Perplexity 2026-08-30: \"The NoBOOM dataset itself is released under the CC-BY-SA 4.0 license, which is clearly specified on the dataset page\") + achado independente anterior via GitHub/paper que também leu CC-BY-SA 4.0. A leitura divergente 'CC BY 4.0' (LOTE_E, via suposto fetch direto do Kaggle) é descartada por vir de um método já sinalizado como pouco confiável neste protocolo.",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_processo_quimico_simulado",
+     "frase": "Simular/testar detecção de falha em processo químico contínuo usando NoBOOM — Chemical Process Datasets for Industrial Anomaly Detection."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_PHM2022_RockDrill",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "PHM_Challenges",
+   "nome": "PHM Data Challenge 2022 — Rock Drill Fault Classification (Epiroc/Linköping Univ.)",
+   "url": "https://data.phmsociety.org/2022-phm-conference-data-challenge/",
+   "oferece": "Classificação de falhas em perfuratriz hidráulica (rock drill) sob diferentes configurações individuais; dados de sensor de pressão a 50kHz, 5 configurações de treino + configurações cegas de teste/validação.",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "CC BY 3.0 US — confirmado por fetch direto do PDF oficial 'PHM2022_Data_Challenge_Description.pdf' (Perplexity, 2026-08-30), reproduzindo o mesmo texto literal já citado pela leitura anterior (LOTE_E) da mesma fonte primária.",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com PHM Data Challenge 2022 — Rock Drill Fault Classification (Epiroc/Lin…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_femtost_bearing_rul",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "RUL_Rolamentos",
+   "nome": "FEMTO-ST Bearing Dataset for RUL Prediction",
+   "url": "https://huggingface.co/datasets/amgharr/femto-st_dataset",
+   "oferece": "Dataset de rolamentos (bearings) do instituto FEMTO-ST, reempacotado para predição de RUL (Remaining Useful Life), com arquivos parquet e viewer no Hugging Face.",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "\"License: MIT\" (dataset card + README, Hugging Face)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com FEMTO-ST Bearing Dataset for RUL Prediction."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_nasa_ims_bearings",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "RUL_Rolamentos",
+   "nome": "IMS Bearings Dataset (NASA Open Data Portal / PCoE)",
+   "url": "https://data.nasa.gov/dataset/ims-bearings",
+   "oferece": "Dados de degradação/run-to-failure de rolamentos (vibração), referência clássica em PHM/RUL",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "U.S. Government Works — domínio público (usa.gov/government-works)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com IMS Bearings Dataset (NASA Open Data Portal / PCoE)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_nasa_cmapss_v2_turbofan2",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "RUL_Turbomaquinas",
+   "nome": "NASA C-MAPSS Turbofan Engine Degradation Simulation Dataset (v2 / Turbofan-2)",
+   "url": "https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan-2",
+   "oferece": "Simulação de degradação de motores turbofan (dataset v2), referência em RUL/PHM",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC0: Public Domain / U.S. Government Works",
+   "tipo_fonte": "Dataset sintético/simulado",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com NASA C-MAPSS Turbofan Engine Degradation Simulation Dataset (v2 / Tur…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_nasa_cmapss_classic_turbofan",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "RUL_Turbomaquinas",
+   "nome": "NASA C-MAPSS Turbofan Engine Degradation Simulation Dataset (clássico / FD001-FD004)",
+   "url": "https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan",
+   "oferece": "Dataset clássico FD001-FD004 de degradação de motores turbofan, referência mundial em RUL/PHM",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC0: Public Domain / U.S. Government Works",
+   "tipo_fonte": "Base de dados institucional/governamental",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com NASA C-MAPSS Turbofan Engine Degradation Simulation Dataset (clássico…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_blog_sintef_com_sintef_pds_hand",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Dados_Confiabilidade_SINTEF",
+   "nome": "SINTEF PDS Handbook 2021/2013 (cita blog SINTEF com quote da Equinor)",
+   "url": "https://blog.sintef.com/digital-en/new-handbook-reliability-data-for-safety-equipment",
+   "oferece": "DU/DD/SFF/DC/PTC final elements valvulas",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "Confirmado por citação literal (SINTEF PDS Handbook).",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_valvula",
+     "frase": "Calibrar válvula da Planta Virtual com dado real de SINTEF PDS Handbook 2021/2013 (cita blog SINTEF com quote da Equinor)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "valvula",
+     "nota": "match por palavra-chave 'valvula'"
+    }
+   ],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_sintef_no_sintef_pds_data",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Dados_Confiabilidade_SINTEF",
+   "nome": "SINTEF PDS Data Handbook (2021) + loja",
+   "url": "https://sintef.no",
+   "oferece": "site institucional da SINTEF — pagina sobre o PDS Data Handbook (2021), contexto e resumo do produto, sem acesso ao conteudo completo",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "SINTEF PDS Data Handbook confirmado por citação literal.",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de SINTEF PDS Data Handbook (2021) + loja."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_sintefstore_no_sintef_pds_data",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Dados_Confiabilidade_SINTEF",
+   "nome": "SINTEF PDS Data Handbook (2021) + loja",
+   "url": "https://sintefstore.no/en/products/pds-handbooks",
+   "oferece": "loja online da SINTEF (sintefstore.no) — pagina de compra efetiva do PDS Data Handbook (2021), onde o documento e adquirido",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "SINTEF PDS Data Handbook / loja confirmado por citação literal.",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de SINTEF PDS Data Handbook (2021) + loja."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_cbm_naval_propulsion_uci",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "RUL_Turbomaquinas",
+   "nome": "Condition Based Maintenance of Naval Propulsion Plants (UCI)",
+   "url": "https://archive.ics.uci.edu/ml/datasets/condition+based+maintenance+of+naval+propulsion+plants",
+   "oferece": "Simulação de planta de propulsão naval (turbina a gás) pra manutenção baseada em condição — degradação de compressor e turbina",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC BY 4.0",
+   "tipo_fonte": "Dataset sintético/simulado",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_compressor",
+     "frase": "Calibrar compressor da Planta Virtual com dado real de Condition Based Maintenance of Naval Propulsion Plants (UCI)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "compressor",
+     "nota": "match por palavra-chave 'compressor'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ufd_ultrasonic_flowmeter_uci",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Flow",
+   "nome": "Ultrasonic Flowmeter Diagnostics (UCI)",
+   "url": "https://archive.ics.uci.edu/ml/datasets/Ultrasonic+flowmeter+diagnostics",
+   "oferece": "Diagnóstico de falhas em medidor de vazão ultrassônico",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC BY 4.0",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Ultrasonic Flowmeter Diagnostics (UCI)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_initowl_production_plant",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Anomaly_Detection / CPS",
+   "nome": "Production Plant Data for Condition Monitoring (inIT-OWL, Kaggle)",
+   "url": "https://www.kaggle.com/datasets/inIT-OWL/production-plant-data-for-condition-monitoring",
+   "oferece": "Dados de planta de produção industrial pra monitoramento de condição (série inIT-OWL)",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "RESTRITO",
+   "licenca": "CC BY-SA 3.0",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando Production Plant Data for Condition Monitoring (inIT-OWL, Kaggle)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_industrial_equipment_maintenance_data",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Manutencao_Geral",
+   "nome": "Industrial Equipment Maintenance Data",
+   "url": "https://kaggle.com/datasets/mayurgadekar5555/industrial-equipment-maintenance-data",
+   "oferece": "-",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "\"Unknown\" (campo License literal do Kaggle) — NÃO equivale a licença aberta",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de Industrial Equipment Maintenance Data."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_initowl_vega_shrinkwrapper",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Confiabilidade_Manutencao",
+   "nome": "VEGA Shrinkwrapper Run-to-Failure Data (inIT-OWL, Kaggle)",
+   "url": "kaggle.com/inIT-OWL/vega-shrinkwrapper-runtofailure-data",
+   "oferece": "Dados de teste até falha de máquina shrinkwrapper VEGA",
+   "status": "CONFIRMADO",
+   "risco_legal": "ABERTO",
+   "licenca": "CC BY-SA",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de VEGA Shrinkwrapper Run-to-Failure Data (inIT-OWL, Kaggle)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "stg_cincinnati_fleet_wo",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Work_Orders",
+   "nome": "Fleet Preventative Maintenance & Repair Work Orders — City of Cincinnati",
+   "url": "data.cincinnati-oh.gov/Thriving-Neighborhoods/Fleet-Preventative-Maintenance-Repair-Work-Orders/2a8x-bxjm",
+   "oferece": "Ordens de manutenção preventiva/corretiva de frota municipal desde jan/2008",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Public Domain — portal Socrata/Tyler, campo License/licenseId confirmado por 3 fontes independentes (Qwen, LLM-B, LLM-C)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ordem_servico_manutencao",
+     "frase": "Analisar padrão de ordem de serviço de manutenção com Fleet Preventative Maintenance & Repair Work Orders — City of Cincinn…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "gestao"
+  },
+  {
+   "id": "stg_water_pump_rul_kaggle",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "RUL",
+   "nome": "Water Pump RUL",
+   "url": "https://www.kaggle.com/datasets/anseldsouza/water-pump-rul-predictive-maintenance",
+   "oferece": "RUL de bomba d'água, manutenção preditiva",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC0: Public Domain — confirmado por 2 fontes via provenance secundária (Kaggle bloqueava fetch direto)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_bomba",
+     "frase": "Calibrar bomba da Planta Virtual com dado real de Water Pump RUL."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "bomba",
+     "nota": "match por palavra-chave ' pump '"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "stg_lm_energyinst_org_parloc_2001_hse",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Confiabilidade_Dutos",
+   "nome": "PARLOC 2001 (HSE, historico) + PARLOC 2020 (Energy Institute)",
+   "url": "https://energyinst.org/industry/publications/topics/offshore-safety",
+   "oferece": "Taxas de falha dutos/risers offshore Mar do Norte 2001-2020",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "Todos os direitos reservados, reprodução proibida sem permissão por escrito — Energy Institute (confirmado por 2 fontes)",
+   "tipo_fonte": "Base de dados institucional/governamental",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "confiabilidade_mtbf_dados",
+     "frase": "Consultar dado de confiabilidade (MTBF/MTTR/taxa de falha) de PARLOC 2001 (HSE, historico) + PARLOC 2020 (Energy Institute)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_wo_kaggle_tinhban",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Work_Orders",
+   "nome": "Maintenance Work Orders Dataset (Kaggle)",
+   "url": "https://www.kaggle.com/datasets/tinhban/maintenance-work-orders-dataset",
+   "oferece": "Tabela de ordens de manutenção",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "License: Other — campo Kaggle, texto não lido literalmente",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ordem_servico_manutencao",
+     "frase": "Analisar padrão de ordem de serviço de manutenção com Maintenance Work Orders Dataset (Kaggle)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "gestao"
+  },
+  {
+   "id": "src_rul_continuous_casting",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "RUL",
+   "nome": "RUL Dataset from Continuous Casting Machine",
+   "url": "https://www.kaggle.com/datasets/yuriykatser/rul-dataset-from-continuous-casting-machine",
+   "oferece": "RUL de máquina de lingotamento contínuo — metalurgia",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "não lida literalmente ainda",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com RUL Dataset from Continuous Casting Machine."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_nasa_shuttle_valve",
+   "tema": "Confiabilidade_Manutencao",
+   "subtema": "Válvulas",
+   "nome": "NASA Shuttle Valve Data",
+   "url": "https://cs.fit.edu/~pkc/nasa/data/",
+   "oferece": "Benchmark clássico de detecção de outlier em válvula",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Sem licença formal — só obrigação de citação (Ferrell & Santuro, 2005)",
+   "tipo_fonte": "Base de dados institucional/governamental",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_valvula",
+     "frase": "Calibrar válvula da Planta Virtual com dado real de NASA Shuttle Valve Data."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "valvula",
+     "nota": "match por palavra-chave 'válvula'"
+    }
+   ],
+   "cluster": "equipamento"
+  },
+  {
+   "id": "AAS-001",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "Eclipse BaSyx Python SDK",
+   "url": "https://github.com/eclipse-basyx/basyx-python-sdk",
+   "oferece": "SDK para AAS/AASX, JSON e XML",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "MIT; dados de exemplo a confirmar / OK condicionado",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com Eclipse BaSyx Python SDK."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "AAS-002",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "Eclipse BaSyx Java Server SDK",
+   "url": "https://github.com/eclipse-basyx",
+   "oferece": "Servidores e componentes AAS || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): BaSyx Java V1; repositório arquivado/read-only em 29/07/2026; README recomenda BaSyx Java V2 para especificações IDTA atuais. [Achado: Não é dataset; atenção ao status arquivado.] || [NOTA 2026-09-17: candidato a status arquivado/legado — parece ser só demonstrador histórico do BaSyx, não dataset ativo]",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Licença do código; exemplos a confirmar / OK condicionado",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com Eclipse BaSyx Java Server SDK."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "AAS-003",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "BaSyx PDF-to-AAS",
+   "url": "https://github.com/eclipse-basyx/basyx-pdf-to-aas",
+   "oferece": "Conversão de PDFs técnicos para AAS || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Pipeline Python que extrai informações de PDFs/textos e gera submodelo AAS Technical Data em JSON usando pypdfium2, ECLASS, busca PropertyLLM e LLMs; possui exemplos, avaliação e WebUI Gradio. [Achado: Não gera necessariamente um AAS completo genérico.]",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "MIT; documentos processados dependem da origem / OK condicionado",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com BaSyx PDF-to-AAS."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "DT001",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "SMIA Dataset",
+   "url": "https://www.sciencedirect.com/science/article/pii/S2665963825000673#3",
+   "oferece": "Performance evaluation dataset with CSV R scripts AASX and ontology || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Pacote associado à arquitetura SMIA/AAS, com CSV, scripts R, arquivos AASX e ontologia; não corresponde a um dataset convencional de sensores. [Achado: Necessita confirmação do pacote suplementar exato.]",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Não explicitada (código sem licença)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com SMIA Dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "DT002",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "IDTA AAS Specifications (IEC61360)",
+   "url": "https://github.com/admin-shell-io/aas-specs-iec61360",
+   "oferece": "Especificações normativas do AAS (schemas JSON RDF XML) || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Parte 3a da especificação AAS; cobre templates e propriedades IEC 61360, value lists/values, unidades e referências semânticas; versão V3.1.1 confirmada. [Achado: Não é dataset; deve ser classificado como especificação/recurso semântico.]",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Creative Commons Attribution 4.0 International",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com IDTA AAS Specifications (IEC61360)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "DT003",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "Eclipse BaSyx Demo Data",
+   "url": "https://git.eclipse.org/c/basyx/basyx.git/tree/reference-implementations/hmi2018-demonstrator-snapshot",
+   "oferece": "Código-fonte e demonstração do middleware BaSyx || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): URL antiga associada a snapshot/demonstrador HMI 2018; não foi confirmada como dataset científico independente. [Achado: Classificação como dataset é inadequada.] || [NOTA 2026-09-17: suspeita de ser só demonstrador/código de exemplo do BaSyx, não dataset — confirmar antes de tratar como fonte de dado]",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Eclipse Public License (EPL)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com Eclipse BaSyx Demo Data."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "DT004",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "PerfCam Dataset",
+   "url": "https://ieee-dataport.org/documents/experiments-dataset-perfcam-digital-twinning-production-lines-using-3d-gaussian-splatting",
+   "oferece": "Dataset para reconstrução 3D e tracking em linhas de produção || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Dados de câmeras robóticas para reconstrução 3D, digital twins e manutenção preditiva; imagens coloridas removidas por compliance, permanecendo depth images e nuvens COLMAP raw/fused; usa Git LFS. [Achado: A ausência de color frames limita certos usos de visão.]",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Não explicitada (repositório AstraZeneca)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com PerfCam Dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "DT005",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "Manufacturing Ontologies (DTDL - ISA95/AAS)",
+   "url": "https://github.com/sandervandevelde/ManufacturingOntologies",
+   "oferece": "Ontologias DTDL v2 para ISA95 e IEC 63278",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Não especificada",
+   "tipo_fonte": "Norma/Padrão técnico",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com Manufacturing Ontologies (DTDL - ISA95/AAS)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "EDGE-001",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Edge & IIoT",
+   "nome": "Edge-IIoTset",
+   "url": "https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications",
+   "oferece": "Tráfego IoT/IIoT com múltiplos ataques e dispositivos",
+   "status": "VERIFICADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "Acesso IEEE DataPort e restrições comerciais / RESTRITO",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "edge_iiot_benchmark",
+     "frase": "Avaliar desempenho de protocolo/dispositivo IIoT/edge com Edge-IIoTset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "LLM001",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "LLMs para Manutenção",
+   "nome": "Industrial-Instruction Dataset",
+   "url": "https://huggingface.co/papers/Industrial-Instruction",
+   "oferece": "Datasets QA abertos de 906 documentos técnicos da Panasonic",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "A verificar",
+   "tipo_fonte": "Artigo/Metodologia",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (Industrial-Instruction Dataset)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "ia_generativa"
+  },
+  {
+   "id": "LLM002",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "LLMs para Manutenção",
+   "nome": "Industrial Fault Codes Dataset",
+   "url": "https://huggingface.co/datasets/avneetsingla/industrial-fault-codes-sample",
+   "oferece": "70000+ códigos de falha com descrições e ações de reparo de 82+ fabricantes",
+   "status": "VERIFICADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "CC BY-NC 4.0",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (Industrial Fault Codes Dataset)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "ia_generativa"
+  },
+  {
+   "id": "LLM004",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "LLMs para Manutenção",
+   "nome": "Robot Instructions Dataset",
+   "url": "https://huggingface.co/datasets/milistu/robot-instructions",
+   "oferece": "Dataset para fine-tuning de LLMs em instruções para robôs industriais || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Exemplos em Parquet/JSONL em inglês, com comando humano e saída representando chamadas de funções robóticas; aproximadamente 986 exemplos, gerados com GPT-3.5-Turbo-1106. [Achado: Saídas podem estar serializadas como string/lista.]",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "A verificar",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (Robot Instructions Dataset)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "ia_generativa"
+  },
+  {
+   "id": "MRO-001",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "LLMs para Manutenção",
+   "nome": "Industrial MRO Metadata",
+   "url": "https://sourceforge.net/projects/qte-technologies-industrial/files/",
+   "oferece": "Mais de 1 milhão de registros de metadados MRO",
+   "status": "VERIFICADO",
+   "risco_legal": "OK",
+   "licenca": "CC BY 4.0 / OK condicionado",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (Industrial MRO Metadata)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "ia_generativa"
+  },
+  {
+   "id": "P0-01-01",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "Eclipse BaSyx — SDK Modelos & Demonstrações AAS",
+   "url": "https://github.com/eclipse-basyx;https://basyx.eclipse.org/",
+   "oferece": "Implementação completa padrão IEC 63278 metadados submodelos exemplos prontos de fábrica e servidores compatíveis",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Apache-2.0 SPDX: Apache-2.0",
+   "tipo_fonte": "Norma/Padrão técnico",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com Eclipse BaSyx — SDK Modelos & Demonstrações AAS."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "P0-01-02",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "Eclipse AAS Core Works — Meta-modelo & Conjuntos-Referência",
+   "url": "https://github.com/eclipse-aas-core-works;https://projects.eclipse.org/proposals/eclipse-aas-core-works",
+   "oferece": "Esquema máquina-legível atualizado (v3/v4) serialização geradores SDK + conjuntos de dados-teste padrão completos",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "MIT SPDX: MIT",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com Eclipse AAS Core Works — Meta-modelo & Conjuntos-Referência."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "P0-01-03",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "DTDL — Vocabulário + Biblioteca Modelos Industriais Abertos",
+   "url": "https://github.com/Azure/opendigitaltwins-dtdl;https://learn.microsoft.com/en-us/azure/digital-twins/concepts-models",
+   "oferece": "Linguagem padrão gêmeos digitais + > 100 ontologias prontas; conversão oficial bidirecional AAS disponível",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "MIT SPDX: MIT",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com DTDL — Vocabulário + Biblioteca Modelos Industriais Abertos."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "P0-01-04",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "Eclipse Ditto — Gêmeos Digitais Genéricos + Sincronização Dispositivo-Nuvem",
+   "url": "https://eclipse.org/ditto;https://github.com/eclipse-ditto",
+   "oferece": "Gêmeo-sombra persistência estado APIs prontas exemplos fábrica inteligente; integração OPC-UA/MQTT nativa || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Framework Eclipse IoT para Things, Policies, Things Search, Gateway e Connectivity; suporta MQTT, AMQP, HTTP, WebSocket e Kafka conforme bindings documentados; execução local por Docker Compose. [Achado: Duplicata técnica de AAS-004.] || [Duplicata mesclada em 2026-09-17: AAS-004 — descrição idêntica do Eclipse Ditto, cadastrada 2x em lotes diferentes]",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "EPL-2.0 + Apache-2.0 SPDX válido",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com Eclipse Ditto — Gêmeos Digitais Genéricos + Sincronização Dispositivo…."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "P0-01-05",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Digital Twin & AAS",
+   "nome": "OPC UA Companion Specification — Modelos de Domínio Padrão",
+   "url": "https://opcfoundation.org/developer/tools-and-libraries/unified-architecture-information-models",
+   "oferece": "Modelos semânticos aprovados indústria; esqueleto oficial usado dentro de AAS",
+   "status": "VERIFICADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "Especificação: aberto / conjuntos exemplo: ver individualmente — modelos base gratuitos alguns completos exigem filiação OPC F",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "automacao_digital_twin",
+     "frase": "Modelar digital twin / Asset Administration Shell com OPC UA Companion Specification — Modelos de Domínio Padrão."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "P0-02-01",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "LLMs para Manutenção",
+   "nome": "IBM TechQA — Documentação Técnica Real Q&A",
+   "url": "https://arxiv.org/pdf/1911.02984;https://huggingface.co/datasets/ibm/TechQA;https://ibm.biz/TechQA",
+   "oferece": "1396 pares Q&A anotados manualmente baseados exclusivamente ~810 mil Technotes reais || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): 1.396 pares QA anotados manualmente, derivados de aproximadamente 810 mil Technotes/documentos técnicos IBM; três URLs representam o mesmo registro composto. [Achado: Não é especificamente industrial.]",
+   "status": "VERIFICADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "Artigo: CC-BY-4.0; Dados: uso acadêmico livre comercial/redistribuição exige consulta IBM — Apache-2.0 confirmado variantes",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (IBM TechQA — Documentação Técnica Real Q&A)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "ia_generativa"
+  },
+  {
+   "id": "P0-02-02",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "LLMs para Manutenção",
+   "nome": "MRO-QA / Industrial Maintenance Instruction Tuning",
+   "url": "https://paperswithcode.com/datasets?q=maintenance+qa;https://huggingface.co/datasets/search?q=industrial+maintenance",
+   "oferece": "Estrutura ordens-serviço: sintoma → causa → reparo → peças — formato ideal fine-tuning/RAG || SINALIZADO 2026-09-18 (Claude/chat): URL e uma query de busca (search?q=...), nao um dataset fixo - mesmo padrao do P0-02-03. Recomenda-se desmembramento futuro em fontes especificas. || DESMEMBRADO 2026-09-19 (PP-32): criado(s) filho(s) concreto(s) via parent_id: P0-02-02-A. Este ID mantido só como índice de busca geral.",
+   "status": "VERIFICADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "Maioria: CC-BY-4.0 ou MIT — cada conjunto mantém licença própria",
+   "tipo_fonte": "Índice/agregador de busca (não é dataset único)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (MRO-QA / Industrial Maintenance Instruction Tuning)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "ia_generativa"
+  },
+  {
+   "id": "P0-02-02-A",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "LLMs para Manutenção",
+   "nome": "Industrial-Instruction Dataset (Parssky, Panasonic technical reports)",
+   "url": "https://huggingface.co/datasets/Parssky/industrial-instruction-dataset",
+   "oferece": "Dataset de instruction-tuning/QA construído a partir de 906 manuais técnicos reais da Panasonic (7.525 páginas) — 2 versões geradas por Qwen3-30B e Claude-Opus-4.6, pipeline e modelos também públicos (DOI 10.57967/hf/10098)",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Não confirmada na página do dataset (não achada em 1 busca) — pendente 2ª verificação",
+   "tipo_fonte": "Texto/QA",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (Industrial-Instruction Dataset (Parssky, Panasonic technical reports))."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "ia_generativa"
+  },
+  {
+   "id": "P0-02-03",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "LLMs para Manutenção",
+   "nome": "Industrial Multimodal Datasets (P&ID + Diagramas + Texto)",
+   "url": "https://paperswithcode.com/task/industrial-document-understanding;https://huggingface.co/datasets/search?q=p&id",
+   "oferece": "Diagramas de processo fluxogramas combinados com legendas/anotações; resolve limites só-texto || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): A URL reúne recursos de P&ID, símbolos, textos, gráficos, QA e reconstrução de diagramas; exemplos encontrados incluem datasets de P&ID, PID2Graph, PIDQA e conjuntos sintéticos YOLO. [Achado: Não é um dataset único; deve ser desmembrado.] || Enriquecimento PP-25 (2026-09-17): [QC PP-25] Confirmado: registro não é um dataset único, é um ponto de busca/agregador (paperswithcode + HuggingFace search). Desmembrado em 2 fontes reais e específicas: [[P0-02-03-A]] PID2Graph e [[P0-02-03-B]] PIDQA. Manter este ID só como índice de busca geral pra outros datasets P&ID ainda não catalogados individualmente; reclassificar tipo_fonte.",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Variável: conjuntos públicos usam CC mas frequentemente extraídos manuais proprietários com permissão limitada",
+   "tipo_fonte": "Índice/agregador de busca (não é dataset único)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (Industrial Multimodal Datasets (P&ID + Diagramas + Texto))."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "ia_generativa"
+  },
+  {
+   "id": "P0-02-03-A",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "LLMs para Manutenção",
+   "nome": "PID2Graph (P&ID graph digitization benchmark)",
+   "url": "https://arxiv.org/abs/2411.13929",
+   "oferece": "Stürmer, Graumann & Koch, 'From Engineering Diagrams to Graphs: Digitizing P&IDs with Transformers' (IEEE DSAA 2025, arXiv:2411.13929). Primeiro benchmark P&ID publicamente acessível com ground truth em nível de grafo (símbolos + conexões). Base real-world OPEN100 (12 imagens de planta nuclear), 57-210 componentes e 28-118 arestas por imagem após colapso de conectores; inclui também subset sintético pra treino.",
+   "status": "VERIFICADO",
+   "risco_legal": null,
+   "licenca": null,
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (PID2Graph (P&ID graph digitization benchmark))."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "ia_generativa"
+  },
+  {
+   "id": "P0-02-03-B",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "LLMs para Manutenção",
+   "nome": "PIDQA (P&ID Question-Answering dataset)",
+   "url": "https://doi.org/10.3390/MAKE7020039",
+   "oferece": "Dataset PIDQA (Machine Learning and Knowledge Extraction, DOI 10.3390/MAKE7020039): 64.000 pares pergunta-resposta sobre P&IDs em 4 categorias (contagem simples, contagem espacial, conexões espaciais, perguntas baseadas em valor). Constrói grafo de propriedades rotuladas (LPG) a partir de imagem P&ID + LLM traduz pergunta em query Cypher.",
+   "status": "VERIFICADO",
+   "risco_legal": null,
+   "licenca": null,
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "ferramenta_llm_ia_industrial",
+     "frase": "Usar ferramenta de IA/LLM aplicada à indústria (PIDQA (P&ID Question-Answering dataset))."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "ia_generativa"
+  },
+  {
+   "id": "P0-05-01",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Edge & IIoT",
+   "nome": "Edge-IIoTset — Protocolos Industriais Latência e Desempenho Edge",
+   "url": "https://doi.org/10.5281/zenodo.8358961;https://github.com/accsb/Edge-IIoTset",
+   "oferece": "Mesmo conjunto — acrescenta medições explícitas: tempo ida-volta uso banda consumo energia por dispositivo/conexão — ideal avaliar requisitos tempo-real",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC-BY-4.0",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "edge_iiot_benchmark",
+     "frase": "Avaliar desempenho de protocolo/dispositivo IIoT/edge com Edge-IIoTset — Protocolos Industriais Latência e Desempenho Edge."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "P0-05-02",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Edge & IIoT",
+   "nome": "MQTT-Set — Benchmark Mensagens Leves Publicação/Assinatura",
+   "url": "https://github.com/antoine-maillard/MQTT-Set;https://ieeexplore.ieee.org/document/9134876",
+   "oferece": "Tráfego puro MQTT v3.1/v5 — cargas tamanho real taxas publicação variadas comportamento QoS níveis 0-2 — sem outros protocolos misturados",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC-BY-4.0",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "edge_iiot_benchmark",
+     "frase": "Avaliar desempenho de protocolo/dispositivo IIoT/edge com MQTT-Set — Benchmark Mensagens Leves Publicação/Assinatura."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "src_awesome_acust_001",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Deteccao_Acustica_Industrial",
+   "nome": "ToyADMOS dataset",
+   "url": "https://github.com/jonathanwvd/awesome-industrial-datasets/blob/master/markdown/toyadmos_dataset.md",
+   "oferece": "Som de máquinas em miniatura — 12000 amostras | Anomaly Detection/Fault Diagnosis/Condition Monitoring | Real Lab/Testbed, 2019, Repository/Zenodo",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Info não disponível na curadoria — checar fonte primária (reportado pela curadoria — não confirmado na fonte primária)",
+   "tipo_fonte": "Áudio",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_acustico_industrial",
+     "frase": "Diagnosticar falha por assinatura acústica usando ToyADMOS dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_awesome_acust_002",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Deteccao_Acustica_Industrial",
+   "nome": "ToyADMOS2 dataset",
+   "url": "https://github.com/jonathanwvd/awesome-industrial-datasets/blob/master/markdown/toyadmos2_dataset.md",
+   "oferece": "Som de máquinas em miniatura sob domain shift — 27k amostras | Anomaly Detection/Fault Diagnosis/Condition Monitoring | Real Lab/Testbed, 2021, Repository",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Info não disponível na curadoria (reportado pela curadoria — não confirmado na fonte primária)",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_acustico_industrial",
+     "frase": "Diagnosticar falha por assinatura acústica usando ToyADMOS2 dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_awesome_acust_003",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Deteccao_Acustica_Industrial",
+   "nome": "MIMII DG (Domain Generalization)",
+   "url": "https://github.com/jonathanwvd/awesome-industrial-datasets/blob/master/markdown/mimii_dg.md",
+   "oferece": "Variante do MIMII (já catalogado como src_ind_008) para generalização de domínio — som de máquina malfuncionando | Anomaly Detection/Fault Diagnosis/Condition Monitoring | Real Lab/Testbed, 2022, Repository/Zenodo/Competition",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "CC BY-NC-SA (reportado pela curadoria — não confirmado na fonte primária)",
+   "tipo_fonte": "Áudio",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_acustico_industrial",
+     "frase": "Diagnosticar falha por assinatura acústica usando MIMII DG (Domain Generalization)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_edge_anomaly_phi3_dataset",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Edge & IIoT",
+   "nome": "Edge-Industrial-Anomaly-Phi3 Dataset",
+   "url": "https://huggingface.co/datasets/ssam17/Edge-Industrial-Anomaly-Phi3",
+   "oferece": "Conjunto de dados unificado de detecção de anomalias industriais, combinando dados de detecção de falhas, segurança cibernética IoT e manutenção preditiva para implantação de IA na borda. || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Dataset Hugging Face em JSONL/text generation, com arquivos para falhas industriais, anomalias Edge-IIoT e manutenção preditiva; viewer indica cerca de 11,9 mil linhas no split train; licença Apache-2.0. [Achado: Não confundir com o modelo phi3-industrial-anomaly.]",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Apache 2.0 — confirmado por 2 leituras independentes: achado original ('conteúdo conferindo perfeitamente') + fetch direto do README/dataset_info.json por Perplexity (2026-08-30, citação literal 'This dataset is released under the Apache 2.0 License').",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "edge_iiot_benchmark",
+     "frase": "Avaliar desempenho de protocolo/dispositivo IIoT/edge com Edge-Industrial-Anomaly-Phi3 Dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "src_iiot_edge_computing_ziya07",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Edge & IIoT",
+   "nome": "IIoT Edge Computing Dataset (Kaggle, ziya07)",
+   "url": "https://www.kaggle.com/datasets/ziya07/iiot-edge-computing-dataset",
+   "oferece": "Dados de computação de borda (edge) em ambiente IIoT || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Inclui temperatura, pressão, vibração, latência de rede, tempo de processamento, saída de fuzzy PID, status de manutenção e Predicted_Failure; a descrição também menciona NASA CMAPSS/RUL, sugerindo possível mistura conceitual. [Achado: Conteúdo e escopo precisam ser tratados com cautela.]",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC0: Public Domain",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "edge_iiot_benchmark",
+     "frase": "Avaliar desempenho de protocolo/dispositivo IIoT/edge com IIoT Edge Computing Dataset (Kaggle, ziya07)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "iiot_twin"
+  },
+  {
+   "id": "src_ind_001",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Manutenção Preditiva / Prognóstico",
+   "nome": "NASA Prognostics Data Repository",
+   "url": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/",
+   "oferece": "Degradação e falhas de componentes | Rolamentos, motores, fresadoras, turbinas | Vibração, degradação, falha || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico.",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Repositório agregador",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com NASA Prognostics Data Repository."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_004",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Manutenção Preditiva / Prognóstico",
+   "nome": "NASA N-CMAPSS",
+   "url": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/",
+   "oferece": "Versão moderna de prognóstico de turbinas | Turbinas | Múltiplas variáveis de operação",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com NASA N-CMAPSS."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_005",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Manutenção Preditiva / Prognóstico",
+   "nome": "NASA Milling Dataset",
+   "url": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/",
+   "oferece": "Desgaste de ferramenta de usinagem | Fresadoras/Usinagem | Força, vibração, desgaste da ferramenta",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Software/Ferramenta",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com NASA Milling Dataset."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_006",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Manutenção Preditiva / Prognóstico",
+   "nome": "NASA IGBT Aging",
+   "url": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/",
+   "oferece": "Envelhecimento de componentes eletrônicos | Componentes eletrônicos | Tensão, corrente, temperatura",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com NASA IGBT Aging."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_007",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Manutenção Preditiva / Prognóstico",
+   "nome": "NASA Fatigue Crack Growth",
+   "url": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/",
+   "oferece": "Propagação de trincas por fadiga | Materiais metálicos | Comprimento de trinca, ciclos",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com NASA Fatigue Crack Growth."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_MIMIIDG",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Deteccao_Acustica_Industrial",
+   "nome": "MIMII DG (Domain Generalization)",
+   "url": "CC BY-NC-SA 4.0",
+   "oferece": "Sons de operação normal/anormal de 5 tipos de máquina industrial (ventiladores, engrenagens, rolamentos, trilhos deslizantes, válvulas), organizados em 3 subconjuntos (\"sections\") por tipo de domain shift; subconjunto do dataset de desenvolvimento do DCASE 2022 Challenge Task 2.",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "CC BY-NC-SA 4.0 — não permite uso comercial",
+   "tipo_fonte": "Áudio",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_valvula",
+     "frase": "Calibrar válvula da Planta Virtual com dado real de MIMII DG (Domain Generalization)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "valvula",
+     "nota": "match por palavra-chave 'válvula'"
+    }
+   ],
+   "cluster": "sensoriamento"
+  },
+  {
+   "id": "src_ind_TEP_Reinartz2021",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Manutenção Preditiva / Prognóstico",
+   "nome": "Reinartz 2021 — Extended TEP Reference Data (DTU)",
+   "url": "https://data.dtu.dk/articles/dataset/Tennessee_Eastman_Reference_Data_for_Fault-Detection_and_Decision_Support_Systems/13385936",
+   "oferece": "Dados de referência estendidos do processo Tennessee Eastman (TEP) pra detecção de falha e sistemas de suporte à decisão — reamostragem/extensão do TEP clássico com foco em domain adaptation",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "CC0 — declarado no repositório institucional data.dtu.dk (DTU Data), conforme registrado pelo verificador (Grok) com paper associado Reinartz et al. 2021",
+   "tipo_fonte": "Dataset sintético/simulado",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com Reinartz 2021 — Extended TEP Reference Data (DTU)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_nab_numenta_benchmark",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Detecção de Anomalia (benchmark)",
+   "nome": "NAB — Numenta Anomaly Benchmark",
+   "url": "https://github.com/numenta/NAB",
+   "oferece": "Benchmark de referência para detecção de anomalia em série temporal, uso industrial amplo || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): NAB v1.1 contém mais de 50 séries rotuladas, reais e artificiais, além de labels, scripts, resultados, configuração e scoring para detecção online/streaming; licença MIT. [Achado: Não é benchmark especificamente industrial.]",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "MIT, confirmado literalmente em múltiplos arquivos-fonte do próprio repositório (headers de copyright + setup.py)",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_deteccao_falha_ml",
+     "frase": "Treinar/testar modelo de detecção ou diagnóstico de falha usando NAB — Numenta Anomaly Benchmark."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_nist_robotarm_degradation",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Manutenção Preditiva / Prognóstico",
+   "nome": "Degradation Measurement of Robot Arm Position Accuracy (NIST)",
+   "url": "https://www.nist.gov/el/intelligent-systems-division-73500/degradation-measurement-robot-arm-position-accuracy",
+   "oferece": "Dados de degradação de precisão posicional de braço robótico (Universal Robot UR5) sob diferentes condições de temperatura/carga/velocidade — posição TCP e dados de controlador por junta",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Domínio Público (US Gov, NIST) — data.gov declara 'Public: This dataset is intended for public access and use'; DOI oficial 10.18434/M31962 em data.nist.gov",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_rul_prognostico",
+     "frase": "Estimar vida útil remanescente (RUL) / prognóstico de degradação com Degradation Measurement of Robot Arm Position Accuracy (NIST)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_x_ims_run_to_failure_tep",
+   "tema": "Automacao_Controle_Digital",
+   "subtema": "Deteccao_Falhas_Processo",
+   "nome": "X-IMS - Run-to-Failure Dataset for Tennessee Eastman Process (TEP)",
+   "url": "https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi%3A10.57745%2F1KATN7",
+   "oferece": "Pacote de replicação do projeto X-IMS para construção de health indicators e prognóstico no Tennessee Eastman Process; versão 1.0, ZIP de aproximadamente 2,5 GB. [Achado: É simulado e voltado a condition monitoring/prognostics.]",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "NAO ENCONTRADO na página do dataset",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "manutencao_preditiva"
+   ],
+   "tags_uso": [
+    {
+     "tag": "benchmark_processo_quimico_simulado",
+     "frase": "Simular/testar detecção de falha em processo químico contínuo usando X-IMS - Run-to-Failure Dataset for Tennessee Eastman Process (TEP)."
+    }
+   ],
+   "casos_de_uso": [],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_bearing_6213_norm_or",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Bearing 6213 Norm/OR Dataset",
+   "url": "https://data.mendeley.com/datasets/fbf6y8m4mv/1",
+   "oferece": "Detecção de anomalia em rolamento 6213",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Bearing 6213 Norm/OR Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_bearing_vibration_constant_speed",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Vibração de rolamento sob velocidade de eixo constante",
+   "url": "https://data.mendeley.com/datasets/ryg9rrkgv8/1",
+   "oferece": "Par do dataset acima, velocidade constante",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Vibração de rolamento sob velocidade de eixo constante."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_bearing_vibration_moderate_speed",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Vibração de rolamento sob velocidade de eixo moderadamente variável",
+   "url": "https://data.mendeley.com/datasets/j66x27t229/1",
+   "oferece": "Monitoramento de processo, detecção de outlier em rolamento",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Vibração de rolamento sob velocidade de eixo moderadamente variável."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_bearing_vibration_wide_speed",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Vibração de rolamentos sob condições de velocidade amplamente variável",
+   "url": "https://data.mendeley.com/datasets/6k6fbzc6vv/1",
+   "oferece": "Monitoramento de processo, rolamento",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal",
+   "tipo_fonte": "Dataset operacional (dados reais)",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Vibração de rolamentos sob condições de velocidade amplamente variável."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_019",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "XJTU-SY Bearing Dataset",
+   "url": "https://www.indatlas.com/benchmarks/xjtu-sy-bearing-dataset/",
+   "oferece": "Ensaios acelerados até falha | Rolamentos (15 unidades) | Vibração em dois eixos, temperatura",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de XJTU-SY Bearing Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_020",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "CWRU Bearing Data",
+   "url": "https://engineering.case.edu/bearingdatacenter",
+   "oferece": "Benchmark clássico de falhas | Rolamentos de motor de indução | Vibração, velocidade, carga",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de CWRU Bearing Data."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_023",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Paderborn University Bearing Dataset",
+   "url": "https://mb.uni-paderborn.de/kat/forschung/datacenter/bearing-datacenter/",
+   "oferece": "Falhas artificiais e naturais | Rolamentos | Vibração, corrente do motor",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Paderborn University Bearing Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_024",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "MAFAULDA",
+   "url": "https://www02.smt.ufrj.br/~offshore/mfs/page_01.html",
+   "oferece": "Banco de falhas de máquinas (UFRJ) | Rolamentos, desbalanceamento, desalinhamento | Vibração, áudio",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Áudio",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de MAFAULDA."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_025",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "KAIST Bearing Datasets",
+   "url": "https://data.mendeley.com/datasets/",
+   "oferece": "Dados com múltiplos sensores | Rolamentos | Corrente, vibração, torque",
+   "status": "PENDENTE_NAO_LOCALIZADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de KAIST Bearing Datasets."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_026",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "UNSW Bearing Dataset",
+   "url": "https://data.mendeley.com/",
+   "oferece": "Prognóstico em condições reais | Rolamentos | Vibração, temperatura",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de UNSW Bearing Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_027",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Awesome Bearing Datasets (Curadoria)",
+   "url": "https://github.com/VictorBauler/awesome-bearing-dataset",
+   "oferece": "Curadoria de datasets de rolamentos | Rolamentos e máquinas rotativas | Links e metadados",
+   "status": "CONFIRMADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Awesome Bearing Datasets (Curadoria)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_028",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Gearboxes",
+   "nome": "DOE Gearbox Fault Diagnosis Data",
+   "url": "https://data.openei.org/submissions/623 (fonte primaria real — data.gov e so catalogo/indice que linka pra ca)",
+   "oferece": "Falha de trinca em gearbox | Gearbox de dois estágios | Vibração, torque, rotação",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de DOE Gearbox Fault Diagnosis Data."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Gearboxes'"
+    }
+   ],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_029",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Gearboxes",
+   "nome": "PHM 2009 Gearbox Fault Detection",
+   "url": "https://c3.ndc.nasa.gov/dashlink/resources/997/",
+   "oferece": "Desafio PHM/NASA de detecção | Gearbox com rolamentos | Acelerômetros, geometria de rolamentos",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de PHM 2009 Gearbox Fault Detection."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Gearboxes'"
+    }
+   ],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_031",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Gearboxes",
+   "nome": "PHM Society Public Data Sets",
+   "url": "https://phmsociety.org/public-data-sets/",
+   "oferece": "Curadoria de datasets PHM | Múltiplos equipamentos | Links e metadados || CONFIRMADO 2026-09-18 (Claude/chat, analise de dominios repetidos + conhecimento geral): e repositorio/registro agregador real, multi-dataset/multi-obra, nao uma fonte unica.",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Repositório agregador",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de PHM Society Public Data Sets."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Gearboxes'"
+    }
+   ],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_082",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Gearboxes",
+   "nome": "PHM 2023 Gearbox Degradation Dataset",
+   "url": "https://data.phmsociety.org/phm2023-conference-data-challenge/",
+   "oferece": "Degradação de engrenagens por pitting | Gearbox de um estágio (spur gears 40/72 teeth) | Acelerômetro triaxial, vibração X/Y/Z, rpm, torque",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de PHM 2023 Gearbox Degradation Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Gearboxes'"
+    }
+   ],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_083",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Gearboxes",
+   "nome": "PHM 2026 Gear Spall Damage Dataset",
+   "url": "https://data.phmsociety.org/phm-north-america-2026-conference-data-challenge/",
+   "oferece": "Dano por spall em dentes de engrenagem | Spur gear (28 teeth), gearbox 1:1 | Vibração axial+radial (102.4 kHz), torque, velocidade, temperatura, CIs (FM4, NA4, M6a, ALR), imagens dos dentes",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Imagem",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de PHM 2026 Gear Spall Damage Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Gearboxes'"
+    }
+   ],
+   "cluster": "fundamentos"
+  },
+  {
+   "id": "src_ind_099",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "KAIST Bearing Datasets (Run-to-Failure)",
+   "url": "https://data.mendeley.com/datasets/j8d8pfkvj2/4",
+   "oferece": "Run-to-failure de rolamentos com velocidade variável | Rolamentos de esferas de sulco profundo | Vibração (x/y eixos, 2 sensores), corrente do motor (3 fases), velocidade de rotação (RPM)",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de KAIST Bearing Datasets (Run-to-Failure)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_100",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "KAIST AC Motor Testbed (Multi-fault)",
+   "url": "https://data.mendeley.com/datasets/9r82jppsn7/1",
+   "oferece": "Falhas múltiplas em motor de indução | Motores de 1, 3, 5, 7.5 HP + rolamentos | Corrente 3-fase (100 kHz), vibração z-axis (25.6 kHz), torque (25.6 kHz), RPM",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de KAIST AC Motor Testbed (Multi-fault)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_101",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Paderborn University Bearing Dataset (KAt DataCenter)",
+   "url": "https://mb.uni-paderborn.de/kat/forschung/bearing-datacenter/data-sets-and-download",
+   "oferece": "Diagnóstico de falhas em rolamentos - corrente + vibração | Rolamentos 6203 (32 estados: 6 saudáveis + 26 danificados) | Corrente do motor (2 fases), vibração, velocidade, torque, carga radial, temperatura",
+   "status": "CONFIRMADO",
+   "risco_legal": "RESTRITO",
+   "licenca": "CC BY-NC 4.0",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Paderborn University Bearing Dataset (KAt DataCenter)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_102",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "UNSW Bearing Dataset (Run-to-Failure)",
+   "url": "https://data.mendeley.com/datasets/h4df4mgrfb/3",
+   "oferece": "Run-to-failure com spall natural | Rolamentos (4 experimentos run-to-failure) | Aceleração horizontal, aceleração vertical, sinal do encoder",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de UNSW Bearing Dataset (Run-to-Failure)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_145",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "HUST Bearing Dataset (Hanoi University of Science and Technology)",
+   "url": "https://data.mendeley.com/datasets/cbv7jyx4p9",
+   "oferece": "Vibração de rolamentos com falhas simples e duplas em 5 tipos de rolamento | Rolamentos 6204, 6205, 6206, 6207, 6208 (KG Bearing India) | Vibração (51.2 kHz, 10s), 6 tipos de defeitos em 5 rolamentos × 3 cargas",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de HUST Bearing Dataset (Hanoi University of Science and Technology)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_146",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "MFPT Bearing Fault Dataset",
+   "url": "https://www.mfpt.org/fault-data-sets/",
+   "oferece": "Vibração de rolamentos — laboratório + mundo real | Rolamentos NICE (test rig) + rolamentos reais de turbina eólica | Aceleração gs, sampling rate sr, shaft speed rate, load weight, BPFO, BPFI, FTF, BSF",
+   "status": "BLOQUEADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "indeterminada (fonte oficial descontinuada, so mirrors nao-oficiais sem licenca propria)",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de MFPT Bearing Fault Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_147",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "JNU Bearing Dataset (Jiangnan University)",
+   "url": "https://github.com/ClarkGableWang/JNU-Bearing-Dataset",
+   "oferece": "Vibração de rolamentos com falhas artificiais em 3 velocidades | Motor de indução Mitsubishi SB-JR + acelerômetro PCB MA352A60 | Vibração vertical (50 kHz), 4 estados × 3 velocidades",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de JNU Bearing Dataset (Jiangnan University)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_148",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "HIT Inter-shaft Bearing Fault Dataset (Aero-engine)",
+   "url": "https://github.com/HouLeiHIT/HIT-dataset",
+   "oferece": "Vibração de rolamento inter-eixo em aero-motor real | Aero-motor real com rolamento inter-eixo (artificial fault) | Deslocamento do rotor LP (2 sensores), aceleração do casing (4 sensores), 28 grupos de velocidade HP/LP",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de HIT Inter-shaft Bearing Fault Dataset (Aero-engine)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_150",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "SCA Bearing Dataset (Pulp Mill - Industrial Real)",
+   "url": "https://data.mendeley.com/datasets/tdn96mkkpt",
+   "oferece": "Vibração de falhas naturais em moinho de celulose operacional | Máquinas de moinho de celulose (2019-2022) | Vibração bruta (.mat), timestamps, velocidade, labels de falha",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de SCA Bearing Dataset (Pulp Mill - Industrial Real)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_151",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Politecnico di Torino Spherical Roller Bearing Dataset",
+   "url": "https://zenodo.org/records/14856938",
+   "oferece": "Vibração, temperatura e velocidade de rolamentos esféricos grandes | SKF spherical roller bearings (aplicações industriais pesadas) | Vibração, temperatura, velocidade || PENDENCIA 2026-09-18 (Claude/chat): URL atual e a do agregador (awesome-bearing-dataset), nao a pagina especifica deste dataset - precisa de busca dedicada pra achar o link proprio. || CORRIGIDO 2026-09-19 (PP-32): URL trocada do agregador (awesome-bearing-dataset) pro Zenodo, fonte primária real (Di Maggio, Giorio, Delprete, Brusa — ISED/Politecnico di Torino, multi-defeito em rolamentos esféricos SKF 22240 CCK/W33).",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "BLOQUEADO",
+   "licenca": "Verificar",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Politecnico di Torino Spherical Roller Bearing Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_152",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "University of Arkansas Single & Double Fault Dataset",
+   "url": "https://doi.org/10.6084/m9.figshare.22693120.v1",
+   "oferece": "Vibração de falhas simples e compostas em máquinas rotativas | SpectraQuest fault simulator | Vibração (6.400 Hz, ~10s), 39 cenários de falha || PENDENCIA 2026-09-18 (Claude/chat): URL atual e a do agregador (awesome-bearing-dataset), nao a pagina especifica deste dataset - precisa de busca dedicada pra achar o link proprio. || CORRIGIDO 2026-09-19 (PP-32): URL trocada do agregador (awesome-bearing-dataset) pro Figshare, fonte primária real (Marshall & Jensen 2023, Data in Brief, DOI 10.1016/j.dib.2023.109358 — 38 cenários de falha única/dupla + 1 baseline saudável). Artigo companion é open access sob licença Creative Commons (não lida literalmente qual variante).",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "RESTRITO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de University of Arkansas Single & Double Fault Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_168",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "UdS Bearing Dataset (Saarland University)",
+   "url": "https://www.lmt.uni-saarland.de/",
+   "oferece": "Acelerômetros de rolamentos cilíndricos para domain adaptation | 3 rolamentos cilíndricos (B10, B20, B30) | Aceleração, posição do rolamento (1, 2, 3), velocidade (383-960 rpm), força (1-3)",
+   "status": "AMBIGUO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de UdS Bearing Dataset (Saarland University)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_169",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "ZeMA Electromechanical Axis (EA) Dataset",
+   "url": "https://doi.org/10.5281/zenodo.5185953",
+   "oferece": "Dados de eixo eletromecânico para condition monitoring | Eixo eletromecânico (ZeMA gGmbH) | Corrente, tensão, posição, velocidade, temperatura, força",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de ZeMA Electromechanical Axis (EA) Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_170",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Open Guided Waves (OGW) Dataset",
+   "url": "https://openguidedwaves.de/",
+   "oferece": "Dados de guided waves para structural health monitoring | Estruturas com sensores de guided waves | Sinais de guided waves, temperatura, posição do dano",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Open Guided Waves (OGW) Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_171",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "NASA FEMTO/PRONOSTIA Bearing Dataset",
+   "url": "https://phm-datasets.s3.amazonaws.com/NASA/10.+FEMTO+Bearing.zip",
+   "oferece": "Run-to-failure experiments em rolamentos (accelerated life tests) | Rolamentos testados na plataforma PRONOSTIA (FEMTO-ST Institute, Besançon, França) | Vibração (2 acelerômetros), temperatura, carga, velocidade de rotação",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto (NASA)",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de NASA FEMTO/PRONOSTIA Bearing Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_172",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "CWRU Bearing Dataset (Zenodo - Corrected & Cleaned)",
+   "url": "https://zenodo.org/records/10987113",
+   "oferece": "Vibração de rolamentos saudáveis e com falhas (corrigido e limpo) | Motor 2 HP Reliance Electric, rolamentos com falhas EDM (0.007-0.040 polegadas) | Aceleração DE (12/48 kHz), FE (12 kHz), BA, 4 cargas (0-3 HP), 4 diâmetros de falha, 3 tipos de falha (IR, B, OR)",
+   "status": "CONFIRMADO",
+   "risco_legal": "OK",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de CWRU Bearing Dataset (Zenodo - Corrected & Cleaned)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_ind_173",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "XJTU-SY Bearing Dataset (Run-to-Failure)",
+   "url": "https://github.com/WangBiaoXJTU/xjtu-sy-bearing-datasets (fonte primaria oficial; download real hospedado em MediaFire/MEGA/Baidu Netdisk linkados desta pagina)",
+   "oferece": "Run-to-failure vibration data de 15 rolamentos | Rolamentos de esferas de sulco profundo (PCB 352C33 acelerômetros) | Vibração horizontal e vertical (25.6 kHz, 32768 pontos = 1.28s), 3 condições operacionais",
+   "status": "CONFIRMADO_RESTRICAO_LICENCA",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Aberto",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de XJTU-SY Bearing Dataset (Run-to-Failure)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_shaft_angular_misalignment",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Shaft Angular Misalignment Dataset",
+   "url": "https://data.mendeley.com/datasets/kf96jx9dzf/1",
+   "oferece": "Detecção/diagnóstico de desalinhamento de eixo",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Shaft Angular Misalignment Dataset."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_shaft_misalignment_phase",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Shaft Misalignment Data (Inter-component Phase Processing)",
+   "url": "https://data.mendeley.com/datasets/pt9mjcvghd/1",
+   "oferece": "Desalinhamento de eixo, processamento de fase entre componentes",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Shaft Misalignment Data (Inter-component Phase Processing)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  },
+  {
+   "id": "src_shaft_orbits_dataset",
+   "tema": "Equipamento_Datasheets",
+   "subtema": "Bearings",
+   "nome": "Shaft Orbits Dataset (desalinhamento paralelo e angular)",
+   "url": "https://data.mendeley.com/datasets/8b33tx79wt/1",
+   "oferece": "Órbitas de eixo para diagnóstico de desalinhamento",
+   "status": "VERIFICADO",
+   "risco_legal": "AMBIGUO",
+   "licenca": "Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal",
+   "tipo_fonte": "Catálogo/Datasheet comercial",
+   "macro_categorias": [
+    "equipamento"
+   ],
+   "tags_uso": [
+    {
+     "tag": "calibracao_rolamento",
+     "frase": "Calibrar rolamento da Planta Virtual com dado real de Shaft Orbits Dataset (desalinhamento paralelo e angular)."
+    }
+   ],
+   "casos_de_uso": [
+    {
+     "equipamento": "rolamento",
+     "nota": "subtema do catalogo = 'Bearings'"
+    }
+   ],
+   "cluster": "rul_ia"
+  }
+ ]
+}

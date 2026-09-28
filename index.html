@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manutenção — projeto industrial</title>
+<meta name="description" content="Catálogo curado de fontes de dado sobre manutenção preditiva e confiabilidade industrial — 158 fontes reais, com auditoria de licença.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Manutenção — projeto industrial">
+<meta property="og:description" content="158 fontes de dado reais sobre manutenção preditiva e confiabilidade, com licença checada uma a uma.">
+<meta property="og:image" content="https://projetoindustrial.github.io/manutencao/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10161A; --surface:#171F24; --surface2:#1D262C; --border:#2A343A; --border-light:#3A464D;
+    --text:#E7EDF0; --text-soft:#B9C4CA; --muted:#7E8C93; --faint:#5B666C;
+    --copper:#E2924D; --copper-dim:#3A2E22;
+    --ok:#4FAE8B; --ok-dim:#152722;
+    --warn:#D9B24C; --warn-dim:#2E2814;
+    --risk:#D9614B; --risk-dim:#2E1C18;
+    --gray:#5B666C; --gray-dim:#1E2427;
+    --radius:3px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'IBM Plex Sans',system-ui,sans-serif; font-size:15px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Space Grotesk',sans-serif; font-weight:700; margin:0; letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+  .wrap{max-width:980px; margin:0 auto; padding:0 20px;}
+  ::selection{background:var(--copper-dim); color:var(--copper);}
+
+  /* ---------- topo ---------- */
+  header{border-bottom:1px solid var(--border); position:sticky; top:0; background:rgba(16,22,26,.92); backdrop-filter:blur(6px); z-index:20;}
+  .topbar{display:flex; align-items:center; justify-content:space-between; padding:14px 20px; max-width:980px; margin:0 auto;}
+  .brand{display:flex; align-items:baseline; gap:8px;}
+  .brand b{font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:700;}
+  .brand span{font-size:11px; color:var(--faint);}
+  .topnav{display:flex; gap:18px; font-size:13px;}
+  .topnav a{color:var(--text-soft); text-decoration:none; border-bottom:1px solid transparent; padding-bottom:2px;}
+  .topnav a:hover{color:var(--copper); border-color:var(--copper);}
+
+  /* ---------- hero ---------- */
+  .hero{padding:64px 20px 40px; max-width:980px; margin:0 auto; display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center;}
+  @media (max-width:760px){ .hero{grid-template-columns:1fr; padding-top:40px;} }
+  .kicker{font-size:12px; color:var(--copper); margin-bottom:14px;}
+  .hero h1{font-size:38px; line-height:1.12; max-width:16ch;}
+  .hero p.lede{color:var(--text-soft); font-size:15.5px; max-width:46ch; margin-top:16px;}
+  .hero .stats{display:flex; gap:26px; margin-top:26px; flex-wrap:wrap;}
+  .hero .stat b{display:block; font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--text);}
+  .hero .stat span{font-size:11.5px; color:var(--muted);}
+  .cta-row{margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;}
+  .btn{display:inline-block; padding:10px 18px; border-radius:var(--radius); font-size:13.5px; font-weight:600; text-decoration:none; cursor:pointer; border:1px solid transparent;}
+  .btn-primary{background:var(--copper); color:#1A1207;}
+  .btn-primary:hover{background:#EFA562;}
+  .btn-ghost{border-color:var(--border-light); color:var(--text-soft);}
+  .btn-ghost:hover{border-color:var(--copper); color:var(--copper);}
+
+  /* curva de degradação, assinatura visual */
+  .curve-box{position:relative;}
+  .curve-box svg{width:100%; height:auto; display:block;}
+  .curve-label{position:absolute; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--faint);}
+  #curvePath{stroke-dasharray:600; stroke-dashoffset:600; animation:draw 1.8s ease-out forwards .2s;}
+  @keyframes draw{ to{stroke-dashoffset:0;} }
+  @media (prefers-reduced-motion: reduce){ #curvePath{animation:none; stroke-dashoffset:0;} }
+
+  /* ---------- destaques ---------- */
+  section{padding:52px 20px; max-width:980px; margin:0 auto; border-top:1px solid var(--border);}
+  .section-head{margin-bottom:24px;}
+  .section-head h2{font-size:22px;}
+  .section-head p{color:var(--muted); font-size:13.5px; margin-top:6px; max-width:60ch;}
+
+  .strip{display:flex; gap:12px; overflow-x:auto; padding-bottom:8px; margin:0 -20px; padding-left:20px; padding-right:20px;}
+  .strip::-webkit-scrollbar{height:6px;}
+  .strip::-webkit-scrollbar-thumb{background:var(--border-light); border-radius:3px;}
+  .dcard{flex:0 0 240px; border:1px solid var(--border); background:var(--surface); padding:16px; border-radius:var(--radius);}
+  .dcard .tag{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--copper); margin-bottom:8px; display:block;}
+  .dcard h3{font-size:14.5px; line-height:1.35; margin-bottom:8px;}
+  .dcard p{font-size:12px; color:var(--muted); line-height:1.5; margin:0 0 12px;}
+  .dcard a{font-size:12px; color:var(--text-soft); text-decoration:none; border-bottom:1px solid var(--border-light);}
+  .dcard a:hover{color:var(--copper); border-color:var(--copper);}
+
+  /* ---------- clusters (módulos) ---------- */
+  .modules{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;}
+  @media (max-width:760px){ .modules{grid-template-columns:repeat(2,1fr);} }
+  .module{background:var(--surface); padding:16px 14px; cursor:pointer; transition:background .12s;}
+  .module:hover{background:var(--surface2);}
+  .module.active{background:var(--copper-dim); box-shadow:inset 0 2px 0 var(--copper);}
+  .module .n{font-family:'IBM Plex Mono',monospace; font-size:20px; color:var(--text);}
+  .module.active .n{color:var(--copper);}
+  .module .t{font-size:12px; color:var(--text-soft); margin-top:6px; line-height:1.35;}
+  .module .d{font-size:10.5px; color:var(--faint); margin-top:6px; line-height:1.4;}
+
+  /* ---------- controles ---------- */
+  .controls{display:flex; gap:10px; margin:22px 0 4px; flex-wrap:wrap; align-items:center;}
+  input[type=text]{background:var(--surface); border:1px solid var(--border); color:var(--text); padding:9px 12px; border-radius:var(--radius); font-size:13px; font-family:inherit; flex:1; min-width:180px;}
+  input[type=text]:focus{outline:none; border-color:var(--copper);}
+  .toggle{display:flex; align-items:center; gap:7px; font-size:12.5px; color:var(--text-soft); cursor:pointer; white-space:nowrap;}
+  .toggle input{accent-color:var(--ok);}
+  .count-line{font-size:12px; color:var(--faint); margin-bottom:14px;}
+
+  /* ---------- lista tipo diário de bordo ---------- */
+  .logbook{border-top:1px solid var(--border);}
+  .entry{border-bottom:1px solid var(--border); padding:14px 0; cursor:pointer;}
+  .entry-head{display:flex; justify-content:space-between; align-items:flex-start; gap:14px;}
+  .entry-id{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--faint); width:52px; flex-shrink:0; padding-top:2px;}
+  .entry-main{flex:1; min-width:0;}
+  .entry-title{font-size:14px; font-weight:600; color:var(--text);}
+  .entry-sub{font-size:11.5px; color:var(--muted); margin-top:2px;}
+  .badges{display:flex; gap:6px; margin-top:8px; flex-wrap:wrap;}
+  .badge{font-size:10px; padding:2px 8px; border-radius:2px; font-family:'IBM Plex Mono',monospace; white-space:nowrap;}
+  .b-ok{background:var(--ok-dim); color:var(--ok);}
+  .b-warn{background:var(--warn-dim); color:var(--warn);}
+  .b-risk{background:var(--risk-dim); color:var(--risk);}
+  .b-gray{background:var(--gray-dim); color:var(--gray);}
+  .entry-arrow{color:var(--faint); font-size:14px; flex-shrink:0; transition:transform .15s;}
+  .entry.open .entry-arrow{transform:rotate(90deg); color:var(--copper);}
+  .entry-detail{display:none; margin-top:14px; padding:14px; background:var(--surface); border-radius:var(--radius); font-size:12.5px; color:var(--text-soft); line-height:1.6;}
+  .entry.open .entry-detail{display:block;}
+  .entry-detail .label{font-size:10px; color:var(--faint); font-family:'IBM Plex Mono',monospace; margin:10px 0 3px;}
+  .entry-detail .label:first-child{margin-top:0;}
+  .entry-detail a.visit{display:inline-block; margin-top:10px; color:var(--copper); text-decoration:none; font-weight:600; font-size:12.5px;}
+  .entry-detail a.visit:hover{text-decoration:underline;}
+  .uso-line{margin-bottom:4px;}
+  .uso-line b{color:var(--text-soft); font-weight:600;}
+
+  /* ---------- glossário ---------- */
+  .gloss{display:grid; grid-template-columns:1fr 1fr; gap:20px 32px;}
+  @media (max-width:640px){ .gloss{grid-template-columns:1fr;} }
+  .gloss dt{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--copper); margin-bottom:4px;}
+  .gloss dd{margin:0; font-size:13px; color:var(--text-soft); line-height:1.55;}
+
+  /* ---------- legenda risco ---------- */
+  .legend{display:flex; gap:16px; flex-wrap:wrap; font-size:11.5px; color:var(--muted); margin-top:18px;}
+  .legend span{display:flex; align-items:center; gap:6px;}
+  .dot{width:8px; height:8px; border-radius:50%; display:inline-block;}
+
+  footer{padding:40px 20px 60px; text-align:center; color:var(--faint); font-size:12px; border-top:1px solid var(--border);}
+  footer a{color:var(--text-soft); text-decoration:none; border-bottom:1px solid var(--border-light);}
+  .loading{padding:80px 20px; text-align:center; color:var(--faint); font-size:13px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="brand"><b>Manutenção</b><span>· projeto industrial</span></div>
+    <nav class="topnav">
+      <a href="#comece">Comece por aqui</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#glossario">Glossário</a>
+      <a href="https://projetoindustrial.github.io/industriaedu/" target="_blank">IndústriaEDU ↗</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div>
+    <div class="kicker">Confiabilidade &amp; manutenção preditiva</div>
+    <h1>A máquina avisa antes de quebrar. Isso aqui ensina a ouvir.</h1>
+    <p class="lede">Um catálogo curado de fontes de dado reais — vibração, temperatura, ordens de serviço, vida útil remanescente — pra quem quer aprender ou pesquisar manutenção preditiva de verdade, com origem e licença checadas uma por uma.</p>
+    <div class="stats">
+      <div class="stat"><b id="statTotal">158</b><span>fontes catalogadas</span></div>
+      <div class="stat"><b id="statOk">—</b><span>de uso livre confirmado</span></div>
+      <div class="stat"><b>8</b><span>frentes de estudo</span></div>
+    </div>
+    <div class="cta-row">
+      <a href="#comece" class="btn btn-primary">Ver por onde começar</a>
+      <a href="#catalogo" class="btn btn-ghost">Explorar o catálogo</a>
+    </div>
+  </div>
+  <div class="curve-box">
+    <svg viewBox="0 0 320 220" fill="none">
+      <line x1="20" y1="190" x2="300" y2="190" stroke="#2A343A" stroke-width="1"/>
+      <line x1="20" y1="20" x2="20" y2="190" stroke="#2A343A" stroke-width="1"/>
+      <line x1="20" y1="130" x2="300" y2="130" stroke="#3A2E22" stroke-width="1" stroke-dasharray="3 4"/>
+      <path id="curvePath" d="M 20 45 C 90 48, 150 55, 195 90 C 225 115, 235 140, 245 165 C 252 182, 258 190, 265 195"
+            stroke="#E2924D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="195" cy="90" r="4" fill="#D9B24C"/>
+      <circle cx="265" cy="195" r="4" fill="#D9614B"/>
+      <text x="200" y="80" fill="#D9B24C" font-family="IBM Plex Mono" font-size="9">primeiro sinal</text>
+      <text x="205" y="205" fill="#D9614B" font-family="IBM Plex Mono" font-size="9">falha</text>
+      <text x="22" y="125" fill="#7E8C93" font-family="IBM Plex Mono" font-size="9">limiar de alerta</text>
+      <text x="150" y="212" fill="#5B666C" font-family="IBM Plex Mono" font-size="9">tempo</text>
+    </svg>
+  </div>
+</div>
+
+<section id="comece">
+  <div class="section-head">
+    <h2>Comece por aqui</h2>
+    <p>Seis datasets que praticamente todo curso e artigo de manutenção preditiva usa como primeiro contato — bom ponto de partida antes de mergulhar no catálogo completo.</p>
+  </div>
+  <div class="strip" id="destaquesStrip"></div>
+</section>
+
+<section id="catalogo">
+  <div class="section-head">
+    <h2>O catálogo</h2>
+    <p>Organizado por frente de estudo. Clique num módulo pra filtrar, ou busque direto.</p>
+  </div>
+  <div class="modules" id="modules"></div>
+
+  <div class="controls">
+    <input type="text" id="searchBox" placeholder="Buscar por nome, tema...">
+    <label class="toggle"><input type="checkbox" id="onlyOk"> só uso livre confirmado</label>
+  </div>
+  <div class="count-line" id="countLine"></div>
+  <div class="logbook" id="logbook"></div>
+  <div class="legend">
+    <span><span class="dot" style="background:#4FAE8B"></span>uso livre / OK</span>
+    <span><span class="dot" style="background:#D9B24C"></span>ambíguo — leia a licença</span>
+    <span><span class="dot" style="background:#D9614B"></span>restrito / bloqueado</span>
+    <span><span class="dot" style="background:#5B666C"></span>não verificado</span>
+  </div>
+</section>
+
+<section id="glossario">
+  <div class="section-head">
+    <h2>Glossário rápido</h2>
+    <p>Os termos que mais aparecem no catálogo, sem jargão.</p>
+  </div>
+  <dl class="gloss">
+    <dt>RUL</dt><dd>Remaining Useful Life — quanto tempo de vida útil resta num equipamento até a falha, estimado a partir de dados de sensor.</dd>
+    <dt>PHM</dt><dd>Prognostics and Health Management — a área que junta diagnóstico (o que está errado) e prognóstico (quando vai falhar).</dd>
+    <dt>IIoT</dt><dd>Internet Industrial das Coisas — sensores conectados enviando dado em tempo real de uma planta ou máquina.</dd>
+    <dt>Digital Twin / AAS</dt><dd>Réplica digital de um ativo físico, usada pra simular comportamento antes que ele aconteça de verdade.</dd>
+    <dt>Run-to-failure</dt><dd>Tipo de dataset onde o equipamento roda até quebrar de propósito, gerando o histórico completo de degradação.</dd>
+    <dt>Risco legal</dt><dd>Nossa auditoria de licença de cada fonte — se dá pra usar livremente, com restrição, ou nem isso.</dd>
+  </dl>
+</section>
+
+<footer>
+  <div class="wrap">
+    Dado bruto e metodologia de verificação de fonte vêm do
+    <a href="https://projetoindustrial.github.io/industriaedu/" target="_blank">Catálogo de Fontes de Dado Industrial</a>,
+    projeto irmão do IndústriaEDU. Cada fonte foi checada individualmente — licença, status e caso de uso.
+  </div>
+</footer>
+
+<script>
+const CLUSTER_ORDER = ["rul_ia","fundamentos","sensoriamento","iiot_twin","ia_generativa","portais","equipamento","gestao"];
+const RISK_CLASS = {
+  OK:"b-ok", ABERTO:"b-ok", BAIXO:"b-ok",
+  AMBIGUO:"b-warn",
+  RESTRITO:"b-risk", BLOQUEADO:"b-risk", "BLOQUEADO_FERRAMENTA":"b-risk", DISTRIBUIDOR_TERCEIRO:"b-warn",
+};
+const RISK_LABEL = {
+  OK:"uso livre", ABERTO:"uso livre", BAIXO:"uso livre",
+  AMBIGUO:"ambíguo", RESTRITO:"restrito", BLOQUEADO:"bloqueado", BLOQUEADO_FERRAMENTA:"bloqueado (ferramenta)",
+  DISTRIBUIDOR_TERCEIRO:"distribuidor terceiro",
+};
+function riskClass(r){ return RISK_CLASS[r] || "b-gray"; }
+function riskLabel(r){ return RISK_LABEL[r] || (r||"não verificado"); }
+
+let DATA = null, activeCluster = null;
+
+fetch("data.json").then(r=>r.json()).then(d=>{
+  DATA = d;
+  document.getElementById("statTotal").textContent = d.total;
+  const okCount = d.sources.filter(s=>["OK","ABERTO","BAIXO"].includes(s.risco_legal)).length;
+  document.getElementById("statOk").textContent = okCount;
+  renderDestaques();
+  renderModules();
+  renderList();
+  document.getElementById("searchBox").addEventListener("input", renderList);
+  document.getElementById("onlyOk").addEventListener("change", renderList);
+}).catch(()=>{
+  document.getElementById("logbook").innerHTML = '<div class="loading">Não consegui carregar data.json — confira se o arquivo está na mesma pasta do index.html.</div>';
+});
+
+function renderDestaques(){
+  const strip = document.getElementById("destaquesStrip");
+  strip.innerHTML = DATA.destaques.map(id=>{
+    const s = DATA.sources.find(x=>x.id===id);
+    if(!s) return "";
+    return `<div class="dcard">
+      <span class="tag">${(s.subtema||"").replace(/_/g," ")}</span>
+      <h3>${escapeHtml(s.nome)}</h3>
+      <p>${escapeHtml((s.oferece||"").slice(0,110))}${(s.oferece||"").length>110?"…":""}</p>
+      <a href="${s.url}" target="_blank" rel="noopener">Acessar fonte →</a>
+    </div>`;
+  }).join("");
+}
+
+function renderModules(){
+  const box = document.getElementById("modules");
+  const counts = {};
+  DATA.sources.forEach(s=>{ counts[s.cluster] = (counts[s.cluster]||0)+1; });
+  box.innerHTML = CLUSTER_ORDER.map(key=>{
+    const meta = DATA.clusters[key];
+    if(!meta) return "";
+    return `<div class="module" data-cluster="${key}">
+      <div class="n">${counts[key]||0}</div>
+      <div class="t">${meta.nome}</div>
+      <div class="d">${meta.desc}</div>
+    </div>`;
+  }).join("");
+  box.querySelectorAll(".module").forEach(el=>{
+    el.addEventListener("click", ()=>{
+      const c = el.getAttribute("data-cluster");
+      activeCluster = (activeCluster===c) ? null : c;
+      box.querySelectorAll(".module").forEach(m=>m.classList.toggle("active", m.getAttribute("data-cluster")===activeCluster));
+      renderList();
+    });
+  });
+}
+
+function renderList(){
+  const q = document.getElementById("searchBox").value.trim().toLowerCase();
+  const onlyOk = document.getElementById("onlyOk").checked;
+  let list = DATA.sources.filter(s=>{
+    if(activeCluster && s.cluster!==activeCluster) return false;
+    if(onlyOk && !["OK","ABERTO","BAIXO"].includes(s.risco_legal)) return false;
+    if(q){
+      const hay = (s.nome+" "+(s.subtema||"")+" "+(s.tema||"")+" "+(s.oferece||"")).toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  document.getElementById("countLine").textContent = `${list.length} de ${DATA.total} fontes`;
+  const book = document.getElementById("logbook");
+  book.innerHTML = list.map((s,i)=>{
+    const usos = (s.tags_uso||[]).map(t=>`<div class="uso-line"><b>${escapeHtml((t.tag||"").replace(/_/g," "))}:</b> ${escapeHtml(t.frase||"")}</div>`).join("");
+    const casos = (s.casos_de_uso||[]).map(c=>`<div class="uso-line"><b>${escapeHtml(c.equipamento||"")}:</b> ${escapeHtml(c.nota||"")}</div>`).join("");
+    return `<div class="entry" data-id="${s.id}">
+      <div class="entry-head">
+        <div class="entry-id">${String(i+1).padStart(3,"0")}</div>
+        <div class="entry-main">
+          <div class="entry-title">${escapeHtml(s.nome)}</div>
+          <div class="entry-sub">${escapeHtml(s.tema||"")} · ${escapeHtml((s.subtema||"").replace(/_/g," "))}</div>
+          <div class="badges">
+            <span class="badge ${riskClass(s.risco_legal)}">${riskLabel(s.risco_legal)}</span>
+            ${s.tipo_fonte?`<span class="badge b-gray">${escapeHtml(s.tipo_fonte)}</span>`:""}
+          </div>
+        </div>
+        <div class="entry-arrow">▸</div>
+      </div>
+      <div class="entry-detail">
+        <p>${escapeHtml(s.oferece||"sem descrição registrada.")}</p>
+        ${s.licenca?`<div class="label">LICENÇA</div><div>${escapeHtml(s.licenca)}</div>`:""}
+        ${usos?`<div class="label">USO TÉCNICO</div>${usos}`:""}
+        ${casos?`<div class="label">ONDE ISSO ENTRA NA PLANTA</div>${casos}`:""}
+        ${s.url?`<a class="visit" href="${s.url}" target="_blank" rel="noopener">Acessar fonte original →</a>`:""}
+      </div>
+    </div>`;
+  }).join("") || '<div class="loading">Nenhuma fonte bate com esse filtro.</div>';
+
+  book.querySelectorAll(".entry").forEach(el=>{
+    el.querySelector(".entry-head").addEventListener("click", ()=> el.classList.toggle("open"));
+  });
+}
+
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+</script>
+
+</body>
+</html>
