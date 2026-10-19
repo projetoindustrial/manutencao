@@ -81,8 +81,16 @@ esse link no rodapé do site em vez do menu principal.
 
 ## Pendências / próximos passos (não bloqueantes)
 
-- Publicar o repositório no GitHub Pages (passo a passo acima).
+- ~~Publicar o repositório no GitHub Pages~~ — feito (site no ar em https://projetoindustrial.github.io/manutencao/).
 - Os 6 destaques de "Comece por aqui" foram escolhidos por fama na literatura, não por
   teste com o público — vale revisar depois de ver quem realmente acessa.
 - O agrupamento em 8 frentes foi feito por `subtema` (mapeamento manual, `CLUSTER_MAP`
   no script), não por validação fonte a fonte.
+
+## Ajustes de 18/10/2026
+
+- Texto do site alinhado aos dados: tirei "licença checada uma a uma" e "cada fonte foi checada individualmente" (há fontes `AMBIGUO`, `PENDENTE_NAO_LOCALIZADO` e com licença "Verificar"/"não verificado"); acrescentei aviso de que a licença é um resumo.
+- "Uso livre confirmado" passou de 65 para **62**: o `index.html` agora calcula o risco efetivo (`effRisk`) e rebaixa fonte marcada `OK` quando o status é `PENDENTE_NAO_LOCALIZADO` (KAIST Bearing Datasets) ou a licença está como "Verificar"/"não verificado" (2 fontes IEEE DataPort). Está no front-end para valer mesmo depois de regerar o `data.json`.
+- URLs: 2 fontes vinham sem `https://` (links relativos quebrados) e `MIMII DG (src_ind_MIMIIDG)` traz o texto da licença no campo `url`. O `index.html` agora normaliza e esconde o link inválido. **Corrigir na origem (banco do catálogo)**: informar a URL real do MIMII DG.
+- Acessibilidade: módulos e entradas operáveis por teclado (Enter/Espaço), `aria-expanded`/`aria-pressed`; cabeçalho quebra linha no celular; link de volta para o Projeto Industrial.
+- Pendência de curadoria: `PID2Graph` e `PIDQA` (ids `P0-02-03-A/B`) estão sem `risco_legal` nem `licenca`.

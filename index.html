@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manutenção — projeto industrial</title>
-<meta name="description" content="Catálogo curado de fontes de dado sobre manutenção preditiva e confiabilidade industrial — 158 fontes reais, com auditoria de licença.">
+<meta name="description" content="Catálogo curado de fontes de dado sobre manutenção preditiva e confiabilidade industrial — 158 fontes, com status de licença registrado por fonte.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Manutenção — projeto industrial">
-<meta property="og:description" content="158 fontes de dado reais sobre manutenção preditiva e confiabilidade, com licença checada uma a uma.">
+<meta property="og:description" content="158 fontes de dado sobre manutenção preditiva e confiabilidade, com status de licença por fonte.">
 <meta property="og:image" content="https://projetoindustrial.github.io/manutencao/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,6 +47,8 @@
   .topnav{display:flex; gap:18px; font-size:13px;}
   .topnav a{color:var(--text-soft); text-decoration:none; border-bottom:1px solid transparent; padding-bottom:2px;}
   .topnav a:hover{color:var(--copper); border-color:var(--copper);}
+  @media (max-width:640px){ .topbar{flex-direction:column; align-items:flex-start; gap:8px;} .topnav{flex-wrap:wrap; gap:6px 14px;} }
+  .module:focus-visible,.entry-head:focus-visible{outline:2px solid var(--copper); outline-offset:-2px;}
 
   /* ---------- hero ---------- */
   .hero{padding:64px 20px 40px; max-width:980px; margin:0 auto; display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center;}
@@ -153,7 +155,8 @@
 <header>
   <div class="topbar">
     <div class="brand"><b>Manutenção</b><span>· projeto industrial</span></div>
-    <nav class="topnav">
+    <nav class="topnav" aria-label="Principal">
+      <a href="https://projetoindustrial.github.io/">Projeto Industrial</a>
       <a href="#comece">Comece por aqui</a>
       <a href="#catalogo">Catálogo</a>
       <a href="#glossario">Glossário</a>
@@ -235,7 +238,7 @@
     <dt>IIoT</dt><dd>Internet Industrial das Coisas — sensores conectados enviando dado em tempo real de uma planta ou máquina.</dd>
     <dt>Digital Twin / AAS</dt><dd>Réplica digital de um ativo físico, usada pra simular comportamento antes que ele aconteça de verdade.</dd>
     <dt>Run-to-failure</dt><dd>Tipo de dataset onde o equipamento roda até quebrar de propósito, gerando o histórico completo de degradação.</dd>
-    <dt>Risco legal</dt><dd>Nossa auditoria de licença de cada fonte — se dá pra usar livremente, com restrição, ou nem isso.</dd>
+    <dt>Risco legal</dt><dd>Nossa classificação da licença de cada fonte — uso livre, ambíguo, restrito ou ainda não verificado. É um resumo: confirme sempre na página oficial antes de reutilizar.</dd>
   </dl>
 </section>
 
@@ -243,7 +246,7 @@
   <div class="wrap">
     Dado bruto e metodologia de verificação de fonte vêm do
     <a href="https://projetoindustrial.github.io/industriaedu/" target="_blank">Catálogo de Fontes de Dado Industrial</a>,
-    projeto irmão do IndústriaEDU. Cada fonte foi checada individualmente — licença, status e caso de uso.
+    projeto irmão do IndústriaEDU. Cada fonte traz o status de verificação e a licença registrados no catálogo; as marcadas como ambíguas ou não verificadas exigem conferência na página oficial. A licença exibida é um resumo e pode estar desatualizada. Projeto independente, sem vínculo com as organizações citadas.
   </div>
 </footer>
 
@@ -257,8 +260,27 @@ const RISK_CLASS = {
 const RISK_LABEL = {
   OK:"uso livre", ABERTO:"uso livre", BAIXO:"uso livre",
   AMBIGUO:"ambíguo", RESTRITO:"restrito", BLOQUEADO:"bloqueado", BLOQUEADO_FERRAMENTA:"bloqueado (ferramenta)",
-  DISTRIBUIDOR_TERCEIRO:"distribuidor terceiro",
+  DISTRIBUIDOR_TERCEIRO:"distribuidor terceiro", NAO_VERIFICADO:"não verificado",
 };
+const LIC_DUVIDOSA = /(prov[áa]vel|n[ãa]o verific|^\s*verificar|a verificar|n[ãa]o confirm)/i;
+const LIVRE = ["OK","ABERTO","BAIXO"];
+// Só conta como "uso livre" se a fonte foi localizada e a licença não está marcada como duvidosa.
+function effRisk(s){
+  const r = s.risco_legal;
+  if(LIVRE.includes(r)){
+    if(s.status==="PENDENTE_NAO_LOCALIZADO") return "NAO_VERIFICADO";
+    if(LIC_DUVIDOSA.test(s.licenca||"")) return "AMBIGUO";
+  }
+  return r;
+}
+function isLivre(s){ return LIVRE.includes(effRisk(s)); }
+function normUrl(u){
+  u=(u||"").trim();
+  if(/^https?:\/\/\S+$/i.test(u)) return u;
+  if(/^[a-z0-9.-]+\.[a-z]{2,}(\/\S*)?$/i.test(u)) return "https://"+u;   // veio sem protocolo
+  return "";                                                              // não é um link (ex.: texto de licença no campo url)
+}
+function safeUrl(u){ return u ? escapeHtml(u) : "#"; }
 function riskClass(r){ return RISK_CLASS[r] || "b-gray"; }
 function riskLabel(r){ return RISK_LABEL[r] || (r||"não verificado"); }
 
@@ -266,8 +288,9 @@ let DATA = null, activeCluster = null;
 
 fetch("data.json").then(r=>r.json()).then(d=>{
   DATA = d;
+  DATA.sources.forEach(s=>{ s.url = normUrl(s.url); });
   document.getElementById("statTotal").textContent = d.total;
-  const okCount = d.sources.filter(s=>["OK","ABERTO","BAIXO"].includes(s.risco_legal)).length;
+  const okCount = d.sources.filter(isLivre).length;
   document.getElementById("statOk").textContent = okCount;
   renderDestaques();
   renderModules();
@@ -287,7 +310,7 @@ function renderDestaques(){
       <span class="tag">${(s.subtema||"").replace(/_/g," ")}</span>
       <h3>${escapeHtml(s.nome)}</h3>
       <p>${escapeHtml((s.oferece||"").slice(0,110))}${(s.oferece||"").length>110?"…":""}</p>
-      <a href="${s.url}" target="_blank" rel="noopener">Acessar fonte →</a>
+      <a href="${safeUrl(s.url)}" target="_blank" rel="noopener">Acessar fonte →</a>
     </div>`;
   }).join("");
 }
@@ -299,19 +322,24 @@ function renderModules(){
   box.innerHTML = CLUSTER_ORDER.map(key=>{
     const meta = DATA.clusters[key];
     if(!meta) return "";
-    return `<div class="module" data-cluster="${key}">
+    return `<div class="module" data-cluster="${key}" role="button" tabindex="0" aria-pressed="false">
       <div class="n">${counts[key]||0}</div>
       <div class="t">${meta.nome}</div>
       <div class="d">${meta.desc}</div>
     </div>`;
   }).join("");
   box.querySelectorAll(".module").forEach(el=>{
-    el.addEventListener("click", ()=>{
+    const acionar = ()=>{
       const c = el.getAttribute("data-cluster");
       activeCluster = (activeCluster===c) ? null : c;
-      box.querySelectorAll(".module").forEach(m=>m.classList.toggle("active", m.getAttribute("data-cluster")===activeCluster));
+      box.querySelectorAll(".module").forEach(m=>{
+        const on = m.getAttribute("data-cluster")===activeCluster;
+        m.classList.toggle("active", on); m.setAttribute("aria-pressed", on);
+      });
       renderList();
-    });
+    };
+    el.addEventListener("click", acionar);
+    el.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); acionar(); } });
   });
 }
 
@@ -320,7 +348,7 @@ function renderList(){
   const onlyOk = document.getElementById("onlyOk").checked;
   let list = DATA.sources.filter(s=>{
     if(activeCluster && s.cluster!==activeCluster) return false;
-    if(onlyOk && !["OK","ABERTO","BAIXO"].includes(s.risco_legal)) return false;
+    if(onlyOk && !isLivre(s)) return false;
     if(q){
       const hay = (s.nome+" "+(s.subtema||"")+" "+(s.tema||"")+" "+(s.oferece||"")).toLowerCase();
       if(!hay.includes(q)) return false;
@@ -333,13 +361,13 @@ function renderList(){
     const usos = (s.tags_uso||[]).map(t=>`<div class="uso-line"><b>${escapeHtml((t.tag||"").replace(/_/g," "))}:</b> ${escapeHtml(t.frase||"")}</div>`).join("");
     const casos = (s.casos_de_uso||[]).map(c=>`<div class="uso-line"><b>${escapeHtml(c.equipamento||"")}:</b> ${escapeHtml(c.nota||"")}</div>`).join("");
     return `<div class="entry" data-id="${s.id}">
-      <div class="entry-head">
+      <div class="entry-head" role="button" tabindex="0" aria-expanded="false">
         <div class="entry-id">${String(i+1).padStart(3,"0")}</div>
         <div class="entry-main">
           <div class="entry-title">${escapeHtml(s.nome)}</div>
           <div class="entry-sub">${escapeHtml(s.tema||"")} · ${escapeHtml((s.subtema||"").replace(/_/g," "))}</div>
           <div class="badges">
-            <span class="badge ${riskClass(s.risco_legal)}">${riskLabel(s.risco_legal)}</span>
+            <span class="badge ${riskClass(effRisk(s))}">${riskLabel(effRisk(s))}</span>
             ${s.tipo_fonte?`<span class="badge b-gray">${escapeHtml(s.tipo_fonte)}</span>`:""}
           </div>
         </div>
@@ -350,13 +378,16 @@ function renderList(){
         ${s.licenca?`<div class="label">LICENÇA</div><div>${escapeHtml(s.licenca)}</div>`:""}
         ${usos?`<div class="label">USO TÉCNICO</div>${usos}`:""}
         ${casos?`<div class="label">ONDE ISSO ENTRA NA PLANTA</div>${casos}`:""}
-        ${s.url?`<a class="visit" href="${s.url}" target="_blank" rel="noopener">Acessar fonte original →</a>`:""}
+        ${s.url?`<a class="visit" href="${safeUrl(s.url)}" target="_blank" rel="noopener">Acessar fonte original →</a>`:""}
       </div>
     </div>`;
   }).join("") || '<div class="loading">Nenhuma fonte bate com esse filtro.</div>';
 
   book.querySelectorAll(".entry").forEach(el=>{
-    el.querySelector(".entry-head").addEventListener("click", ()=> el.classList.toggle("open"));
+    const head = el.querySelector(".entry-head");
+    const alternar = ()=>{ const aberto = el.classList.toggle("open"); head.setAttribute("aria-expanded", aberto); };
+    head.addEventListener("click", alternar);
+    head.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); alternar(); } });
   });
 }
 
