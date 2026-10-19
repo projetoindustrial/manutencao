@@ -1,6 +1,6 @@
 # Manutenção
 
-Catálogo curado de 158 fontes de dado sobre manutenção preditiva e confiabilidade industrial (vibração, temperatura, ordens de serviço, vida útil remanescente), organizado em 8 frentes de estudo, com busca e status de licença por fonte.
+Catálogo curado de 157 fontes de dado sobre manutenção preditiva e confiabilidade industrial (vibração, temperatura, ordens de serviço, vida útil remanescente), organizado em 8 frentes de estudo, com busca e status de licença por fonte.
 
 **Acesse:** https://projetoindustrial.github.io/manutencao/
 
@@ -11,7 +11,7 @@ Catálogo curado de 158 fontes de dado sobre manutenção preditiva e confiabili
 
 ## Atualizar os dados
 
-`scripts/exportar_manutencao.py` gera o `data.json` a partir do banco do catálogo de fontes industriais (`catalogo-fontes-industriais`). Rode contra o `.db` mais recente e substitua o `data.json`; o `index.html` não precisa mudar. Detalhes e decisões de curadoria em `LEIAME.md`.
+`scripts/exportar_manutencao.py` gera o `data.json` a partir do banco do catálogo de fontes industriais (`catalogo-fontes-industriais`). Rode contra o `.db` mais recente (hoje o `v33`, que fica fora deste repositório) e substitua o `data.json`; o `index.html` não precisa mudar. As correções de curadoria em `scripts/curadoria_overrides.json` são reaplicadas automaticamente por `scripts/aplicar_overrides.py`. Detalhes e decisões de curadoria em `LEIAME.md`.
 
 ## Relação com outros repositórios
 

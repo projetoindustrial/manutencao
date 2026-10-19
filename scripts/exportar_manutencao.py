@@ -1,4 +1,4 @@
-import sqlite3, json
+import sqlite3, json, os, sys
 
 DB = "/home/claude/inspect1/catalogo_fontes_industriais_v33-ponte-banco-calibracao.db"
 con = sqlite3.connect(DB)
@@ -89,6 +89,11 @@ for r in rows:
         licenca=r["licenca"], tipo_fonte=r["tipo_fonte"], macro_categorias=macro,
         tags_uso=micro, casos_de_uso=casos, cluster=cluster,
     ))
+
+# Correções de curadoria (ver curadoria_overrides.json): valem enquanto o banco não for corrigido
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from aplicar_overrides import aplicar
+sources = aplicar(sources)
 
 # "Comece por aqui": curadoria manual dos 6 datasets mais citados na literatura de PHM/RUL
 # (evita duplicata de variante do mesmo dataset, ex. 2x CWRU, 2x FEMTO)

@@ -7,7 +7,7 @@ sessao: criação do site "Manutenção" — projeto irmão do IndústriaEDU
 
 ## O que é isso
 
-Um site estático (2 arquivos: `index.html` + `data.json`) que agrega **158 fontes**
+Um site estático (2 arquivos: `index.html` + `data.json`) que agrega **157 fontes**
 do catálogo de dados industriais sobre manutenção e confiabilidade — não só
 "manutenção preditiva" (110 fontes), mas o conjunto completo:
 
@@ -91,6 +91,14 @@ esse link no rodapé do site em vez do menu principal.
 
 - Texto do site alinhado aos dados: tirei "licença checada uma a uma" e "cada fonte foi checada individualmente" (há fontes `AMBIGUO`, `PENDENTE_NAO_LOCALIZADO` e com licença "Verificar"/"não verificado"); acrescentei aviso de que a licença é um resumo.
 - "Uso livre confirmado" passou de 65 para **62**: o `index.html` agora calcula o risco efetivo (`effRisk`) e rebaixa fonte marcada `OK` quando o status é `PENDENTE_NAO_LOCALIZADO` (KAIST Bearing Datasets) ou a licença está como "Verificar"/"não verificado" (2 fontes IEEE DataPort). Está no front-end para valer mesmo depois de regerar o `data.json`.
-- URLs: 2 fontes vinham sem `https://` (links relativos quebrados) e `MIMII DG (src_ind_MIMIIDG)` traz o texto da licença no campo `url`. O `index.html` agora normaliza e esconde o link inválido. **Corrigir na origem (banco do catálogo)**: informar a URL real do MIMII DG.
+- URLs: 2 fontes vinham sem `https://` (links relativos quebrados) e `MIMII DG (src_ind_MIMIIDG)` traz o texto da licença no campo `url`. O `index.html` agora normaliza e esconde o link inválido. (resolvido na curadoria de 18/10/2026, abaixo).
 - Acessibilidade: módulos e entradas operáveis por teclado (Enter/Espaço), `aria-expanded`/`aria-pressed`; cabeçalho quebra linha no celular; link de volta para o Projeto Industrial.
-- Pendência de curadoria: `PID2Graph` e `PIDQA` (ids `P0-02-03-A/B`) estão sem `risco_legal` nem `licenca`.
+
+## Curadoria das 5 pendências (18/10/2026, mesma data)
+
+Aplicada por `scripts/curadoria_overrides.json` (evidência por item), reaplicada em todo `exportar_manutencao.py` via `scripts/aplicar_overrides.py`:
+- **MIMII DG:** `url` = https://zenodo.org/record/6529888 (registro Zenodo do MIMII DG; licença CC BY-NC-SA 4.0 conferida, igual à do catálogo).
+- **PID2Graph:** `risco_legal` OK, licença CC BY-SA 4.0 (registro Zenodo 14803338); link passou do artigo para o dataset. Ressalva: as plantas reais vêm do OPEN100, cuja licença o registro não detalha.
+- **PIDQA:** `risco_legal` OK, licença CC0 1.0 (LICENSE do repositório mgupta70/PIDQA, via API do GitHub); link passou do artigo para o dataset. As imagens-base (Dataset-P&ID) têm licença própria.
+- **KAIST Bearing Datasets (`src_ind_025`):** removido do site. Era um registro genérico (URL = raiz do Mendeley, status PENDENTE_NAO_LOCALIZADO) já coberto por `src_ind_099` e `src_ind_100` (ambos CONFIRMADO). Total: 158 → **157** fontes.
+- **Aviso:** o exportador lê o banco `v33` (fora do repo); o repositório `catalogo-fontes-industriais` só tem a v11, que está atrás. As correções acima **ainda precisam ser feitas no v33**, senão só o overrides as mantém.

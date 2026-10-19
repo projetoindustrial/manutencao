@@ -1,0 +1,32 @@
+{
+  "_leia": "Correções de curadoria aplicadas por cima do banco, sempre que o data.json é gerado (aplicar_overrides.py). Servem enquanto a origem (banco do catálogo de fontes industriais, v33 fora deste repo) não estiver corrigida. Cada item traz a evidência e a data de conferência.",
+  "conferido_em": "2026-10-18",
+  "excluir": [
+    {
+      "id": "src_ind_025",
+      "nome": "KAIST Bearing Datasets",
+      "motivo": "Registro genérico: a URL era a raiz do Mendeley Data (status PENDENTE_NAO_LOCALIZADO) e os dois datasets KAIST reais já estão no catálogo como src_ind_099 (Run-to-Failure) e src_ind_100 (AC Motor Testbed), ambos CONFIRMADO."
+    }
+  ],
+  "campos": {
+    "src_ind_MIMIIDG": {
+      "url": "https://zenodo.org/record/6529888",
+      "url_anterior": "CC BY-NC-SA 4.0",
+      "evidencia": "Registro Zenodo 6529888 (MIMII DG, Hitachi): licença CC BY-NC-SA 4.0 e URL citada no artigo arXiv:2205.13879. O campo url do banco continha o texto da licença."
+    },
+    "P0-02-03-A": {
+      "url": "https://zenodo.org/records/14803338",
+      "url_anterior": "https://arxiv.org/abs/2411.13929",
+      "risco_legal": "OK",
+      "licenca": "CC BY-SA 4.0 (registro Zenodo 14803338, DLR): exige atribuição e compartilhamento pela mesma licença. As plantas reais vêm do OPEN100 (Energy Impact Center), cuja licença o registro não detalha. Arquivo único de 9,3 GB. Artigo: arXiv:2411.13929.",
+      "evidencia": "Página do registro Zenodo 14803338 (campo License = CC BY-SA 4.0) e seção Sources do mesmo registro."
+    },
+    "P0-02-03-B": {
+      "url": "https://github.com/mgupta70/PIDQA",
+      "url_anterior": "https://doi.org/10.3390/MAKE7020039",
+      "risco_legal": "OK",
+      "licenca": "CC0 1.0 (LICENSE do repositório mgupta70/PIDQA) para os 64.000 pares pergunta-resposta. As imagens P&ID usadas vêm do Dataset-P&ID (Paliwal et al.), que tem licença própria (CC BY-SA 4.0, segundo o registro do PID2Graph). Artigo: doi 10.3390/MAKE7020039.",
+      "evidencia": "API do GitHub (license = cc0-1.0) e Data Availability Statement do artigo (dataset em github.com/mgupta70/PIDQA)."
+    }
+  }
+}

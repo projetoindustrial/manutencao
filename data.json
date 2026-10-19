@@ -1,6 +1,6 @@
 {
  "gerado_em": "2026-09-27",
- "total": 158,
+ "total": 157,
  "clusters": {
   "fundamentos": {
    "nome": "Fundamentos de Confiabilidade",
@@ -2472,11 +2472,11 @@
    "tema": "Automacao_Controle_Digital",
    "subtema": "LLMs para Manutenção",
    "nome": "PID2Graph (P&ID graph digitization benchmark)",
-   "url": "https://arxiv.org/abs/2411.13929",
+   "url": "https://zenodo.org/records/14803338",
    "oferece": "Stürmer, Graumann & Koch, 'From Engineering Diagrams to Graphs: Digitizing P&IDs with Transformers' (IEEE DSAA 2025, arXiv:2411.13929). Primeiro benchmark P&ID publicamente acessível com ground truth em nível de grafo (símbolos + conexões). Base real-world OPEN100 (12 imagens de planta nuclear), 57-210 componentes e 28-118 arestas por imagem após colapso de conectores; inclui também subset sintético pra treino.",
    "status": "VERIFICADO",
-   "risco_legal": null,
-   "licenca": null,
+   "risco_legal": "OK",
+   "licenca": "CC BY-SA 4.0 (registro Zenodo 14803338, DLR): exige atribuição e compartilhamento pela mesma licença. As plantas reais vêm do OPEN100 (Energy Impact Center), cuja licença o registro não detalha. Arquivo único de 9,3 GB. Artigo: arXiv:2411.13929.",
    "tipo_fonte": "Dataset operacional (dados reais)",
    "macro_categorias": [
     "manutencao_preditiva"
@@ -2495,11 +2495,11 @@
    "tema": "Automacao_Controle_Digital",
    "subtema": "LLMs para Manutenção",
    "nome": "PIDQA (P&ID Question-Answering dataset)",
-   "url": "https://doi.org/10.3390/MAKE7020039",
+   "url": "https://github.com/mgupta70/PIDQA",
    "oferece": "Dataset PIDQA (Machine Learning and Knowledge Extraction, DOI 10.3390/MAKE7020039): 64.000 pares pergunta-resposta sobre P&IDs em 4 categorias (contagem simples, contagem espacial, conexões espaciais, perguntas baseadas em valor). Constrói grafo de propriedades rotuladas (LPG) a partir de imagem P&ID + LLM traduz pergunta em query Cypher.",
    "status": "VERIFICADO",
-   "risco_legal": null,
-   "licenca": null,
+   "risco_legal": "OK",
+   "licenca": "CC0 1.0 (LICENSE do repositório mgupta70/PIDQA) para os 64.000 pares pergunta-resposta. As imagens P&ID usadas vêm do Dataset-P&ID (Paliwal et al.), que tem licença própria (CC BY-SA 4.0, segundo o registro do PID2Graph). Artigo: doi 10.3390/MAKE7020039.",
    "tipo_fonte": "Dataset operacional (dados reais)",
    "macro_categorias": [
     "manutencao_preditiva"
@@ -2794,7 +2794,7 @@
    "tema": "Equipamento_Datasheets",
    "subtema": "Deteccao_Acustica_Industrial",
    "nome": "MIMII DG (Domain Generalization)",
-   "url": "CC BY-NC-SA 4.0",
+   "url": "https://zenodo.org/record/6529888",
    "oferece": "Sons de operação normal/anormal de 5 tipos de máquina industrial (ventiladores, engrenagens, rolamentos, trilhos deslizantes, válvulas), organizados em 3 subconjuntos (\"sections\") por tipo de domain shift; subconjunto do dataset de desenvolvimento do DCASE 2022 Challenge Task 2.",
    "status": "CONFIRMADO",
    "risco_legal": "RESTRITO",
@@ -3123,34 +3123,6 @@
     {
      "tag": "calibracao_rolamento",
      "frase": "Calibrar rolamento da Planta Virtual com dado real de MAFAULDA."
-    }
-   ],
-   "casos_de_uso": [
-    {
-     "equipamento": "rolamento",
-     "nota": "subtema do catalogo = 'Bearings'"
-    }
-   ],
-   "cluster": "rul_ia"
-  },
-  {
-   "id": "src_ind_025",
-   "tema": "Equipamento_Datasheets",
-   "subtema": "Bearings",
-   "nome": "KAIST Bearing Datasets",
-   "url": "https://data.mendeley.com/datasets/",
-   "oferece": "Dados com múltiplos sensores | Rolamentos | Corrente, vibração, torque",
-   "status": "PENDENTE_NAO_LOCALIZADO",
-   "risco_legal": "OK",
-   "licenca": "Aberto",
-   "tipo_fonte": "Catálogo/Datasheet comercial",
-   "macro_categorias": [
-    "equipamento"
-   ],
-   "tags_uso": [
-    {
-     "tag": "calibracao_rolamento",
-     "frase": "Calibrar rolamento da Planta Virtual com dado real de KAIST Bearing Datasets."
     }
    ],
    "casos_de_uso": [
@@ -3917,5 +3889,6 @@
    ],
    "cluster": "rul_ia"
   }
- ]
+ ],
+ "ajustado_em": "2026-10-18"
 }
