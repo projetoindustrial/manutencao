@@ -39,7 +39,7 @@
   ::selection{background:var(--copper-dim); color:var(--copper);}
 
   /* ---------- topo ---------- */
-  header{border-bottom:1px solid var(--border); position:sticky; top:0; background:rgba(16,22,26,.92); backdrop-filter:blur(6px); z-index:20;}
+  header{border-bottom:1px solid var(--border); position:sticky; top:var(--pi-offset,0px); background:rgba(16,22,26,.92); backdrop-filter:blur(6px); z-index:20;}
   .topbar{display:flex; align-items:center; justify-content:space-between; padding:14px 20px; max-width:980px; margin:0 auto;}
   .brand{display:flex; align-items:baseline; gap:8px;}
   .brand b{font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:700;}
@@ -149,6 +149,9 @@
   footer a{color:var(--text-soft); text-decoration:none; border-bottom:1px solid var(--border-light);}
   .loading{padding:80px 20px; text-align:center; color:var(--faint); font-size:13px;}
 </style>
+<!-- Casca compartilhada do Projeto Industrial (menu único em /shell/nav.json) -->
+<link rel="stylesheet" href="/shell/pi-shell.css">
+<script src="/shell/pi-shell.js" defer data-pi-mode="full" data-pi-scheme="dark" data-pi-active="manutencao"></script>
 </head>
 <body>
 
