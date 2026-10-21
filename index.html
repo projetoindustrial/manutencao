@@ -152,6 +152,48 @@
 <!-- Casca compartilhada do Projeto Industrial (menu único em /shell/nav.json) -->
 <link rel="stylesheet" href="/shell/pi-shell.css">
 <script src="/shell/pi-shell.js" defer data-pi-mode="full" data-pi-scheme="dark" data-pi-active="manutencao"></script>
+<style id="ds-bridge">
+/* Ponte do Design System v2 (tokens com contraste corrigido, out/2026; só tema escuro). Remover este bloco desfaz. */
+:root {
+  --color-brand-deep: #0b1520;
+  --color-brand-petroleum: #1a7a8c;
+  --color-brand-cyan: #00c4c4;
+  --color-brand-cyan-muted: #0d2a2e;
+  --color-surface-page: #0b1520;
+  --color-surface-card: #142333;
+  --color-surface-sidebar: #0f1c28;
+  --color-surface-overlay: rgba(0, 0, 0, 0.55);
+  --color-text-primary: #e8eef2;
+  --color-text-secondary: #8ba3b5;
+  --color-text-inverse: #ffffff;
+  --color-text-link: #5eb8c4;
+  --color-text-link-hover: #00c4c4;
+  --color-status-success: #2da56e;
+  --color-status-success-bg: #0f2a1c;
+  --color-status-warning: #d49a2a;
+  --color-status-warning-bg: #2a220e;
+  --color-status-danger: #e05555;
+  --color-status-danger-bg: #2a1212;
+  --color-status-info: #5eb8c4;
+  --color-status-info-bg: #0f1c28;
+  --color-border-default: #243447;
+  --color-border-strong: #5f7890;
+  --color-border-focus: #00c4c4;
+  --color-focus-ring: 0 0 0 3px rgba(0, 196, 196, 0.4);
+  --bg:var(--color-surface-page);--surface:var(--color-surface-sidebar);--surface2:var(--color-surface-card);
+  --border:var(--color-border-default);--border-light:color-mix(in srgb,var(--color-border-default) 55%,var(--color-border-strong));
+  --text:var(--color-text-primary);--text-soft:color-mix(in srgb,var(--color-text-primary) 45%,var(--color-text-secondary));
+  --muted:var(--color-text-secondary);--faint:var(--color-text-secondary);
+  --copper:var(--color-brand-cyan);--copper-dim:var(--color-brand-cyan-muted);
+  --ok:var(--color-status-success);--ok-dim:var(--color-status-success-bg);
+  --warn:var(--color-status-warning);--warn-dim:var(--color-status-warning-bg);
+  --risk:var(--color-status-danger);--risk-dim:var(--color-status-danger-bg);
+  --gray:var(--color-text-secondary);--gray-dim:var(--color-surface-card);
+}
+header { background: color-mix(in srgb, var(--color-surface-page) 92%, transparent); }
+.btn-primary { color: var(--color-brand-deep); }
+.btn-primary:hover { background: var(--color-text-link); }
+</style>
 </head>
 <body>
 
@@ -186,17 +228,17 @@
   </div>
   <div class="curve-box">
     <svg viewBox="0 0 320 220" fill="none">
-      <line x1="20" y1="190" x2="300" y2="190" stroke="#2A343A" stroke-width="1"/>
-      <line x1="20" y1="20" x2="20" y2="190" stroke="#2A343A" stroke-width="1"/>
-      <line x1="20" y1="130" x2="300" y2="130" stroke="#3A2E22" stroke-width="1" stroke-dasharray="3 4"/>
+      <line x1="20" y1="190" x2="300" y2="190" stroke="#243447" stroke-width="1"/>
+      <line x1="20" y1="20" x2="20" y2="190" stroke="#243447" stroke-width="1"/>
+      <line x1="20" y1="130" x2="300" y2="130" stroke="#0D2A2E" stroke-width="1" stroke-dasharray="3 4"/>
       <path id="curvePath" d="M 20 45 C 90 48, 150 55, 195 90 C 225 115, 235 140, 245 165 C 252 182, 258 190, 265 195"
-            stroke="#E2924D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <circle cx="195" cy="90" r="4" fill="#D9B24C"/>
-      <circle cx="265" cy="195" r="4" fill="#D9614B"/>
-      <text x="200" y="80" fill="#D9B24C" font-family="IBM Plex Mono" font-size="9">primeiro sinal</text>
-      <text x="205" y="205" fill="#D9614B" font-family="IBM Plex Mono" font-size="9">falha</text>
-      <text x="22" y="125" fill="#7E8C93" font-family="IBM Plex Mono" font-size="9">limiar de alerta</text>
-      <text x="150" y="212" fill="#5B666C" font-family="IBM Plex Mono" font-size="9">tempo</text>
+            stroke="#00C4C4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="195" cy="90" r="4" fill="#D49A2A"/>
+      <circle cx="265" cy="195" r="4" fill="#E05555"/>
+      <text x="200" y="80" fill="#D49A2A" font-family="IBM Plex Mono" font-size="9">primeiro sinal</text>
+      <text x="205" y="205" fill="#E05555" font-family="IBM Plex Mono" font-size="9">falha</text>
+      <text x="22" y="125" fill="#8BA3B5" font-family="IBM Plex Mono" font-size="9">limiar de alerta</text>
+      <text x="150" y="212" fill="#8BA3B5" font-family="IBM Plex Mono" font-size="9">tempo</text>
     </svg>
   </div>
 </div>
@@ -223,10 +265,10 @@
   <div class="count-line" id="countLine"></div>
   <div class="logbook" id="logbook"></div>
   <div class="legend">
-    <span><span class="dot" style="background:#4FAE8B"></span>uso livre / OK</span>
-    <span><span class="dot" style="background:#D9B24C"></span>ambíguo — leia a licença</span>
-    <span><span class="dot" style="background:#D9614B"></span>restrito / bloqueado</span>
-    <span><span class="dot" style="background:#5B666C"></span>não verificado</span>
+    <span><span class="dot" style="background:#2DA56E"></span>uso livre / OK</span>
+    <span><span class="dot" style="background:#D49A2A"></span>ambíguo — leia a licença</span>
+    <span><span class="dot" style="background:#E05555"></span>restrito / bloqueado</span>
+    <span><span class="dot" style="background:#8BA3B5"></span>não verificado</span>
   </div>
 </section>
 
