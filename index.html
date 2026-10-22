@@ -17,12 +17,12 @@
 <style>
   :root{
     --bg:#10161A; --surface:#171F24; --surface2:#1D262C; --border:#2A343A; --border-light:#3A464D;
-    --text:#E7EDF0; --text-soft:#B9C4CA; --muted:#7E8C93; --faint:#5B666C;
+    --text:#E7EDF0; --text-soft:#B9C4CA; --muted:#9EA4A7; --faint:#8D9396; /* DS v2.3: cinzas de texto >= 4,5:1 em todas as superfícies */
     --copper:#E2924D; --copper-dim:#3A2E22;
     --ok:#4FAE8B; --ok-dim:#152722;
     --warn:#D9B24C; --warn-dim:#2E2814;
     --risk:#D9614B; --risk-dim:#2E1C18;
-    --gray:#5B666C; --gray-dim:#1E2427;
+    --gray:#8D9396; --gray-dim:#1E2427;
     --radius:3px;
   }
   *{box-sizing:border-box;}
@@ -179,7 +179,7 @@
   --color-border-default: #243447;
   --color-border-strong: #5f7890;
   --color-border-focus: #00c4c4;
-  --color-focus-ring: 0 0 0 3px rgba(0, 196, 196, 0.4);
+  --color-focus-ring: 0 0 0 2px #0b1520, 0 0 0 4px #00c4c4;
   --bg:var(--color-surface-page);--surface:var(--color-surface-sidebar);--surface2:var(--color-surface-card);
   --border:var(--color-border-default);--border-light:color-mix(in srgb,var(--color-border-default) 55%,var(--color-border-strong));
   --text:var(--color-text-primary);--text-soft:color-mix(in srgb,var(--color-text-primary) 45%,var(--color-text-secondary));
@@ -193,6 +193,9 @@
 header { background: color-mix(in srgb, var(--color-surface-page) 92%, transparent); }
 .btn-primary { color: var(--color-brand-deep); }
 .btn-primary:hover { background: var(--color-text-link); }
+/* DS v2.1: foco visível e alvos de toque >= 44px */
+:focus-visible { outline: 2px solid var(--color-border-focus); outline-offset: 2px; }
+@media (pointer: coarse) { button, select, summary, [role="button"], [role="tab"] { min-height: 44px; } }
 </style>
 </head>
 <body>
@@ -426,7 +429,15 @@ function renderList(){
         ${s.url?`<a class="visit" href="${safeUrl(s.url)}" target="_blank" rel="noopener">Acessar fonte original →</a>`:""}
       </div>
     </div>`;
-  }).join("") || '<div class="loading">Nenhuma fonte bate com esse filtro.</div>';
+  }).join("") || '<div class="loading">Nenhuma fonte bate com esse filtro.<br><button type="button" class="visit" id="clearFilters" style="margin-top:12px;background:none;cursor:pointer">Limpar filtros</button></div>';
+  const cf = document.getElementById("clearFilters");
+  if(cf) cf.addEventListener("click", ()=>{
+    document.getElementById("searchBox").value = "";
+    document.getElementById("onlyOk").checked = false;
+    activeCluster = null;
+    document.querySelectorAll(".module").forEach(m=>{ m.classList.remove("active"); m.setAttribute("aria-pressed", false); });
+    renderList();
+  });
 
   book.querySelectorAll(".entry").forEach(el=>{
     const head = el.querySelector(".entry-head");
