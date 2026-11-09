@@ -1,0 +1,22 @@
+# Manutenção — fontes de dado para manutenção preditiva
+
+> 157 fontes de dado em 8 frentes; status: CONFIRMADO 89, VERIFICADO 35, CONFIRMADO_RESTRICAO_LICENCA 17, AMBIGUO 14, BLOQUEADO_FERRAMENTA 1, BLOQUEADO 1; risco legal: OK 65, AMBIGUO 60, RESTRITO 23, BLOQUEADO 8, ABERTO 1.
+
+## Páginas
+- [Frentes de estudo](https://projetoindustrial.github.io/manutencao/frentes/)
+- [Fundamentos de Confiabilidade](https://projetoindustrial.github.io/manutencao/frentes/fundamentos.html)
+- [Sensoriamento & Dados de Campo](https://projetoindustrial.github.io/manutencao/frentes/sensoriamento.html)
+- [RUL & Diagnóstico com IA](https://projetoindustrial.github.io/manutencao/frentes/rul_ia.html)
+- [IIoT, Edge & Digital Twin](https://projetoindustrial.github.io/manutencao/frentes/iiot_twin.html)
+- [IA Generativa aplicada](https://projetoindustrial.github.io/manutencao/frentes/ia_generativa.html)
+- [Gestão da Manutenção](https://projetoindustrial.github.io/manutencao/frentes/gestao.html)
+- [Monitoramento de Equipamento](https://projetoindustrial.github.io/manutencao/frentes/equipamento.html)
+- [Portais & Curadorias](https://projetoindustrial.github.io/manutencao/frentes/portais.html)
+
+## Dados
+- [CSV](https://projetoindustrial.github.io/manutencao/dados/catalogo.csv)
+- [JSONL](https://projetoindustrial.github.io/manutencao/dados/catalogo.jsonl)
+- [llms-full.txt](https://projetoindustrial.github.io/manutencao/llms-full.txt)
+
+## Aviso
+Licença e risco legal são resumo próprio; confirme na fonte. Dados gerados em 2026-10-18.

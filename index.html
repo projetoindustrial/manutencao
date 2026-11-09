@@ -3,17 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manutenção — projeto industrial</title>
+<title>Manutenção e confiabilidade: 157 fontes de dados para manutenção preditiva | Projeto Industrial</title>
 <meta name="description" content="Catálogo curado de fontes de dado sobre manutenção preditiva e confiabilidade industrial — 157 fontes, com status de licença registrado por fonte.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Manutenção — projeto industrial">
+<meta property="og:title" content="Manutenção e confiabilidade: 157 fontes de dados para manutenção preditiva | Projeto Industrial">
 <meta property="og:description" content="157 fontes de dado sobre manutenção preditiva e confiabilidade, com status de licença por fonte.">
 <meta property="og:image" content="https://projetoindustrial.github.io/manutencao/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./fonts/fonts.css">
 <style>
   :root{
     --bg:#10161A; --surface:#171F24; --surface2:#1D262C; --border:#2A343A; --border-light:#3A464D;
@@ -118,7 +116,7 @@
   .entry-title{font-size:14px; font-weight:600; color:var(--text);}
   .entry-sub{font-size:11.5px; color:var(--muted); margin-top:2px;}
   .badges{display:flex; gap:6px; margin-top:8px; flex-wrap:wrap;}
-  .badge{font-size:10px; padding:2px 8px; border-radius:2px; font-family:'IBM Plex Mono',monospace; white-space:nowrap;}
+  .badge{font-size:10px; padding:2px 8px; border-radius:2px; font-family:'IBM Plex Mono',monospace; white-space:normal; max-width:100%; overflow-wrap:anywhere;}
   .b-ok{background:var(--ok-dim); color:var(--ok);}
   .b-warn{background:var(--warn-dim); color:var(--warn);}
   .b-risk{background:var(--risk-dim); color:var(--risk);}
@@ -197,6 +195,9 @@ header { background: color-mix(in srgb, var(--color-surface-page) 92%, transpare
 :focus-visible { outline: 2px solid var(--color-border-focus); outline-offset: 2px; }
 @media (pointer: coarse) { button, select, summary, [role="button"], [role="tab"] { min-height: 44px; } }
 </style>
+<link rel="canonical" href="https://projetoindustrial.github.io/manutencao/">
+<link rel="alternate" type="text/plain" href="https://projetoindustrial.github.io/manutencao/llms.txt" title="llms.txt">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Manutenção e confiabilidade — fontes de dado", "description": "Catálogo curado de fontes de dado sobre manutenção preditiva e confiabilidade industrial. 157 fontes de dado em 8 frentes; status: CONFIRMADO 89, VERIFICADO 35, CONFIRMADO_RESTRICAO_LICENCA 17, AMBIGUO 14, BLOQUEADO_FERRAMENTA 1, BLOQUEADO 1; risco legal: OK 65, AMBIGUO 60, RESTRITO 23, BLOQUEADO 8, ABERTO 1.", "url": "https://projetoindustrial.github.io/manutencao/", "inLanguage": "pt-BR", "isAccessibleForFree": true, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://projetoindustrial.github.io/manutencao/dados/catalogo.csv"}, {"@type": "DataDownload", "encodingFormat": "application/x-ndjson", "contentUrl": "https://projetoindustrial.github.io/manutencao/dados/catalogo.jsonl"}]}</script>
 </head>
 <body>
 
@@ -266,7 +267,7 @@ header { background: color-mix(in srgb, var(--color-surface-page) 92%, transpare
     <label class="toggle"><input type="checkbox" id="onlyOk"> só uso livre confirmado</label>
   </div>
   <div class="count-line" id="countLine"></div>
-  <div class="logbook" id="logbook"></div>
+  <div class="logbook" id="logbook"><div id="estatico"><h2>157 fontes de dado sobre manutenção preditiva</h2><p>157 fontes de dado em 8 frentes; status: CONFIRMADO 89, VERIFICADO 35, CONFIRMADO_RESTRICAO_LICENCA 17, AMBIGUO 14, BLOQUEADO_FERRAMENTA 1, BLOQUEADO 1; risco legal: OK 65, AMBIGUO 60, RESTRITO 23, BLOQUEADO 8, ABERTO 1. Sem JavaScript, leia <a href="frentes/">as frentes de estudo</a> ou baixe <a href="dados/catalogo.csv">o CSV</a>.</p></div></div>
   <div class="legend">
     <span><span class="dot" style="background:#2DA56E"></span>uso livre / OK</span>
     <span><span class="dot" style="background:#D49A2A"></span>ambíguo — leia a licença</span>
@@ -295,6 +296,7 @@ header { background: color-mix(in srgb, var(--color-surface-page) 92%, transpare
     Dado bruto e metodologia de verificação de fonte vêm do
     <a href="https://projetoindustrial.github.io/industriaedu/" target="_blank">Catálogo de Fontes de Dado Industrial</a>,
     projeto irmão do IndústriaEDU. Cada fonte traz o status de verificação e a licença registrados no catálogo; as marcadas como ambíguas ou não verificadas exigem conferência na página oficial. A licença exibida é um resumo e pode estar desatualizada. Projeto independente, sem vínculo com as organizações citadas.
+    <p style="margin-top:14px">Procura vagas, normas e comunidades de manutenção? Veja o tema <a href="https://projetoindustrial.github.io/recursos/tema-manutencao-pcm.html">Manutenção &amp; PCM</a> em Recursos O&amp;G.</p>
   </div>
 </footer>
 

@@ -1,0 +1,653 @@
+# Manutenção — fontes de dado para manutenção preditiva
+
+> 157 fontes de dado em 8 frentes; status: CONFIRMADO 89, VERIFICADO 35, CONFIRMADO_RESTRICAO_LICENCA 17, AMBIGUO 14, BLOQUEADO_FERRAMENTA 1, BLOQUEADO 1; risco legal: OK 65, AMBIGUO 60, RESTRITO 23, BLOQUEADO 8, ABERTO 1.
+
+## Páginas
+- [Frentes de estudo](https://projetoindustrial.github.io/manutencao/frentes/)
+- [Fundamentos de Confiabilidade](https://projetoindustrial.github.io/manutencao/frentes/fundamentos.html)
+- [Sensoriamento & Dados de Campo](https://projetoindustrial.github.io/manutencao/frentes/sensoriamento.html)
+- [RUL & Diagnóstico com IA](https://projetoindustrial.github.io/manutencao/frentes/rul_ia.html)
+- [IIoT, Edge & Digital Twin](https://projetoindustrial.github.io/manutencao/frentes/iiot_twin.html)
+- [IA Generativa aplicada](https://projetoindustrial.github.io/manutencao/frentes/ia_generativa.html)
+- [Gestão da Manutenção](https://projetoindustrial.github.io/manutencao/frentes/gestao.html)
+- [Monitoramento de Equipamento](https://projetoindustrial.github.io/manutencao/frentes/equipamento.html)
+- [Portais & Curadorias](https://projetoindustrial.github.io/manutencao/frentes/portais.html)
+
+## Dados
+- [CSV](https://projetoindustrial.github.io/manutencao/dados/catalogo.csv)
+- [JSONL](https://projetoindustrial.github.io/manutencao/dados/catalogo.jsonl)
+- [llms-full.txt](https://projetoindustrial.github.io/manutencao/llms-full.txt)
+
+## Aviso
+Licença e risco legal são resumo próprio; confirme na fonte. Dados gerados em 2026-10-18.
+
+
+# Todas as fontes
+
+## OREDA (Offshore Reliability Data)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: BLOQUEADO | Licença: Paga | Link: https://oreda.com/
+Dados de confiabilidade offshore e onshore | Múltiplos equipamentos (20,500+ topside, 3,100+ subsea) | Taxas de falha, modos de falha, causas, efeitos, manutenção
+
+## UK HSE RR1186 - Failure rates pipelines
+Frente: Fundamentos de Confiabilidade | Status: VERIFICADO | Risco legal: OK | Licença: Aberto | Link: https://www.hse.gov.uk/Research/rrhtm/rr1186.htm
+Metodologia e taxas de falha de tubulações acima do solo
+
+## causRCA - Real-World Dataset for Causal Discovery and Root Cause Analysis in Machinery
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: Apache-2.0 | Link: https://doi.org/10.5281/zenodo.15876410
+Registros de falhas industriais | Múltiplos equipamentos | Modo de falha, tempo de falha, consequência
+
+## FAN-COIL-I Vibration Dataset
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: OK | Licença: CC BY | Link: https://www.sciencedirect.com/science/article/pii/S2352340924008308
+Vibração de motor Fan Coil em operação real (2 semanas) | Motor Fan Coil (ambiente corporativo real) | Vibração (frente e traseira, 32 kHz sampling)
+
+## Genesis Demonstrator Data for Machine Learning (inIT-OWL)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: CC BY-NC-SA 4.0 — declarado na página Kaggle (uso não-comercial obrigatório) | Link: https://www.kaggle.com/datasets/inIT-OWL/genesis-demonstrator-data-for-machine-learning
+Dados de sistema ciber-físico (CPS) de demonstrador industrial (inIT-OWL) pra detecção de anomalia — múltiplos sensores em ciclo de operação real
+
+## ReliabilityCalc
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: AMBIGUO | Licença: desconhecida — NAO_INFORMADO (Gratuito) | Link: https://reliabilitycalc.com/
+Ferramenta gratuita com 4 calculadoras de confiabilidade (MTBF, MTTR, disponibilidade, OEE)
+
+## Intel Lab Data (Sensor Network)
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://db.csail.mit.edu/labdata/labdata.html
+Leituras de rede de sensores (temperatura, umidade, luz, voltagem) | 54 sensores no Intel Berkeley Research Lab | Temperatura, umidade, luz, voltagem, localização no mapa do lab
+
+## AI4I 2020 Predictive Maintenance Dataset
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: CC BY 4.0 | Link: https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset
+Classificação de falhas em máquinas industriais (sintético) | Máquina genérica industrial | Tipo de produto, temperatura do ar, temperatura do processo, velocidade de rotação, torque, desgaste da ferramenta, target (falha), tipo de falha
+
+## XJTU-SY Bearing Datasets
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: não verificado | Link: https://github.com/WangBiaoXJTU/xjtu-sy-bearing-datasets
+Datasets de Remaining Useful Life | Múltiplos equipamentos | Vida útil remanescente, condição atual
+
+## Two-Phase Flow in Horizontal Pipe (Unicamp)
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: Aberto | Link: https://doi.org/10.25824/redu/ISMWP4
+Fluxo bifásico gas-água em tubulação horizontal | Tubulação de aço horizontal (ar + água) | 10 sensores de pressão piezoelétrica (PCB 112B21, 106B50), 5 acelerômetros (PCB 352C33), void fraction meters (4 estações), câmera de alta velocidade (Phantom VEO 640, 800 fps)
+
+## OREDA Standards & Publications
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: BLOQUEADO | Licença: proprietaria_paga — Copyright OREDA | Link: https://oreda.com/standards-and-publications/
+Handbooks publicados com dados de confiabilidade pré-analisados e validados.
+
+## OREDA — Offshore and Onshore Reliability Data
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: AMBIGUO | Licença: paga — consórcio OREDA (SINTEF/DNV), assinatura corporativa/handbook | Link: https://www.oreda.com/
+Taxas de falha de equipamento estático/rotativo em O&G; MTBF, modos de falha (300+ instalações, 18mil+ equipamentos).
+
+## Plant Fault Detection Dataset (70 Industrial Sites)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://phmsociety.org/conference/annual-conference-of-the-phm-society/annual-conference-of-the-prognostics-and-health-management-society-2015/phm-data-challenge-3/
+Dados de falhas de 70 instalações industriais | Múltiplos equipamentos industriais | 212 data files, múltiplos formatos CSV (raw, selected, sampled)
+
+## Sensor-Based Environmental Monitoring Dataset
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: AMBIGUO | Licença: não verificado | Link: https://data.mendeley.com/datasets/pdsjz2wjw7/1
+Datasets de temperatura | Múltiplos equipamentos | Temperatura, gradiente térmico
+
+## FCCU Dataset (ML-PSE) — Fluid Catalytic Cracking Unit Process Monitoring
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: OK | Licença: MIT License — confirmado por 2 fontes independentes lendo o LICENSE do repositório GitHub, incl. nome do titular do copyright ('Copyright (c) 2023 Ankur Kumar') | Link: https://github.com/ML-PSE/Fluid-Catalytic-Cracking-Unit-Dataset-for-Process-Monitoring-Evaluation
+Dataset de monitoramento de processo de uma unidade de craqueamento catalítico fluido (FCC) — dados de simulação pra avaliação de métodos de process monitoring/fault detection
+
+## MCSA-DC (Motor Current Signature Analysis Data Center)
+Frente: Monitoramento de Equipamento | Status: CONFIRMADO | Risco legal: OK | Licença: CC BY 4.0 (LICENSE explícito no repositório) | Link: https://github.com/lias-laboratory/mcsa-dc
+Datasets de assinatura elétrica | Motores, geradores | Corrente, tensão, potência, frequência, harmônicos
+
+## AIChE/CCPS PERD
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: BLOQUEADO | Licença: proprietaria_paga — Copyright AIChE/CCPS | Link: https://ccps.aiche.org/resources/process-equipment-reliability-database-perd
+Base/metodologia de confiabilidade de equipamentos de processo, alinhada à ISO 14224.
+
+## Additional TEP Data for Anomaly Detection Evaluation
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1
+Extensão do TEP para avaliação de anomaly detection | Tennessee Eastman Process | 55 colunas (mesmas do TEP original)
+
+## PRONTO Heterogeneous Benchmark Dataset
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://zenodo.org/record/1341582
+Dados heterogêneos de processo industrial (água, ar, óleo) | Facilidade de fluxo industrial (Cranfield University) | Pressão, vazão, temperatura, densidade, alarmes, sensores de alta frequência (pressão, ultrassom), logs de operação, vídeo || CORRECAO URL 2026-09-18 (Claude/chat, busca web direta): URL antiga apontava para zenodo.org (raiz do agregador), corrigida para o registro especifico do dataset (Zenodo, publicado 16/05/2019, ABB Corporate Research/Imperial College London/Zhejiang University).
+
+## OREDA@Cloud
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: BLOQUEADO | Licença: proprietaria_paga — Copyright OREDA | Link: https://oreda.com/oredacloud/
+Acesso web a datasets estruturados, pesquisáveis e filtráveis de confiabilidade e manutenção.
+
+## FailureSensorIQ (IBM Research)
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: Apache License 2.0 (confirmada em texto literal no README do dataset) | Link: https://huggingface.co/datasets/ibm-research/FailureSensorIQ
+Dataset MCQA (Multi-Choice QA) relacionando sensores e modos de falha para 10 ativos industriais (motor elétrico, turbina a vapor, turbina a gás aero/industrial, etc.) — 8296 perguntas (2667 single-true + 5629 multi-true), geradas a partir de documentos ISO. Inclui leaderboard e paper (arXiv:2506.03278). Repositório: github.com/IBM/FailureSensorIQ
+
+## GIDEP (Government-Industry Data Exchange Program)
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: proprietaria_gratuita — Gov-US / Restrição membros | Link: https://www.gidep.org/dashboard/content/data
+Base colaborativa governo-indústria dos EUA com taxas de falha, modos e manutenção
+
+## PMx_data (Predictive Maintenance eXtended)
+Frente: Portais & Curadorias | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://github.com/autonlab/pmx_data
+Curadoria de datasets para manutenção preditiva | Múltiplos: heat exchangers, pumps, robots, turbofan, solar, trucks | Links, scripts de download, metadados
+
+## Acoustic Emission Bearing Fault Dataset (Kaggle)
+Frente: Sensoriamento & Dados de Campo | Status: BLOQUEADO_FERRAMENTA | Risco legal: AMBIGUO | Licença: Verificar | Link: https://www.kaggle.com/datasets/ahuyng/bearingfault-dataset
+Sinais de emissão acústica de rolamentos com falhas | Rolamento (pitch 46.5mm, 13 elementos, diâmetro 9mm) | Emissão acústica (250 kHz), velocidades 250-500 RPM
+
+## Edge-AI Sensor Dataset for Smart Manufacturing
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: OK | Licença: não verificado (regra 9: IEEE DataPort força CC BY em bloco — confirmar quando verificar) | Link: https://ieee-dataport.org/documents/edge-ai-sensor-dataset-real-time-fault-prediction-smart-manufacturing
+Datasets de pressão | Múltiplos equipamentos | Pressão, pressão diferencial
+
+## One Year Industrial Component Degradation (Cutting Blade / Vega Shrink-wrapper)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: CC BY-SA 3.0 — declarado na página Kaggle | Link: https://www.kaggle.com/datasets/inIT-OWL/one-year-industrial-component-degradation
+Um ano de dados de degradação de componente industrial real (lâmina de corte de uma embaladora shrink-wrap Vega) — sensores de vibração/corrente ao longo de ciclo completo de vida útil
+
+## Rare Event Classification in Multivariate Time Series — Pulp and Paper Dataset (Ranjan et al. 2018)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International — lido literalmente na Seção 8 (LICENSE) do paper arXiv:1809.10717: 'users can share... cannot be used for any commercial purposes... distribute any additions...' | Link: https://arxiv.org/abs/1809.10717
+Dataset real de planta de papel e celulose pra classificação de evento raro (paper break) em série temporal multivariada — ~19k observações, sensores de processo contínuo
+
+## UMFDD - Universal Machinery Fault Diagnosis Dataset
+Frente: Portais & Curadorias | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://data.mendeley.com/datasets/3bz24t6tf4
+Repositório multi-sensor normalizado para fault diagnosis cross-domain | Integra CWRU, UOEMD, UORED, HUST, IM-VACD, gearbox multi-mode | Vibração (m/s² → m/s), acústico (V → Pa → particle velocity), corrente, temperatura
+
+## APS Failure at Scania Trucks (UCI / IDA 2016)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: CC BY 4.0 — padrão da plataforma UCI Machine Learning Repository | Link: https://archive.ics.uci.edu/dataset/421/aps+failure+at+scania+trucks
+Dataset de diagnóstico de falha do sistema de ar comprimido (APS) de caminhões Scania, usado no desafio IDA 2016 — classificação binária custo-sensível (falso negativo custa 500x mais que falso positivo)
+
+## Energy Institute (Heat Exchangers)
+Frente: Fundamentos de Confiabilidade | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Misto (sumários abertos; relatórios completos via associação/compra) | Link: https://www.energyinst.org/
+Incidentes e taxas de falha de trocadores de calor
+
+## SECOM - Semiconductor Manufacturing Process Data
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://archive.ics.uci.edu/ml/datasets/SECOM
+Dados de manufatura de semicondutores para quality prediction | Processo de fabricação de semicondutores | 590 features de sensores, pass/fail label
+
+## NREL Wind Turbine Gearbox Vibration Benchmark
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://catalog.data.gov/dataset/wind-turbine-gearbox-condition-monitoring-vibration-analysis-benchmarking-datasets
+Vibração de gearbox de turbina eólica (dinamômetro + campo) | Gearbox de turbina eólica (saudável e danificado) | Acelerômetros (múltiplos eixos), RPM do high-speed shaft
+
+## MaintIE - Information Extraction from Maintenance Short Texts
+Frente: Gestão da Manutenção | Status: CONFIRMADO | Risco legal: OK | Licença: MIT (confirmado literalmente no README do repositório GitHub e no paper ACL Anthology/LREC-COLING 2024: "publicly available... under the MIT license"). | Link: https://github.com/nlp-tlp/maintie
+Esquema de anotação + corpus (1.076 textos fino-granulares + 7.000 textos grosso-granulares) e modelos de benchmark para extração de entidades/relações de ordens de serviço de manutenção (MWOs).
+
+## Fraunhofer Machine Learning Datasets for Production
+Frente: Portais & Curadorias | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Varia por dataset | Link: https://www.bigdata-ai.fraunhofer.de/s/datasets/index.html
+Múltiplos datasets de processos de produção | Extrusora de plástico, máquina de revestimento (e-coating), forno de roasting, wafer manufacturing | Temperatura, pressão, vibração, espessura, defeitos, qualidade
+
+## SKAB — Skoltech Anomaly Benchmark
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: GPL-3.0 — lido literalmente no arquivo LICENSE (github.com/waico/SKAB/blob/master/LICENSE) | Link: https://github.com/waico/SKAB
+Benchmark de anomaly detection em time-series multivariada (8 sensores: vibração×2, corrente, pressão, temperatura×2, tensão, vazão) em testbed de circulação de água com bomba. 35 CSVs (~37k pontos). Labels dual: outlier (ponto) e changepoint (coletivo).
+
+## DINOS - Diverse INdustrial Operation Sounds
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: AMBIGUO | Licença: não verificado | Link: https://doi.org/10.7910/DVN/FWAZBQ
+Datasets acústicos | Múltiplos equipamentos | Áudio, espectrogramas, dB
+
+## Vibration Signals of Different Fault Conditions
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: AMBIGUO | Licença: CC BY 4.0 | Link: https://zenodo.org/records/14388093
+Datasets de vibração genéricos | Múltiplos equipamentos | Aceleração, velocidade, deslocamento, frequência
+
+## Industrial Maintenance Synthetic Dataset — Jvachier (Hugging Face/Kaggle)
+Frente: Gestão da Manutenção | Status: CONFIRMADO | Risco legal: OK | Licença: Apache 2.0 | Link: https://huggingface.co/datasets/Jvachier/industrial-maintenance-synthetic
+Dataset sintético de manutenção industrial (ordens de serviço, eventos, falhas simuladas)
+
+## NeqSim - Reliability Data Sources
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: aberta — MIT License | Link: https://equinor.github.io/neqsim/
+Framework que carrega dados de confiabilidade (MTBF, MTTR) de arquivos CSV baseados em OREDA
+
+## Industrial Maintenance Synthetic Dataset
+Frente: Gestão da Manutenção | Status: CONFIRMADO | Risco legal: OK | Licença: Apache 2.0 | Link: https://www.kaggle.com/datasets/jvachier/industrial‑maintenance‑synthetic
+Ordens de serviço de manutenção | Múltiplos equipamentos | Tipo de manutenção, tempo, custo, peças
+
+## IEEE Industrial AI Lab Datasets
+Frente: Portais & Curadorias | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://www.ieee.org/
+Curadoria de datasets industriais e manutenção preditiva | Múltiplos equipamentos industriais | Links e metadados
+
+## Rotating Electromechanical System Dataset (Nature Sci Data)
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: Aberto | Link: https://www.nature.com/articles/s41597-026-07224-0
+Sinais multivariados sincronizados de sistema eletromecânico | Bancada eletromecânica flexível (motor + carga) | Vibração (acelerômetro), corrente elétrica (3 fases), temperatura, velocidade de rotação
+
+## UK HSE ROGI (Offshore Oil and Gas Incident)
+Frente: Fundamentos de Confiabilidade | Status: VERIFICADO | Risco legal: OK | Licença: Aberto (relatórios agregados) | Link: https://www.hse.gov.uk/offshore/omar/rogi.htm
+Dados de liberação de hidrocarbonetos e falhas offshore
+
+## Exida SILSafe Data
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: proprietaria_gratuita — Copyright exida (gratuito parcial) | Link: https://silsafedata.com/
+Coleção de taxas de falha aplicáveis a Sistemas Instrumentados de Segurança (SIS)
+
+## Real-IAD D3 - Multimodal Industrial Anomaly Detection
+Frente: Monitoramento de Equipamento | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: não verificado | Link: https://huggingface.co/datasets/Real-IAD/Real-IAD_D3
+Dados de inspeção industrial | Múltiplos equipamentos | Tipo de inspeção, resultados, data
+
+## SCANIA Component X Dataset
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: aberta — CC BY 4.0 | Link: https://www.nature.com/articles/s41597-024-03548-5
+Dataset real de falhas de componente de motor de caminhão SCANIA
+
+## Industrial Atlas
+Frente: Portais & Curadorias | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://www.indatlas.com/
+Benchmarks industriais curados | Bombas, rolamentos, sistemas hidráulicos | Links e metadados
+
+## AIChE/CCPS PERD Publications
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: BLOQUEADO | Licença: proprietaria_paga — Copyright AIChE/CCPS | Link: https://ccps.aiche.org/resources/perd/publications
+Publicações e tabelas de dados de confiabilidade de equipamentos de processo.
+
+## Data Resources for Materials Science (GitHub)
+Frente: Portais & Curadorias | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://github.com/sedaoturak/data-resources-for-materials-science
+Curadoria de bancos de dados de materiais | Todas as classes de materiais | Links, descrições, tipos de propriedades || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico.
+
+## GitHub - Predictive Maintenance Datasets
+Frente: Portais & Curadorias | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://github.com/kokikwbt/predictive-maintenance
+Lista de datasets para manutenção preditiva | Múltiplos equipamentos | Links e metadados || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico.
+
+## Exida Component Reliability Database (CRD)
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: BLOQUEADO | Licença: proprietaria_paga — Copyright exida | Link: https://www.exida.com/OEMx/Reliability-Database
+Banco de dados de taxas de falha para componentes elétricos, mecânicos e sensores
+
+## ALPI — Alarm Logs in Packaging Industry
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: CC BY — regra de plataforma do IEEE DataPort, confirmada em múltiplas páginas oficiais IEEE: 'Datasets on IEEE DataPort are made available under Creative Commons Attribution (CC-BY) licenses which require attribution' | Link: https://ieee-dataport.org/open-access/alarm-logs-packaging-industry-alpi
+Logs de alarme de 20 máquinas de embalagem industrial (2019-2020), 154 códigos de alarme distintos — previsão de próximo alarme / manutenção preditiva por eventos
+
+## Current Signature Dataset - Three-Phase Induction Motor
+Frente: Monitoramento de Equipamento | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://data.mendeley.com/datasets/gxdd74czwh
+Corrente 3-fase de motor com falhas de rolamento e BRB | Motor de indução com rolamentos defeituosos e barras quebradas | Corrente instantânea 3-fase [A], 10 kHz sampling, 1000 amostras/canal
+
+## MaintIE - Information Extraction from Maintenance Short Texts — nlp-tlp
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: MIT (confirmado no README oficial do repositório) | Link: https://github.com/nlp-tlp/maintie
+Esquema de anotação multi-nível e corpus (1.076 textos finos + 7.000 textos grossos) para extração de entidades/relações de ordens de serviço de manutenção (MWOs)
+
+## BÔNUS: AIChE DIERS - alívio emergencial.
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: AMBIGUO | Licença: Copyright AIChE/CCPS (Assinatura) | Link: https://www.aiche.org/ccps/design-institute-emergency-relief-systems-diers
+BÔNUS: AIChE DIERS - alívio emergencial.
+
+## Industrial Sensor Time-Series with Operational Event Labels
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: OK | Licença: Verificar | Link: https://ieee-dataport.org/documents/industrial-sensor-time-series-operational-event-labels-digital-twin-research
+Séries temporais multivariadas de sensores industriais | Sistema industrial genérico | Temperatura, vibração, pressão, horas operacionais, índice de eficiência, estado do sistema, performance score
+
+## Lab-Scale Vibration Analysis Dataset (Zenodo)
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://zenodo.org/record/7006575
+Vibração de máquina em escala laboratorial | Máquina rotativa em bancada | Vibração, 4 condições: normal, unbalance, misalignment, bearing fault
+
+## NASA Prognostics Data Repository - IMS Bearing Dataset
+Frente: Sensoriamento & Dados de Campo | Status: VERIFICADO | Risco legal: OK | Licença: Aberto | Link: https://data.phmsociety.org/nasa/
+Experimentos run-to-failure de rolamentos para RUL (Vida Útil Remanescente)
+
+## Awesome Industrial Datasets - Extended (GitHub)
+Frente: Portais & Curadorias | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://github.com/jonathanwvd/awesome-industrial-datasets
+Curadoria expandida de datasets industriais (50+ datasets) | Múltiplos: oil wells, turbines, bearings, motors, valves, chemical process, manufacturing | Links, metadados, descrições, licenças, formatos || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico. || CONSOLIDACAO 2026-09-18 (Claude/chat, correcao de dominios repetidos): src_ind_095 era a mesma entrada (repositorio unico github.com/jonathanwvd/awesome-industrial-datasets), cadastrada 2x em rodadas diferentes com contagens desatualizadas; verificado ao vivo (18/09/2026): repo ativo com 190 datasets catalogados atualmente, cresce continuamente. Mesclada em src_ind_185.
+
+## Paper Machine Vibration Dataset with Annotations (Luleå UT)
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: BLOQUEADO | Licença: Restrito | Link: https://researchdata.se/en/catalogue/dataset/2023-246/1
+Vibração anotada de máquinas de papel (process industry real) | 2 máquinas de papel Kraftliner (80m×10m×10m) | FFT e envelope-transformed vibration signals, anotações em sueco (por especialistas), embeddings Swedish SentenceBERT
+
+## DiTEC-WDN - Water Distribution Network Dataset
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: OK | Licença: CC BY 4.0 | Link: https://github.com/DiTEC-project/DiTEC_WDN_dataset
+Datasets de vazão | Múltiplos equipamentos | Vazão massica, volumétrica
+
+## NoBOOM — Chemical Process Datasets for Industrial Anomaly Detection
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: CC-BY-SA 4.0 — confirmado por citação literal do paper oficial NeurIPS 2025 (via OpenReview, Perplexity 2026-08-30: "The NoBOOM dataset itself is released under the CC-BY-SA 4.0 license, which is clearly specified on the dataset page") + achado independente anterior via GitHub/paper que também leu CC-BY-SA 4.0. A leitura divergente 'CC BY 4.0' (LOTE_E, via suposto fetch direto do Kaggle) é descartada por vir de um método já sinalizado como pouco confiável neste protocolo. | Link: https://www.kaggle.com/datasets/faebs94/noboom-anomaly-detection-in-chemical-processes
+Primeira coleção de datasets de anomaly detection em dados reais de processo químico: dados rotulados de um processo em operação real na BASF SE + vários processos químicos em plantas laboratoriais/piloto, com informação detalhada de configuração de planta e rótulos de anomalia.
+
+## PHM Data Challenge 2022 — Rock Drill Fault Classification (Epiroc/Linköping Univ.)
+Frente: RUL & Diagnóstico com IA | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: CC BY 3.0 US — confirmado por fetch direto do PDF oficial 'PHM2022_Data_Challenge_Description.pdf' (Perplexity, 2026-08-30), reproduzindo o mesmo texto literal já citado pela leitura anterior (LOTE_E) da mesma fonte primária. | Link: https://data.phmsociety.org/2022-phm-conference-data-challenge/
+Classificação de falhas em perfuratriz hidráulica (rock drill) sob diferentes configurações individuais; dados de sensor de pressão a 50kHz, 5 configurações de treino + configurações cegas de teste/validação.
+
+## FEMTO-ST Bearing Dataset for RUL Prediction
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: "License: MIT" (dataset card + README, Hugging Face) | Link: https://huggingface.co/datasets/amgharr/femto-st_dataset
+Dataset de rolamentos (bearings) do instituto FEMTO-ST, reempacotado para predição de RUL (Remaining Useful Life), com arquivos parquet e viewer no Hugging Face.
+
+## IMS Bearings Dataset (NASA Open Data Portal / PCoE)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: U.S. Government Works — domínio público (usa.gov/government-works) | Link: https://data.nasa.gov/dataset/ims-bearings
+Dados de degradação/run-to-failure de rolamentos (vibração), referência clássica em PHM/RUL
+
+## NASA C-MAPSS Turbofan Engine Degradation Simulation Dataset (v2 / Turbofan-2)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: CC0: Public Domain / U.S. Government Works | Link: https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan-2
+Simulação de degradação de motores turbofan (dataset v2), referência em RUL/PHM
+
+## NASA C-MAPSS Turbofan Engine Degradation Simulation Dataset (clássico / FD001-FD004)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: CC0: Public Domain / U.S. Government Works | Link: https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan
+Dataset clássico FD001-FD004 de degradação de motores turbofan, referência mundial em RUL/PHM
+
+## SINTEF PDS Handbook 2021/2013 (cita blog SINTEF com quote da Equinor)
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: Confirmado por citação literal (SINTEF PDS Handbook). | Link: https://blog.sintef.com/digital-en/new-handbook-reliability-data-for-safety-equipment
+DU/DD/SFF/DC/PTC final elements valvulas
+
+## SINTEF PDS Data Handbook (2021) + loja
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: SINTEF PDS Data Handbook confirmado por citação literal. | Link: https://sintef.no
+site institucional da SINTEF — pagina sobre o PDS Data Handbook (2021), contexto e resumo do produto, sem acesso ao conteudo completo
+
+## SINTEF PDS Data Handbook (2021) + loja
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: SINTEF PDS Data Handbook / loja confirmado por citação literal. | Link: https://sintefstore.no/en/products/pds-handbooks
+loja online da SINTEF (sintefstore.no) — pagina de compra efetiva do PDS Data Handbook (2021), onde o documento e adquirido
+
+## Condition Based Maintenance of Naval Propulsion Plants (UCI)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: CC BY 4.0 | Link: https://archive.ics.uci.edu/ml/datasets/condition+based+maintenance+of+naval+propulsion+plants
+Simulação de planta de propulsão naval (turbina a gás) pra manutenção baseada em condição — degradação de compressor e turbina
+
+## Ultrasonic Flowmeter Diagnostics (UCI)
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: OK | Licença: CC BY 4.0 | Link: https://archive.ics.uci.edu/ml/datasets/Ultrasonic+flowmeter+diagnostics
+Diagnóstico de falhas em medidor de vazão ultrassônico
+
+## Production Plant Data for Condition Monitoring (inIT-OWL, Kaggle)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: RESTRITO | Licença: CC BY-SA 3.0 | Link: https://www.kaggle.com/datasets/inIT-OWL/production-plant-data-for-condition-monitoring
+Dados de planta de produção industrial pra monitoramento de condição (série inIT-OWL)
+
+## Industrial Equipment Maintenance Data
+Frente: Fundamentos de Confiabilidade | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: "Unknown" (campo License literal do Kaggle) — NÃO equivale a licença aberta | Link: https://kaggle.com/datasets/mayurgadekar5555/industrial-equipment-maintenance-data
+-
+
+## VEGA Shrinkwrapper Run-to-Failure Data (inIT-OWL, Kaggle)
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: ABERTO | Licença: CC BY-SA | Link: kaggle.com/inIT-OWL/vega-shrinkwrapper-runtofailure-data
+Dados de teste até falha de máquina shrinkwrapper VEGA
+
+## Fleet Preventative Maintenance & Repair Work Orders — City of Cincinnati
+Frente: Gestão da Manutenção | Status: CONFIRMADO | Risco legal: OK | Licença: Public Domain — portal Socrata/Tyler, campo License/licenseId confirmado por 3 fontes independentes (Qwen, LLM-B, LLM-C) | Link: data.cincinnati-oh.gov/Thriving-Neighborhoods/Fleet-Preventative-Maintenance-Repair-Work-Orders/2a8x-bxjm
+Ordens de manutenção preventiva/corretiva de frota municipal desde jan/2008
+
+## Water Pump RUL
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: CC0: Public Domain — confirmado por 2 fontes via provenance secundária (Kaggle bloqueava fetch direto) | Link: https://www.kaggle.com/datasets/anseldsouza/water-pump-rul-predictive-maintenance
+RUL de bomba d'água, manutenção preditiva
+
+## PARLOC 2001 (HSE, historico) + PARLOC 2020 (Energy Institute)
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: Todos os direitos reservados, reprodução proibida sem permissão por escrito — Energy Institute (confirmado por 2 fontes) | Link: https://energyinst.org/industry/publications/topics/offshore-safety
+Taxas de falha dutos/risers offshore Mar do Norte 2001-2020
+
+## Maintenance Work Orders Dataset (Kaggle)
+Frente: Gestão da Manutenção | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: License: Other — campo Kaggle, texto não lido literalmente | Link: https://www.kaggle.com/datasets/tinhban/maintenance-work-orders-dataset
+Tabela de ordens de manutenção
+
+## RUL Dataset from Continuous Casting Machine
+Frente: RUL & Diagnóstico com IA | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: não lida literalmente ainda | Link: https://www.kaggle.com/datasets/yuriykatser/rul-dataset-from-continuous-casting-machine
+RUL de máquina de lingotamento contínuo — metalurgia
+
+## NASA Shuttle Valve Data
+Frente: Monitoramento de Equipamento | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Sem licença formal — só obrigação de citação (Ferrell & Santuro, 2005) | Link: https://cs.fit.edu/~pkc/nasa/data/
+Benchmark clássico de detecção de outlier em válvula
+
+## Eclipse BaSyx Python SDK
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: MIT; dados de exemplo a confirmar / OK condicionado | Link: https://github.com/eclipse-basyx/basyx-python-sdk
+SDK para AAS/AASX, JSON e XML
+
+## Eclipse BaSyx Java Server SDK
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: Licença do código; exemplos a confirmar / OK condicionado | Link: https://github.com/eclipse-basyx
+Servidores e componentes AAS || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): BaSyx Java V1; repositório arquivado/read-only em 29/07/2026; README recomenda BaSyx Java V2 para especificações IDTA atuais. [Achado: Não é dataset; atenção ao status arquivado.] || [NOTA 2026-09-17: candidato a status arquivado/legado — parece ser só demonstrador histórico do BaSyx, não dataset ativo]
+
+## BaSyx PDF-to-AAS
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: MIT; documentos processados dependem da origem / OK condicionado | Link: https://github.com/eclipse-basyx/basyx-pdf-to-aas
+Conversão de PDFs técnicos para AAS || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Pipeline Python que extrai informações de PDFs/textos e gera submodelo AAS Technical Data em JSON usando pypdfium2, ECLASS, busca PropertyLLM e LLMs; possui exemplos, avaliação e WebUI Gradio. [Achado: Não gera necessariamente um AAS completo genérico.]
+
+## SMIA Dataset
+Frente: IIoT, Edge & Digital Twin | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Não explicitada (código sem licença) | Link: https://www.sciencedirect.com/science/article/pii/S2665963825000673#3
+Performance evaluation dataset with CSV R scripts AASX and ontology || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Pacote associado à arquitetura SMIA/AAS, com CSV, scripts R, arquivos AASX e ontologia; não corresponde a um dataset convencional de sensores. [Achado: Necessita confirmação do pacote suplementar exato.]
+
+## IDTA AAS Specifications (IEC61360)
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: Creative Commons Attribution 4.0 International | Link: https://github.com/admin-shell-io/aas-specs-iec61360
+Especificações normativas do AAS (schemas JSON RDF XML) || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Parte 3a da especificação AAS; cobre templates e propriedades IEC 61360, value lists/values, unidades e referências semânticas; versão V3.1.1 confirmada. [Achado: Não é dataset; deve ser classificado como especificação/recurso semântico.]
+
+## Eclipse BaSyx Demo Data
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: Eclipse Public License (EPL) | Link: https://git.eclipse.org/c/basyx/basyx.git/tree/reference-implementations/hmi2018-demonstrator-snapshot
+Código-fonte e demonstração do middleware BaSyx || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): URL antiga associada a snapshot/demonstrador HMI 2018; não foi confirmada como dataset científico independente. [Achado: Classificação como dataset é inadequada.] || [NOTA 2026-09-17: suspeita de ser só demonstrador/código de exemplo do BaSyx, não dataset — confirmar antes de tratar como fonte de dado]
+
+## PerfCam Dataset
+Frente: IIoT, Edge & Digital Twin | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Não explicitada (repositório AstraZeneca) | Link: https://ieee-dataport.org/documents/experiments-dataset-perfcam-digital-twinning-production-lines-using-3d-gaussian-splatting
+Dataset para reconstrução 3D e tracking em linhas de produção || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Dados de câmeras robóticas para reconstrução 3D, digital twins e manutenção preditiva; imagens coloridas removidas por compliance, permanecendo depth images e nuvens COLMAP raw/fused; usa Git LFS. [Achado: A ausência de color frames limita certos usos de visão.]
+
+## Manufacturing Ontologies (DTDL - ISA95/AAS)
+Frente: IIoT, Edge & Digital Twin | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Não especificada | Link: https://github.com/sandervandevelde/ManufacturingOntologies
+Ontologias DTDL v2 para ISA95 e IEC 63278
+
+## Edge-IIoTset
+Frente: IIoT, Edge & Digital Twin | Status: VERIFICADO | Risco legal: RESTRITO | Licença: Acesso IEEE DataPort e restrições comerciais / RESTRITO | Link: https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications
+Tráfego IoT/IIoT com múltiplos ataques e dispositivos
+
+## Industrial-Instruction Dataset
+Frente: IA Generativa aplicada | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: A verificar | Link: https://huggingface.co/papers/Industrial-Instruction
+Datasets QA abertos de 906 documentos técnicos da Panasonic
+
+## Industrial Fault Codes Dataset
+Frente: IA Generativa aplicada | Status: VERIFICADO | Risco legal: RESTRITO | Licença: CC BY-NC 4.0 | Link: https://huggingface.co/datasets/avneetsingla/industrial-fault-codes-sample
+70000+ códigos de falha com descrições e ações de reparo de 82+ fabricantes
+
+## Robot Instructions Dataset
+Frente: IA Generativa aplicada | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: A verificar | Link: https://huggingface.co/datasets/milistu/robot-instructions
+Dataset para fine-tuning de LLMs em instruções para robôs industriais || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Exemplos em Parquet/JSONL em inglês, com comando humano e saída representando chamadas de funções robóticas; aproximadamente 986 exemplos, gerados com GPT-3.5-Turbo-1106. [Achado: Saídas podem estar serializadas como string/lista.]
+
+## Industrial MRO Metadata
+Frente: IA Generativa aplicada | Status: VERIFICADO | Risco legal: OK | Licença: CC BY 4.0 / OK condicionado | Link: https://sourceforge.net/projects/qte-technologies-industrial/files/
+Mais de 1 milhão de registros de metadados MRO
+
+## Eclipse BaSyx — SDK Modelos & Demonstrações AAS
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: Apache-2.0 SPDX: Apache-2.0 | Link: https://github.com/eclipse-basyx;https://basyx.eclipse.org/
+Implementação completa padrão IEC 63278 metadados submodelos exemplos prontos de fábrica e servidores compatíveis
+
+## Eclipse AAS Core Works — Meta-modelo & Conjuntos-Referência
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: MIT SPDX: MIT | Link: https://github.com/eclipse-aas-core-works;https://projects.eclipse.org/proposals/eclipse-aas-core-works
+Esquema máquina-legível atualizado (v3/v4) serialização geradores SDK + conjuntos de dados-teste padrão completos
+
+## DTDL — Vocabulário + Biblioteca Modelos Industriais Abertos
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: MIT SPDX: MIT | Link: https://github.com/Azure/opendigitaltwins-dtdl;https://learn.microsoft.com/en-us/azure/digital-twins/concepts-models
+Linguagem padrão gêmeos digitais + > 100 ontologias prontas; conversão oficial bidirecional AAS disponível
+
+## Eclipse Ditto — Gêmeos Digitais Genéricos + Sincronização Dispositivo-Nuvem
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: EPL-2.0 + Apache-2.0 SPDX válido | Link: https://eclipse.org/ditto;https://github.com/eclipse-ditto
+Gêmeo-sombra persistência estado APIs prontas exemplos fábrica inteligente; integração OPC-UA/MQTT nativa || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Framework Eclipse IoT para Things, Policies, Things Search, Gateway e Connectivity; suporta MQTT, AMQP, HTTP, WebSocket e Kafka conforme bindings documentados; execução local por Docker Compose. [Achado: Duplicata técnica de AAS-004.] || [Duplicata mesclada em 2026-09-17: AAS-004 — descrição idêntica do Eclipse Ditto, cadastrada 2x em lotes diferentes]
+
+## OPC UA Companion Specification — Modelos de Domínio Padrão
+Frente: IIoT, Edge & Digital Twin | Status: VERIFICADO | Risco legal: RESTRITO | Licença: Especificação: aberto / conjuntos exemplo: ver individualmente — modelos base gratuitos alguns completos exigem filiação OPC F | Link: https://opcfoundation.org/developer/tools-and-libraries/unified-architecture-information-models
+Modelos semânticos aprovados indústria; esqueleto oficial usado dentro de AAS
+
+## IBM TechQA — Documentação Técnica Real Q&A
+Frente: IA Generativa aplicada | Status: VERIFICADO | Risco legal: RESTRITO | Licença: Artigo: CC-BY-4.0; Dados: uso acadêmico livre comercial/redistribuição exige consulta IBM — Apache-2.0 confirmado variantes | Link: https://arxiv.org/pdf/1911.02984;https://huggingface.co/datasets/ibm/TechQA;https://ibm.biz/TechQA
+1396 pares Q&A anotados manualmente baseados exclusivamente ~810 mil Technotes reais || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): 1.396 pares QA anotados manualmente, derivados de aproximadamente 810 mil Technotes/documentos técnicos IBM; três URLs representam o mesmo registro composto. [Achado: Não é especificamente industrial.]
+
+## MRO-QA / Industrial Maintenance Instruction Tuning
+Frente: IA Generativa aplicada | Status: VERIFICADO | Risco legal: RESTRITO | Licença: Maioria: CC-BY-4.0 ou MIT — cada conjunto mantém licença própria | Link: https://paperswithcode.com/datasets?q=maintenance+qa;https://huggingface.co/datasets/search?q=industrial+maintenance
+Estrutura ordens-serviço: sintoma → causa → reparo → peças — formato ideal fine-tuning/RAG || SINALIZADO 2026-09-18 (Claude/chat): URL e uma query de busca (search?q=...), nao um dataset fixo - mesmo padrao do P0-02-03. Recomenda-se desmembramento futuro em fontes especificas. || DESMEMBRADO 2026-09-19 (PP-32): criado(s) filho(s) concreto(s) via parent_id: P0-02-02-A. Este ID mantido só como índice de busca geral.
+
+## Industrial-Instruction Dataset (Parssky, Panasonic technical reports)
+Frente: IA Generativa aplicada | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Não confirmada na página do dataset (não achada em 1 busca) — pendente 2ª verificação | Link: https://huggingface.co/datasets/Parssky/industrial-instruction-dataset
+Dataset de instruction-tuning/QA construído a partir de 906 manuais técnicos reais da Panasonic (7.525 páginas) — 2 versões geradas por Qwen3-30B e Claude-Opus-4.6, pipeline e modelos também públicos (DOI 10.57967/hf/10098)
+
+## Industrial Multimodal Datasets (P&ID + Diagramas + Texto)
+Frente: IA Generativa aplicada | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Variável: conjuntos públicos usam CC mas frequentemente extraídos manuais proprietários com permissão limitada | Link: https://paperswithcode.com/task/industrial-document-understanding;https://huggingface.co/datasets/search?q=p&id
+Diagramas de processo fluxogramas combinados com legendas/anotações; resolve limites só-texto || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): A URL reúne recursos de P&ID, símbolos, textos, gráficos, QA e reconstrução de diagramas; exemplos encontrados incluem datasets de P&ID, PID2Graph, PIDQA e conjuntos sintéticos YOLO. [Achado: Não é um dataset único; deve ser desmembrado.] || Enriquecimento PP-25 (2026-09-17): [QC PP-25] Confirmado: registro não é um dataset único, é um ponto de busca/agregador (paperswithcode + HuggingFace search). Desmembrado em 2 fontes reais e específicas: [[P0-02-03-A]] PID2Graph e [[P0-02-03-B]] PIDQA. Manter este ID só como índice de busca geral pra outros datasets P&ID ainda não catalogados individualmente; reclassificar tipo_fonte.
+
+## PID2Graph (P&ID graph digitization benchmark)
+Frente: IA Generativa aplicada | Status: VERIFICADO | Risco legal: OK | Licença: CC BY-SA 4.0 (registro Zenodo 14803338, DLR): exige atribuição e compartilhamento pela mesma licença. As plantas reais vêm do OPEN100 (Energy Impact Center), cuja licença o registro não detalha. Arquivo único de 9,3 GB. Artigo: arXiv:2411.13929. | Link: https://zenodo.org/records/14803338
+Stürmer, Graumann & Koch, 'From Engineering Diagrams to Graphs: Digitizing P&IDs with Transformers' (IEEE DSAA 2025, arXiv:2411.13929). Primeiro benchmark P&ID publicamente acessível com ground truth em nível de grafo (símbolos + conexões). Base real-world OPEN100 (12 imagens de planta nuclear), 57-210 componentes e 28-118 arestas por imagem após colapso de conectores; inclui também subset sintético pra treino.
+
+## PIDQA (P&ID Question-Answering dataset)
+Frente: IA Generativa aplicada | Status: VERIFICADO | Risco legal: OK | Licença: CC0 1.0 (LICENSE do repositório mgupta70/PIDQA) para os 64.000 pares pergunta-resposta. As imagens P&ID usadas vêm do Dataset-P&ID (Paliwal et al.), que tem licença própria (CC BY-SA 4.0, segundo o registro do PID2Graph). Artigo: doi 10.3390/MAKE7020039. | Link: https://github.com/mgupta70/PIDQA
+Dataset PIDQA (Machine Learning and Knowledge Extraction, DOI 10.3390/MAKE7020039): 64.000 pares pergunta-resposta sobre P&IDs em 4 categorias (contagem simples, contagem espacial, conexões espaciais, perguntas baseadas em valor). Constrói grafo de propriedades rotuladas (LPG) a partir de imagem P&ID + LLM traduz pergunta em query Cypher.
+
+## Edge-IIoTset — Protocolos Industriais Latência e Desempenho Edge
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: CC-BY-4.0 | Link: https://doi.org/10.5281/zenodo.8358961;https://github.com/accsb/Edge-IIoTset
+Mesmo conjunto — acrescenta medições explícitas: tempo ida-volta uso banda consumo energia por dispositivo/conexão — ideal avaliar requisitos tempo-real
+
+## MQTT-Set — Benchmark Mensagens Leves Publicação/Assinatura
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: CC-BY-4.0 | Link: https://github.com/antoine-maillard/MQTT-Set;https://ieeexplore.ieee.org/document/9134876
+Tráfego puro MQTT v3.1/v5 — cargas tamanho real taxas publicação variadas comportamento QoS níveis 0-2 — sem outros protocolos misturados
+
+## ToyADMOS dataset
+Frente: Sensoriamento & Dados de Campo | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Info não disponível na curadoria — checar fonte primária (reportado pela curadoria — não confirmado na fonte primária) | Link: https://github.com/jonathanwvd/awesome-industrial-datasets/blob/master/markdown/toyadmos_dataset.md
+Som de máquinas em miniatura — 12000 amostras | Anomaly Detection/Fault Diagnosis/Condition Monitoring | Real Lab/Testbed, 2019, Repository/Zenodo
+
+## ToyADMOS2 dataset
+Frente: Sensoriamento & Dados de Campo | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Info não disponível na curadoria (reportado pela curadoria — não confirmado na fonte primária) | Link: https://github.com/jonathanwvd/awesome-industrial-datasets/blob/master/markdown/toyadmos2_dataset.md
+Som de máquinas em miniatura sob domain shift — 27k amostras | Anomaly Detection/Fault Diagnosis/Condition Monitoring | Real Lab/Testbed, 2021, Repository
+
+## MIMII DG (Domain Generalization)
+Frente: Sensoriamento & Dados de Campo | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: CC BY-NC-SA (reportado pela curadoria — não confirmado na fonte primária) | Link: https://github.com/jonathanwvd/awesome-industrial-datasets/blob/master/markdown/mimii_dg.md
+Variante do MIMII (já catalogado como src_ind_008) para generalização de domínio — som de máquina malfuncionando | Anomaly Detection/Fault Diagnosis/Condition Monitoring | Real Lab/Testbed, 2022, Repository/Zenodo/Competition
+
+## Edge-Industrial-Anomaly-Phi3 Dataset
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: Apache 2.0 — confirmado por 2 leituras independentes: achado original ('conteúdo conferindo perfeitamente') + fetch direto do README/dataset_info.json por Perplexity (2026-08-30, citação literal 'This dataset is released under the Apache 2.0 License'). | Link: https://huggingface.co/datasets/ssam17/Edge-Industrial-Anomaly-Phi3
+Conjunto de dados unificado de detecção de anomalias industriais, combinando dados de detecção de falhas, segurança cibernética IoT e manutenção preditiva para implantação de IA na borda. || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Dataset Hugging Face em JSONL/text generation, com arquivos para falhas industriais, anomalias Edge-IIoT e manutenção preditiva; viewer indica cerca de 11,9 mil linhas no split train; licença Apache-2.0. [Achado: Não confundir com o modelo phi3-industrial-anomaly.]
+
+## IIoT Edge Computing Dataset (Kaggle, ziya07)
+Frente: IIoT, Edge & Digital Twin | Status: CONFIRMADO | Risco legal: OK | Licença: CC0: Public Domain | Link: https://www.kaggle.com/datasets/ziya07/iiot-edge-computing-dataset
+Dados de computação de borda (edge) em ambiente IIoT || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): Inclui temperatura, pressão, vibração, latência de rede, tempo de processamento, saída de fuzzy PID, status de manutenção e Predicted_Failure; a descrição também menciona NASA CMAPSS/RUL, sugerindo possível mistura conceitual. [Achado: Conteúdo e escopo precisam ser tratados com cautela.]
+
+## NASA Prognostics Data Repository
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/
+Degradação e falhas de componentes | Rolamentos, motores, fresadoras, turbinas | Vibração, degradação, falha || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico.
+
+## NASA N-CMAPSS
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/
+Versão moderna de prognóstico de turbinas | Turbinas | Múltiplas variáveis de operação
+
+## NASA Milling Dataset
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/
+Desgaste de ferramenta de usinagem | Fresadoras/Usinagem | Força, vibração, desgaste da ferramenta
+
+## NASA IGBT Aging
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/
+Envelhecimento de componentes eletrônicos | Componentes eletrônicos | Tensão, corrente, temperatura
+
+## NASA Fatigue Crack Growth
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/
+Propagação de trincas por fadiga | Materiais metálicos | Comprimento de trinca, ciclos
+
+## MIMII DG (Domain Generalization)
+Frente: Sensoriamento & Dados de Campo | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: CC BY-NC-SA 4.0 — não permite uso comercial | Link: https://zenodo.org/record/6529888
+Sons de operação normal/anormal de 5 tipos de máquina industrial (ventiladores, engrenagens, rolamentos, trilhos deslizantes, válvulas), organizados em 3 subconjuntos ("sections") por tipo de domain shift; subconjunto do dataset de desenvolvimento do DCASE 2022 Challenge Task 2.
+
+## Reinartz 2021 — Extended TEP Reference Data (DTU)
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: CC0 — declarado no repositório institucional data.dtu.dk (DTU Data), conforme registrado pelo verificador (Grok) com paper associado Reinartz et al. 2021 | Link: https://data.dtu.dk/articles/dataset/Tennessee_Eastman_Reference_Data_for_Fault-Detection_and_Decision_Support_Systems/13385936
+Dados de referência estendidos do processo Tennessee Eastman (TEP) pra detecção de falha e sistemas de suporte à decisão — reamostragem/extensão do TEP clássico com foco em domain adaptation
+
+## NAB — Numenta Anomaly Benchmark
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: MIT, confirmado literalmente em múltiplos arquivos-fonte do próprio repositório (headers de copyright + setup.py) | Link: https://github.com/numenta/NAB
+Benchmark de referência para detecção de anomalia em série temporal, uso industrial amplo || Enriquecimento PP-19 Automacao_Controle_Digital (2026-09-15/17): NAB v1.1 contém mais de 50 séries rotuladas, reais e artificiais, além de labels, scripts, resultados, configuração e scoring para detecção online/streaming; licença MIT. [Achado: Não é benchmark especificamente industrial.]
+
+## Degradation Measurement of Robot Arm Position Accuracy (NIST)
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: Domínio Público (US Gov, NIST) — data.gov declara 'Public: This dataset is intended for public access and use'; DOI oficial 10.18434/M31962 em data.nist.gov | Link: https://www.nist.gov/el/intelligent-systems-division-73500/degradation-measurement-robot-arm-position-accuracy
+Dados de degradação de precisão posicional de braço robótico (Universal Robot UR5) sob diferentes condições de temperatura/carga/velocidade — posição TCP e dados de controlador por junta
+
+## X-IMS - Run-to-Failure Dataset for Tennessee Eastman Process (TEP)
+Frente: RUL & Diagnóstico com IA | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: NAO ENCONTRADO na página do dataset | Link: https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi%3A10.57745%2F1KATN7
+Pacote de replicação do projeto X-IMS para construção de health indicators e prognóstico no Tennessee Eastman Process; versão 1.0, ZIP de aproximadamente 2,5 GB. [Achado: É simulado e voltado a condition monitoring/prognostics.]
+
+## Bearing 6213 Norm/OR Dataset
+Frente: RUL & Diagnóstico com IA | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal | Link: https://data.mendeley.com/datasets/fbf6y8m4mv/1
+Detecção de anomalia em rolamento 6213
+
+## Vibração de rolamento sob velocidade de eixo constante
+Frente: RUL & Diagnóstico com IA | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal | Link: https://data.mendeley.com/datasets/ryg9rrkgv8/1
+Par do dataset acima, velocidade constante
+
+## Vibração de rolamento sob velocidade de eixo moderadamente variável
+Frente: RUL & Diagnóstico com IA | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal | Link: https://data.mendeley.com/datasets/j66x27t229/1
+Monitoramento de processo, detecção de outlier em rolamento
+
+## Vibração de rolamentos sob condições de velocidade amplamente variável
+Frente: RUL & Diagnóstico com IA | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal | Link: https://data.mendeley.com/datasets/6k6fbzc6vv/1
+Monitoramento de processo, rolamento
+
+## XJTU-SY Bearing Dataset
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://www.indatlas.com/benchmarks/xjtu-sy-bearing-dataset/
+Ensaios acelerados até falha | Rolamentos (15 unidades) | Vibração em dois eixos, temperatura
+
+## CWRU Bearing Data
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://engineering.case.edu/bearingdatacenter
+Benchmark clássico de falhas | Rolamentos de motor de indução | Vibração, velocidade, carga
+
+## Paderborn University Bearing Dataset
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://mb.uni-paderborn.de/kat/forschung/datacenter/bearing-datacenter/
+Falhas artificiais e naturais | Rolamentos | Vibração, corrente do motor
+
+## MAFAULDA
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://www02.smt.ufrj.br/~offshore/mfs/page_01.html
+Banco de falhas de máquinas (UFRJ) | Rolamentos, desbalanceamento, desalinhamento | Vibração, áudio
+
+## UNSW Bearing Dataset
+Frente: RUL & Diagnóstico com IA | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://data.mendeley.com/
+Prognóstico em condições reais | Rolamentos | Vibração, temperatura
+
+## Awesome Bearing Datasets (Curadoria)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://github.com/VictorBauler/awesome-bearing-dataset
+Curadoria de datasets de rolamentos | Rolamentos e máquinas rotativas | Links e metadados
+
+## DOE Gearbox Fault Diagnosis Data
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://data.openei.org/submissions/623 (fonte primaria real — data.gov e so catalogo/indice que linka pra ca)
+Falha de trinca em gearbox | Gearbox de dois estágios | Vibração, torque, rotação
+
+## PHM 2009 Gearbox Fault Detection
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://c3.ndc.nasa.gov/dashlink/resources/997/
+Desafio PHM/NASA de detecção | Gearbox com rolamentos | Acelerômetros, geometria de rolamentos
+
+## PHM Society Public Data Sets
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://phmsociety.org/public-data-sets/
+Curadoria de datasets PHM | Múltiplos equipamentos | Links e metadados || CONFIRMADO 2026-09-18 (Claude/chat, analise de dominios repetidos + conhecimento geral): e repositorio/registro agregador real, multi-dataset/multi-obra, nao uma fonte unica.
+
+## PHM 2023 Gearbox Degradation Dataset
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://data.phmsociety.org/phm2023-conference-data-challenge/
+Degradação de engrenagens por pitting | Gearbox de um estágio (spur gears 40/72 teeth) | Acelerômetro triaxial, vibração X/Y/Z, rpm, torque
+
+## PHM 2026 Gear Spall Damage Dataset
+Frente: Fundamentos de Confiabilidade | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://data.phmsociety.org/phm-north-america-2026-conference-data-challenge/
+Dano por spall em dentes de engrenagem | Spur gear (28 teeth), gearbox 1:1 | Vibração axial+radial (102.4 kHz), torque, velocidade, temperatura, CIs (FM4, NA4, M6a, ALR), imagens dos dentes
+
+## KAIST Bearing Datasets (Run-to-Failure)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://data.mendeley.com/datasets/j8d8pfkvj2/4
+Run-to-failure de rolamentos com velocidade variável | Rolamentos de esferas de sulco profundo | Vibração (x/y eixos, 2 sensores), corrente do motor (3 fases), velocidade de rotação (RPM)
+
+## KAIST AC Motor Testbed (Multi-fault)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://data.mendeley.com/datasets/9r82jppsn7/1
+Falhas múltiplas em motor de indução | Motores de 1, 3, 5, 7.5 HP + rolamentos | Corrente 3-fase (100 kHz), vibração z-axis (25.6 kHz), torque (25.6 kHz), RPM
+
+## Paderborn University Bearing Dataset (KAt DataCenter)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: RESTRITO | Licença: CC BY-NC 4.0 | Link: https://mb.uni-paderborn.de/kat/forschung/bearing-datacenter/data-sets-and-download
+Diagnóstico de falhas em rolamentos - corrente + vibração | Rolamentos 6203 (32 estados: 6 saudáveis + 26 danificados) | Corrente do motor (2 fases), vibração, velocidade, torque, carga radial, temperatura
+
+## UNSW Bearing Dataset (Run-to-Failure)
+Frente: RUL & Diagnóstico com IA | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://data.mendeley.com/datasets/h4df4mgrfb/3
+Run-to-failure com spall natural | Rolamentos (4 experimentos run-to-failure) | Aceleração horizontal, aceleração vertical, sinal do encoder
+
+## HUST Bearing Dataset (Hanoi University of Science and Technology)
+Frente: RUL & Diagnóstico com IA | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://data.mendeley.com/datasets/cbv7jyx4p9
+Vibração de rolamentos com falhas simples e duplas em 5 tipos de rolamento | Rolamentos 6204, 6205, 6206, 6207, 6208 (KG Bearing India) | Vibração (51.2 kHz, 10s), 6 tipos de defeitos em 5 rolamentos × 3 cargas
+
+## MFPT Bearing Fault Dataset
+Frente: RUL & Diagnóstico com IA | Status: BLOQUEADO | Risco legal: AMBIGUO | Licença: indeterminada (fonte oficial descontinuada, so mirrors nao-oficiais sem licenca propria) | Link: https://www.mfpt.org/fault-data-sets/
+Vibração de rolamentos — laboratório + mundo real | Rolamentos NICE (test rig) + rolamentos reais de turbina eólica | Aceleração gs, sampling rate sr, shaft speed rate, load weight, BPFO, BPFI, FTF, BSF
+
+## JNU Bearing Dataset (Jiangnan University)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://github.com/ClarkGableWang/JNU-Bearing-Dataset
+Vibração de rolamentos com falhas artificiais em 3 velocidades | Motor de indução Mitsubishi SB-JR + acelerômetro PCB MA352A60 | Vibração vertical (50 kHz), 4 estados × 3 velocidades
+
+## HIT Inter-shaft Bearing Fault Dataset (Aero-engine)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://github.com/HouLeiHIT/HIT-dataset
+Vibração de rolamento inter-eixo em aero-motor real | Aero-motor real com rolamento inter-eixo (artificial fault) | Deslocamento do rotor LP (2 sensores), aceleração do casing (4 sensores), 28 grupos de velocidade HP/LP
+
+## SCA Bearing Dataset (Pulp Mill - Industrial Real)
+Frente: RUL & Diagnóstico com IA | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://data.mendeley.com/datasets/tdn96mkkpt
+Vibração de falhas naturais em moinho de celulose operacional | Máquinas de moinho de celulose (2019-2022) | Vibração bruta (.mat), timestamps, velocidade, labels de falha
+
+## Politecnico di Torino Spherical Roller Bearing Dataset
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: BLOQUEADO | Licença: Verificar | Link: https://zenodo.org/records/14856938
+Vibração, temperatura e velocidade de rolamentos esféricos grandes | SKF spherical roller bearings (aplicações industriais pesadas) | Vibração, temperatura, velocidade || PENDENCIA 2026-09-18 (Claude/chat): URL atual e a do agregador (awesome-bearing-dataset), nao a pagina especifica deste dataset - precisa de busca dedicada pra achar o link proprio. || CORRIGIDO 2026-09-19 (PP-32): URL trocada do agregador (awesome-bearing-dataset) pro Zenodo, fonte primária real (Di Maggio, Giorio, Delprete, Brusa — ISED/Politecnico di Torino, multi-defeito em rolamentos esféricos SKF 22240 CCK/W33).
+
+## University of Arkansas Single & Double Fault Dataset
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: RESTRITO | Licença: Aberto | Link: https://doi.org/10.6084/m9.figshare.22693120.v1
+Vibração de falhas simples e compostas em máquinas rotativas | SpectraQuest fault simulator | Vibração (6.400 Hz, ~10s), 39 cenários de falha || PENDENCIA 2026-09-18 (Claude/chat): URL atual e a do agregador (awesome-bearing-dataset), nao a pagina especifica deste dataset - precisa de busca dedicada pra achar o link proprio. || CORRIGIDO 2026-09-19 (PP-32): URL trocada do agregador (awesome-bearing-dataset) pro Figshare, fonte primária real (Marshall & Jensen 2023, Data in Brief, DOI 10.1016/j.dib.2023.109358 — 38 cenários de falha única/dupla + 1 baseline saudável). Artigo companion é open access sob licença Creative Commons (não lida literalmente qual variante).
+
+## UdS Bearing Dataset (Saarland University)
+Frente: RUL & Diagnóstico com IA | Status: AMBIGUO | Risco legal: AMBIGUO | Licença: Aberto | Link: https://www.lmt.uni-saarland.de/
+Acelerômetros de rolamentos cilíndricos para domain adaptation | 3 rolamentos cilíndricos (B10, B20, B30) | Aceleração, posição do rolamento (1, 2, 3), velocidade (383-960 rpm), força (1-3)
+
+## ZeMA Electromechanical Axis (EA) Dataset
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://doi.org/10.5281/zenodo.5185953
+Dados de eixo eletromecânico para condition monitoring | Eixo eletromecânico (ZeMA gGmbH) | Corrente, tensão, posição, velocidade, temperatura, força
+
+## Open Guided Waves (OGW) Dataset
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://openguidedwaves.de/
+Dados de guided waves para structural health monitoring | Estruturas com sensores de guided waves | Sinais de guided waves, temperatura, posição do dano
+
+## NASA FEMTO/PRONOSTIA Bearing Dataset
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto (NASA) | Link: https://phm-datasets.s3.amazonaws.com/NASA/10.+FEMTO+Bearing.zip
+Run-to-failure experiments em rolamentos (accelerated life tests) | Rolamentos testados na plataforma PRONOSTIA (FEMTO-ST Institute, Besançon, França) | Vibração (2 acelerômetros), temperatura, carga, velocidade de rotação
+
+## CWRU Bearing Dataset (Zenodo - Corrected & Cleaned)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO | Risco legal: OK | Licença: Aberto | Link: https://zenodo.org/records/10987113
+Vibração de rolamentos saudáveis e com falhas (corrigido e limpo) | Motor 2 HP Reliance Electric, rolamentos com falhas EDM (0.007-0.040 polegadas) | Aceleração DE (12/48 kHz), FE (12 kHz), BA, 4 cargas (0-3 HP), 4 diâmetros de falha, 3 tipos de falha (IR, B, OR)
+
+## XJTU-SY Bearing Dataset (Run-to-Failure)
+Frente: RUL & Diagnóstico com IA | Status: CONFIRMADO_RESTRICAO_LICENCA | Risco legal: AMBIGUO | Licença: Aberto | Link: https://github.com/WangBiaoXJTU/xjtu-sy-bearing-datasets (fonte primaria oficial; download real hospedado em MediaFire/MEGA/Baidu Netdisk linkados desta pagina)
+Run-to-failure vibration data de 15 rolamentos | Rolamentos de esferas de sulco profundo (PCB 352C33 acelerômetros) | Vibração horizontal e vertical (25.6 kHz, 32768 pontos = 1.28s), 3 condições operacionais
+
+## Shaft Angular Misalignment Dataset
+Frente: RUL & Diagnóstico com IA | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal | Link: https://data.mendeley.com/datasets/kf96jx9dzf/1
+Detecção/diagnóstico de desalinhamento de eixo
+
+## Shaft Misalignment Data (Inter-component Phase Processing)
+Frente: RUL & Diagnóstico com IA | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal | Link: https://data.mendeley.com/datasets/pt9mjcvghd/1
+Desalinhamento de eixo, processamento de fase entre componentes
+
+## Shaft Orbits Dataset (desalinhamento paralelo e angular)
+Frente: RUL & Diagnóstico com IA | Status: VERIFICADO | Risco legal: AMBIGUO | Licença: Provável CC BY 4.0 (licença padrão da plataforma Mendeley Data para datasets publicados) — NÃO confirmado literalmente nesta página específica; autor pode ter trocado a licença padrão no submission, e a página bloqueia fetch direto (bot detection) pra verificação literal | Link: https://data.mendeley.com/datasets/8b33tx79wt/1
+Órbitas de eixo para diagnóstico de desalinhamento
