@@ -27,6 +27,26 @@
       "risco_legal": "OK",
       "licenca": "CC0 1.0 (LICENSE do repositório mgupta70/PIDQA) para os 64.000 pares pergunta-resposta. As imagens P&ID usadas vêm do Dataset-P&ID (Paliwal et al.), que tem licença própria (CC BY-SA 4.0, segundo o registro do PID2Graph). Artigo: doi 10.3390/MAKE7020039.",
       "evidencia": "API do GitHub (license = cc0-1.0) e Data Availability Statement do artigo (dataset em github.com/mgupta70/PIDQA)."
+    },
+    "src_ind_096": {
+      "oferece": "Curadoria de bancos de dados de materiais | Todas as classes de materiais | Links, descrições, tipos de propriedades || Hub que agrega vários datasets (não é um dataset único).",
+      "evidencia": "Nota interna de verificação (18/09/2026) removida do texto público; mantida só a informação de que é um hub agregador."
+    },
+    "src_ind_039": {
+      "oferece": "Lista de datasets para manutenção preditiva | Múltiplos equipamentos | Links e metadados || Hub que agrega vários datasets (não é um dataset único).",
+      "evidencia": "Nota interna de verificação (18/09/2026) removida do texto público; mantida só a informação de que é um hub agregador."
+    },
+    "src_ind_185": {
+      "oferece": "Curadoria expandida de datasets industriais (50+ datasets) | Múltiplos: oil wells, turbines, bearings, motors, valves, chemical process, manufacturing | Links, metadados, descrições, licenças, formatos || Hub que agrega vários datasets (não é um dataset único).",
+      "evidencia": "Nota interna de verificação (18/09/2026) removida do texto público; mantida só a informação de que é um hub agregador."
+    },
+    "src_ind_001": {
+      "oferece": "Degradação e falhas de componentes | Rolamentos, motores, fresadoras, turbinas | Vibração, degradação, falha || Hub que agrega vários datasets (não é um dataset único).",
+      "evidencia": "Nota interna de verificação (18/09/2026) removida do texto público; mantida só a informação de que é um hub agregador."
+    },
+    "src_ind_031": {
+      "oferece": "Curadoria de datasets PHM | Múltiplos equipamentos | Links e metadados || Hub que agrega vários conjuntos de dados (registro, não uma fonte única).",
+      "evidencia": "Nota interna de verificação (18/09/2026) removida do texto público; mantida só a informação de que é um hub agregador."
     }
   }
 }

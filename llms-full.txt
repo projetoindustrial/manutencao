@@ -218,11 +218,11 @@ Publicações e tabelas de dados de confiabilidade de equipamentos de processo.
 
 ## Data Resources for Materials Science (GitHub)
 Frente: Portais & Curadorias | Status: Ambígua: não foi possível decidir se a licença permite o uso | Risco legal: ambíguo | Licença: Aberto | Link: https://github.com/sedaoturak/data-resources-for-materials-science
-Curadoria de bancos de dados de materiais | Todas as classes de materiais | Links, descrições, tipos de propriedades || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico.
+Curadoria de bancos de dados de materiais | Todas as classes de materiais | Links, descrições, tipos de propriedades || Hub que agrega vários datasets (não é um dataset único).
 
 ## GitHub - Predictive Maintenance Datasets
 Frente: Portais & Curadorias | Status: Ambígua: não foi possível decidir se a licença permite o uso | Risco legal: ambíguo | Licença: Aberto | Link: https://github.com/kokikwbt/predictive-maintenance
-Lista de datasets para manutenção preditiva | Múltiplos equipamentos | Links e metadados || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico.
+Lista de datasets para manutenção preditiva | Múltiplos equipamentos | Links e metadados || Hub que agrega vários datasets (não é um dataset único).
 
 ## Exida Component Reliability Database (CRD)
 Frente: Fundamentos de Confiabilidade | Status: Confirmada em duas verificações independentes | Risco legal: bloqueado | Licença: proprietaria_paga — Copyright exida | Link: https://www.exida.com/OEMx/Reliability-Database
@@ -258,7 +258,7 @@ Experimentos run-to-failure de rolamentos para RUL (Vida Útil Remanescente)
 
 ## Awesome Industrial Datasets - Extended (GitHub)
 Frente: Portais & Curadorias | Status: Ambígua: não foi possível decidir se a licença permite o uso | Risco legal: ambíguo | Licença: Aberto | Link: https://github.com/jonathanwvd/awesome-industrial-datasets
-Curadoria expandida de datasets industriais (50+ datasets) | Múltiplos: oil wells, turbines, bearings, motors, valves, chemical process, manufacturing | Links, metadados, descrições, licenças, formatos || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico. || CONSOLIDACAO 2026-09-18 (Claude/chat, correcao de dominios repetidos): src_ind_095 era a mesma entrada (repositorio unico github.com/jonathanwvd/awesome-industrial-datasets), cadastrada 2x em rodadas diferentes com contagens desatualizadas; verificado ao vivo (18/09/2026): repo ativo com 190 datasets catalogados atualmente, cresce continuamente. Mesclada em src_ind_185.
+Curadoria expandida de datasets industriais (50+ datasets) | Múltiplos: oil wells, turbines, bearings, motors, valves, chemical process, manufacturing | Links, metadados, descrições, licenças, formatos || Hub que agrega vários datasets (não é um dataset único).
 
 ## Paper Machine Vibration Dataset with Annotations (Luleå UT)
 Frente: Sensoriamento & Dados de Campo | Status: Confirmada, mas com restrição de licença | Risco legal: bloqueado | Licença: Restrito | Link: https://researchdata.se/en/catalogue/dataset/2023-246/1
@@ -474,7 +474,7 @@ Dados de computação de borda (edge) em ambiente IIoT || Enriquecimento PP-19 A
 
 ## NASA Prognostics Data Repository
 Frente: Fundamentos de Confiabilidade | Status: Confirmada em duas verificações independentes | Risco legal: uso livre | Licença: Aberto | Link: https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/
-Degradação e falhas de componentes | Rolamentos, motores, fresadoras, turbinas | Vibração, degradação, falha || CONFIRMADO 2026-09-18 (Claude/chat, busca web propria): e um repositorio/hub agregador real, multi-dataset, nao um dataset unico.
+Degradação e falhas de componentes | Rolamentos, motores, fresadoras, turbinas | Vibração, degradação, falha || Hub que agrega vários datasets (não é um dataset único).
 
 ## NASA N-CMAPSS
 Frente: Fundamentos de Confiabilidade | Status: Confirmada em duas verificações independentes | Risco legal: uso livre | Licença: Aberto | Link: https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/
@@ -562,7 +562,7 @@ Desafio PHM/NASA de detecção | Gearbox com rolamentos | Acelerômetros, geomet
 
 ## PHM Society Public Data Sets
 Frente: Fundamentos de Confiabilidade | Status: Confirmada, mas com restrição de licença | Risco legal: ambíguo | Licença: Aberto | Link: https://phmsociety.org/public-data-sets/
-Curadoria de datasets PHM | Múltiplos equipamentos | Links e metadados || CONFIRMADO 2026-09-18 (Claude/chat, analise de dominios repetidos + conhecimento geral): e repositorio/registro agregador real, multi-dataset/multi-obra, nao uma fonte unica.
+Curadoria de datasets PHM | Múltiplos equipamentos | Links e metadados || Hub que agrega vários conjuntos de dados (registro, não uma fonte única).
 
 ## PHM 2023 Gearbox Degradation Dataset
 Frente: Fundamentos de Confiabilidade | Status: Confirmada, mas com restrição de licença | Risco legal: ambíguo | Licença: Aberto | Link: https://data.phmsociety.org/phm2023-conference-data-challenge/
