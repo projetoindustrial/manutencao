@@ -17,3 +17,7 @@ Catálogo curado de 157 fontes de dado sobre manutenção preditiva e confiabili
 
 - `fontes-industriais` (catálogo público de fontes abertas): há sobreposição parcial (48 links em comum, medidos em 18/10/2026). Os dois ficam separados de propósito: este tem curadoria e linguagem para o público geral, com foco só em manutenção.
 - `industriaedu` e `caderno`: sites irmãos, ligados no menu.
+
+## Licença
+
+O código deste repositório está sob a licença [MIT](LICENSE). Dados, nomes, textos e marcas de terceiros citados ou reunidos aqui continuam sob as licenças e os direitos de cada fonte e não são cobertos por esta licença.
