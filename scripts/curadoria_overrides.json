@@ -47,6 +47,26 @@
     "src_ind_031": {
       "oferece": "Curadoria de datasets PHM | Múltiplos equipamentos | Links e metadados || Hub que agrega vários conjuntos de dados (registro, não uma fonte única).",
       "evidencia": "Nota interna de verificação (18/09/2026) removida do texto público; mantida só a informação de que é um hub agregador."
+    },
+    "src_initowl_vega_shrinkwrapper": {
+      "url": "https://kaggle.com/inIT-OWL/vega-shrinkwrapper-runtofailure-data",
+      "url_anterior": "kaggle.com/inIT-OWL/vega-shrinkwrapper-runtofailure-data",
+      "evidencia": "O campo url não tinha o esquema https://; adicionado, sem alterar o endereço."
+    },
+    "stg_cincinnati_fleet_wo": {
+      "url": "https://data.cincinnati-oh.gov/Thriving-Neighborhoods/Fleet-Preventative-Maintenance-Repair-Work-Orders/2a8x-bxjm",
+      "url_anterior": "data.cincinnati-oh.gov/Thriving-Neighborhoods/Fleet-Preventative-Maintenance-Repair-Work-Orders/2a8x-bxjm",
+      "evidencia": "O campo url não tinha o esquema https://; adicionado, sem alterar o endereço."
+    },
+    "src_ind_028": {
+      "url": "https://data.openei.org/submissions/623",
+      "url_anterior": "https://data.openei.org/submissions/623 (fonte primaria real — data.gov e so catalogo/indice que linka pra ca)",
+      "evidencia": "O campo url trazia um comentário colado depois do endereço; endereço isolado, comentário preservado em url_anterior."
+    },
+    "src_ind_173": {
+      "url": "https://github.com/WangBiaoXJTU/xjtu-sy-bearing-datasets",
+      "url_anterior": "https://github.com/WangBiaoXJTU/xjtu-sy-bearing-datasets (fonte primaria oficial; download real hospedado em MediaFire/MEGA/Baidu Netdisk linkados desta pagina)",
+      "evidencia": "O campo url trazia um comentário colado depois do endereço; endereço isolado, comentário preservado em url_anterior."
     }
   }
 }
